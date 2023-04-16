@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+
+}
+
+
+.wrapper{
+    
+    
+    
+}
+.header{
+    display: grid;
+    grid-template-columns: 20% 10% 70%;
+    
+}
+.header img{
+    grid-column: 1/2;
+}
+.header ul{
+    grid-column: 3/4;
+    list-style-type: none;
+    display: flex;
+}
+
+.header ul li{
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
+
+.main{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 22% 8% 70%;
+}
+
+
+.ingredient{
+        background-color: grey;
+        height: 1200px;
+        padding: 1rem 1rem;
+        padding-right: 5rem;
+        grid-column: 1 / 3;
+         overflow-x: hidden; /*hide horizontal scroll*/
+        overflow-y: auto; /*enable vertical scroll for div when needed*/
+        text-align: center;
+}
+    
+    
+.article{
+    background-color: bisque;
+
+        padding: 15rem 5rem;
+        grid-column: 3/ 4;
+}
