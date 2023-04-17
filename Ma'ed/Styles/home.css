@@ -32,7 +32,7 @@ body{
     grid-column: 1/2;
 }
 
-.header .logo img{
+.header .logo a img{
     /* position: top left fixed; */
    
     width: calc(0.2 * 100vw );
@@ -72,13 +72,18 @@ body{
     height: 0.5rem;
     background: #FFA500;
     position: absolute;
-    left: 50%;
+    left: 52%;
     transform: translateX(-50%);
-    top: 3rem;
+    top: 3.2rem;
     transition: 0.5s ease-out;
 }
 .navigation ul li#normal a:hover::after{
-    width: 60%;
+    width: 70%;
+    box-shadow: 0 0 5px orange,
+            0 0 0 orange,
+            0 0 0 orange,
+            0 0 0 orange;
+    border-radius: 5rem;
 }
 .navigation ul li#separator{
     font-weight: lighter;
@@ -232,7 +237,7 @@ span[class^="material"]{
 
 @media(max-width: 800px) and (min-width: 0px){
 
-    .header .logo img{
+    .header .logo a img{
         width: 7.5rem;
     }
     .navigation ul{
@@ -243,6 +248,7 @@ span[class^="material"]{
         height: 16rem;
         background-color: #00000023;
         backdrop-filter: blur(6px);
+        
         margin-top: 2rem;
         left: -100%;
         text-align: center;
