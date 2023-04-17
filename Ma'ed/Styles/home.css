@@ -5,7 +5,7 @@
     box-sizing: border-box;
      font-family: Proxima Nova, Helvetica, Arial, sans-serif;
     text-decoration: none;
-   
+    
    
 }
 
@@ -178,6 +178,13 @@ span[class^="material"]{
     
 }
 
+.text > h3{
+    color: rgb(38, 38, 38);
+}
+.text > h5{
+    font-weight:400;
+    color: grey;
+}
  span#orange{
     color: #FFA500;
  }
@@ -203,10 +210,10 @@ span[class^="material"]{
     transform: scale(1.1);
         background-color: orange;
         transition: 0.3s;
-        box-shadow: 0 0 15px orange,
-            0 0 15px orange,
-            0 0 15px orange,
-            0 0 15px orange;
+        box-shadow: 0 0 5px orange,
+            0 0 5px orange,
+            0 0 5px orange,
+            0 0 5px orange;
 }
 
 
