@@ -1,0 +1,191 @@
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* font-family: 'Montserrat', sans-serif; */
+	height: 100vh;
+	/* margin: -20px 0 50px; */
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 1px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: black;
+	font-size: 15px;
+	text-decoration: none;
+	margin: 15px ;
+}
+
+button {
+	border-radius: 20px;
+	border: 3px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	transition: background 0.5s;
+}
+
+button:active {
+	transform: scale(0.95);
+	background-color:white;
+}
+
+
+
+button.Sign {
+	background-color: transparent;
+	border-color: #FFFFFF;
+	transition: background 0.5s;
+}
+
+button.Sign:active{
+	background-color: white;
+}
+
+form {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: gray;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	color: white;
+	text-align: 20px;
+}
+
+
+
+.login {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 10px 10px gray, 
+			    0 10px 10px silver;
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+
+}
+
+.form-login {
+	margin-left: 50px;
+	position: absolute;
+	height: 100%;
+	transition: background 0.5s;
+}
+
+
+
+
+
+
+
+
+.signup-login {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+
+	z-index: 100;
+}
+
+
+.signup{
+	background:#FF4B2B ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+
+}
+
+
+.signup-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+
+}
+
+
+
+
+.signup-right {
+	right: 0;
+	
+}
+
+
+.icon-login {
+	margin: 20px 0;
+}
+
+.icon-login a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	height: 50px;
+	width: 50px;
+}
