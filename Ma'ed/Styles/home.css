@@ -517,6 +517,7 @@ span[class^="material"]{
     font-weight: bolder;
     margin-bottom: 5%;
     padding: 0.5rem 0.5rem;
+    
 }
 #clickgrid:hover{
     transform: scale(1.1);
@@ -560,12 +561,17 @@ span[class^="material"]{
 
 }
 
-.mobileapp_text h1 {
+.mobileapp_text h1{
     color: white;
     font-size: calc(1rem + 1.5vw);
     border: none;
+    text-align: center;
     
 }
+ .mobileapp_text p{
+    text-align: center;
+    color: white;
+ }
 
 .mobileapp_text button {
     
@@ -583,6 +589,7 @@ span[class^="material"]{
     font-weight: bolder;    
     padding: 0.5rem 0.5rem;
     color:#FFA500;
+    border: none;
     transition: 0.3s ease;
     
 /* font-size: 2rem; */
