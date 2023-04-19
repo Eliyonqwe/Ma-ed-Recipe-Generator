@@ -21,3 +21,14 @@ const sr = ScrollReveal({
 
 sr.reveal('.floatingimg', { delay:350, origin:'left'})
 sr.reveal('.text', { delay:350, origin:'right'})
+sr.reveal('.aboutus_pic', { delay:350, origin:'left'})
+sr.reveal('.aboutus_text', { delay:350, origin:'top'})
+
+// sr.reveal('.exploretitle', { delay:350, origin:'left'})
+sr.reveal('.gridone', { delay:350, origin:'top'})
+sr.reveal('.gridtwo', { delay:350, origin:'bottom'})
+sr.reveal('.gridthree', { delay:350, origin:'top'})
+
+sr.reveal('.mobileapp_pic', { delay:350, origin:'left'})
+sr.reveal('.mobileapp_text', { delay:350, origin:'right'})
+

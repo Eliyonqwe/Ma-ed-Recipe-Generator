@@ -235,7 +235,7 @@ span[class^="material"]{
     display: none;
   }
 
-@media(max-width: 800px) and (min-width: 0px){
+@media(max-width: 800px){
 
     .header .logo a img{
         width: 7.5rem;
@@ -366,7 +366,237 @@ span[class^="material"]{
         overflow: auto;
 
     }
+        div.aboutus_pic img {
+            min-width: 250px;
+        }
+        div.aboutus {
+            margin-top: 10%;
+            padding-top: 5%;
+        }
+       
         
+}
+@media(max-width: 500px){
+    .aboutus_pic img {
+           display: none;
+        }
+        div.aboutus{
+           display: block;
+           padding-right:  0;
+           padding-bottom: 10%;
+           background-color: #FFA500   ;
+           /* margin: 0 10%; */
+           min-height: 20vh ;
+           max-height: 100vh ;
+           text-align: center;
+        }
+        div.aboutus_text{
+            padding: 0 10%;
+        } 
+     
+}
+    
+   
+
+
+.aboutus{
+    margin-top: 5%;
+    padding-top: 5%;
+    display: grid;
+    padding-bottom: 5%;
+    gap: 10px;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 200vh;
+    background-color: #FFA500;
+    grid-template-columns: 50% 50%;
+}
+.aboutus_pic{
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    
+}
+.aboutus_pic img{
+
+    width: 80%;
+    min-width: 290px;
+    max-width: 500px;
+    
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    
+    border-radius: 3rem; 
+    
+    
+}
+.aboutus_text{
+      padding-right: 15%;
+      color: black;
+    overflow:hidden;      
+ }
+    .aboutus_text h1{
+        font-size: calc(1rem + 1.5vw);
+       
+    }
+    .aboutus_text p{
+        font-size: min(calc(100vw/30), 1.5rem);
+        line-height: 150%;
+    
+    /* font-size: 2rem; */
+}
+
+
+
+.grid_gallery{
+    display: grid;
+    padding: 0 7%;
+    padding-bottom: 10%;
+    gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+}
+.exploretitle{
+    grid-row: 1/2 ;
+    padding: 5% 0;
+    font-size: 2rem;
+    grid-column: 1/4;
+    text-align: center;
+    font-size: calc(1rem + 1.5vw);
+}
+.gridone{
+    grid-row: 2/3 ;
+    grid-column: 1/2;
+    background-color: #fff3dd;
+    padding: 0 5%;
+    border-radius: 1rem;
+}
+.gridtwo{
+    grid-row: 2/3 ;
+    grid-column: 2/3;
+    padding: 0 5%;
+    background-color: #fff3dd;
+    border-radius: 1rem;
+}
+
+.gridthree{
+    grid-row: 2/3 ;
+    grid-column: 3/4;
+    padding: 0 5%;
+    background-color: #fff3dd;
+    border-radius: 1rem;
+
+}
+.gridone img, .gridtwo img, .gridthree img{
+    width: 100%;
+    
+    margin: 1rem 0;
+}
+
+
+.gridone:hover, .gridtwo:hover, .gridthree:hover{
+    transform: translateY(-0.5%);
+    background-color: #ffdd9d;
+    
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.1);
+}
+#gridtitle{
+    font-size: calc(1rem + 1.5vw);
+    
+}
+#gridtext{
+    font-size: calc(0.1rem + 1.5vw);
+    padding-bottom: 7%;
+}
+#clickgrid{
+    background-color: #FFA500;
+    color: white;
+    border-radius: 3rem;
+    border: none;
+    font-weight: bolder;
+    margin-bottom: 5%;
+    padding: 0.5rem 0.5rem;
+}
+#clickgrid:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    background-color:#ffffff;
         
-        
+}
+
+.mobileapp{
+    background-color: #FFA500;
+    padding-top: 5%;
+    display: grid;
+    padding-bottom:  0;
+    gap: 10px;
+    width: 100%;
+    
+    grid-template-columns: 50% 50%;
+}
+.mobileapp_pic {
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+
+}
+
+.mobileapp_pic img {
+
+    width: 80%;
+   
+
+
+}
+
+.mobileapp_text {
+    padding-right: 15%;
+    padding-bottom: 30%;
+    color: black;
+     margin: auto;
+    
+    text-align: center;
+
+}
+
+.mobileapp_text h1 {
+    color: white;
+    font-size: calc(1rem + 1.5vw);
+    border: none;
+    
+}
+
+.mobileapp_text button {
+    
+    font-size: min(calc(100vw/30), 1.5rem);
+    line-height: 150%;
+    outline: none;
+    
+    min-height: 0.1rem;
+    max-height: 10rem;
+    min-width: 0.1rem;
+    max-width: 10rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-weight: bolder;    
+    padding: 0.5rem 0.5rem;
+    color:#FFA500;
+    transition: 0.3s ease;
+    
+/* font-size: 2rem; */
+}
+
+
+.mobileapp_text button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(240, 240, 240) ;
+    color: #452d00;
+    transition: 0.3s;
+    box-shadow: 0 0 5px white,
+        0 0 5px white,
+        0 0 5px white,
+        0 0 5px white;
 }
