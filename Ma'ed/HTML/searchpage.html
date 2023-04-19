@@ -6,206 +6,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../Styles/searchpage.css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lexend">
+          <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
   </head>
   <body>
     <!-- ---------------------------------------------- -->
     <div class="wrapper">
       <div class="header">
         <header class="header">
-          <img
-            src="./Logo/Screenshot (119).png"
-            alt="Mesob Logo"
-            width="100"
-            height="50"
-          />
-          <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">ACCOUNT</a></li>
-          </ul>
+          <section class="logo">
+            <a href="home.html"
+              ><img src="../pics/Maed_logo1-removebg.png" alt=""
+            /></a>
+          </section>
+          <section class="navigation">  
+            <label id="dropcheckbox_label" for="dropcheckbox">
+              <span class="material-symbols-outlined"> menu </span>Menu
+            </label>
+  
+            <ul>
+              <li id="normal">
+                <a href="#"
+                  ><span
+                    class="material-symbols-outlined style"
+                    style="line-height: 1"
+                    >Home</span
+                  >Home</a
+                >
+              </li>
+              <li id="normal">
+                <a href="#"
+                  ><span class="material-symbols-outlined">groups</span> About
+                  Us</a
+                >
+              </li>
+              <li id="normal">
+                <a href="#">
+                  <span class="material-symbols-outlined">help</span>FAQs</a
+                >
+              </li>
+              <li id="separator"><a href="#">|</a></li>
+              <!--           
+              <li id="signup">
+                <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
+              </li> -->
+              <li id="account">
+                <a href="#"
+                  ><button class="account">
+                    <span class="material-symbols-outlined">person</span>Account
+                  </button>
+                </a>
+              </li>
+            </ul>
+  
+            <!-- <button id="dropdown">
+              <span class="material-symbols-outlined">menu</span> Menu
+            </button> -->
+          </section>
         </header>
       </div>
 
       <!-- ---------------------------------------------- -->
-      <br />
+   
       <div class="main">
         <aside class="ingredient">
           <section class="type1">
             <form action="" method="get">
-              <fieldset>
+
+              <header class="title"> 
+                <h2>Pantry</h2>
+                <h4>You have selected 0 ingredients</h4>
                 <label for="search">Search for Ingredient</label>
-                <input type="search" id="search" />
-              </fieldset>
-              <fieldset>
-                <legend><h4>Type 1</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
+                <a href="#"
+                > <input type="search" id="search" placeholder="search" />
+                <span class="material-symbols-outlined"
+                 style="background-color: white;
+                 color: black;">search
+                </span> 
+               
+                </a>
+              </header>
+              <div class="collection">
+              
+                  <div class="container one">
+
+                    <div class="ingridents-title">
+                      <h4>Type 1</h4>
+                    </div>
+                    <div class="ingredients one">
+                      <label for="ing1">ing1</label>
+        
+                      <label for="ing2">ing2</label>
+        
+                      <label for="ing3">ing3</label>
+        
+                      <label for="ing4">ing4</label>
+                      
+                      <label for="ing1">ing1</label>
+        
+                      <label for="ing2">ing2</label>
+        
+                      <label for="ing3">ing3</label>
+        
+                      <label for="ing4">ing4</label>
+                      <label for="ing1">ing1</label>
+        
+                      <label for="ing2">ing2</label>
+        
+                      <label for="ing3">ing3</label>
+        
+                      <label for="ing4">ing4</label>
+                      
+                      <label for="ing1">ing1</label>
+        
+                      <label for="ing2">ing2</label>
+        
+                      <label for="ing3">ing3</label>
+        
+                      <label for="ing4">ing4</label>
+      
+                    </div>
+                </div>
+                    
+                <div class="container two">
+
+                  <div class="ingridents-title">
+                    <h4>Type 1</h4>
+                  </div>
+                  <div class="ingredients two">
+                    <label for="ing1">ing1</label>
+    
+                  <label for="ing2">ing2</label>
+    
+                  <label for="ing3">ing3</label>
+    
+                  <label for="ing4">ing4</label>
+                  
+                  <label for="ing1">ing1</label>
+    
+                  <label for="ing2">ing2</label>
+    
+                  <label for="ing3">ing3</label>
+    
+                  <label for="ing4">ing4</label>
+    
+                  </div>
+              </div>
+              <div class="container three">
+
+                <div class="ingridents-title">
+                  <h4>Type 1</h4>
+                </div>
+                <div class="ingredients three">
+                  <label for="ing1">ing1</label>
+  
+                <label for="ing2">ing2</label>
+  
+                <label for="ing3">ing3</label>
+  
+                <label for="ing4">ing4</label>
+                
+                <label for="ing1">ing1</label>
+  
+                <label for="ing2">ing2</label>
+  
+                <label for="ing3">ing3</label>
+  
+                <label for="ing4">ing4</label>
+  
+                </div>
+            </div>
+            <div class="container four">
+
+              <div class="ingridents-title">
+                <h4>Type 1</h4>
+              </div>
+              <div class="ingredients four">
                 <label for="ing1">ing1</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
+              <label for="ing2">ing2</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
+              <label for="ing3">ing3</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
+              <label for="ing4">ing4</label>
+              
+              <label for="ing1">ing1</label>
+
+              <label for="ing2">ing2</label>
+
+              <label for="ing3">ing3</label>
+
+              <label for="ing4">ing4</label>
+
+              </div>
+          </div>
+            <div class="container five">
+
+              <div class="ingridents-title">
+                <h4>Type 1</h4>
+              </div>
+              <div class="ingredients five">
                 <label for="ing1">ing1</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing2">ing2</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing3">ing3</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing4">ing4</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend><h4>Type 2</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
+                
                 <label for="ing1">ing1</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing2">ing2</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing3">ing3</label>
 
-                <input type="checkbox" name="ing1" id="" />
                 <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
+              </div>
+          </div>    
+          
+          <div class="container six">
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
+            <div class="ingridents-title">
+              <h4>Type 1</h4>
+            </div>
+            <div class="ingredients six">
+              <label for="ing1">ing1</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
+            <label for="ing2">ing2</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend><h4>Type 2</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
+            <label for="ing3">ing3</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
+            <label for="ing4">ing4</label>
+            
+            <label for="ing1">ing1</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
+            <label for="ing2">ing2</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
+            <label for="ing3">ing3</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
+            <label for="ing4">ing4</label>
 
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend><h4>Type 2</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend><h4>Type 2</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-              </fieldset>
-              <br />
-              <fieldset>
-                <legend><h4>Type 2</h4></legend>
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-                <br />
-                <input type="checkbox" name="ing1" id="ing1" />
-                <label for="ing1">ing1</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing2">ing2</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing3">ing3</label>
-
-                <input type="checkbox" name="ing1" id="" />
-                <label for="ing4">ing4</label>
-              </fieldset>
-
-              <br />
-              <br />
-              <fieldset>
-                <p>
-                  The only thing we assume you already have is salt and water
-                </p>
-              </fieldset>
+            </div>
+        </div>
+                <fieldset>
+                  <p>
+                    The only thing we assume you already have is salt and water
+                  </p>
+                </fieldset>
+              </div>
             </form>
           </section>
           <section class="type2"></section>

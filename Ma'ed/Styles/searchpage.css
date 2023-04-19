@@ -3,62 +3,264 @@
     padding: 0;
     box-sizing:border-box;
     scroll-behavior: smooth;
+    font-family: 'Lexend',serif;
+    font-style: normal;
 
-}
-
-
-.wrapper{
-    
-    
-    
 }
 .header{
+    /* position: fixed; */
+    position: relative;
+    top: 0px;
+    left: 0; right: 0;
+    width: 100vw;
     display: grid;
-    grid-template-columns: 20% 10% 70%;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
     
 }
-.header img{
+.header .logo{
     grid-column: 1/2;
 }
-.header ul{
-    grid-column: 3/4;
-    list-style-type: none;
-    display: flex;
+
+.header .logo a img{
+    /* position: top left fixed; */
+   
+    width: calc(0.2 * 80vw );
+
+} 
+.navigation {
+    grid-column: 2/3;
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: 0;
+
+}
+.navigation ul{
+     list-style: none;
+     
+     
+}
+.navigation ul li{
+    position: relative;
+    float: left;
+    padding-right: 0;
+    font-weight:bolder;
+    font-size: 1rem;
 }
 
-.header ul li{
-    list-style: none;
-}
-
-.header ul li a {
-    text-decoration: none;
+.navigation ul li a{
+    font-size: calc(100% * 16px);
+    padding: 1.3rem;
     color: black;
-    padding: 0 10px;
+    display: block;
+    text-decoration: none;
+
+}
+.navigation ul li#normal a::after{
+    content: '';
+    
+    width: 0;
+    height: 0.3rem;
+    background: #FFA500;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    top: 3.2rem;
+    transition: 0.5s ease-out;
+}
+.navigation ul li#normal a:hover::after{
+    width: 70%;
+    box-shadow: 0 0 5px orange,
+            0 0 0 orange,
+            0 0 0 orange,
+            0 0 0 orange;
+    border-radius: 5rem;
+}
+.navigation ul li#separator{
+    font-weight: lighter;
+}
+span[class^="material"]{
+    color: #FFA500;
+    vertical-align: top;
+    line-height: 1.1;
+    padding-right: 0.2rem ;
+}
+.account span{
+    vertical-align: top;
+    line-height: 0.4;
+    color: white;
+}
+.account{
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0.4;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    background-color: #FFA500;
+    display: block;
+}
+#dropcheckbox_label{
+    display: none;
+}
+
+.wrapper{
+
+    
 }
 
 
 .main{
     display: grid;
     width: 100vw;
-    grid-template-columns: 22% 8% 70%;
+    grid-template-columns: 22% 78%;
 }
 
 
 .ingredient{
-        background-color: grey;
-        height: 1200px;
-        padding: 1rem 1rem;
-        padding-right: 5rem;
-        grid-column: 1 / 3;
+        /* background-color: #213037; */
+        background-color: #f88e28;
+        height: 95vh;
+        /* padding: 1rem 1rem;
+        padding-right: 5rem;  */
+        grid-column: 1/2;
          overflow-x: hidden; /*hide horizontal scroll*/
         overflow-y: auto; /*enable vertical scroll for div when needed*/
         text-align: center;
+        border-radius: 15px;
+        /* box-shadow: 0 1px 10px rgb(183, 183, 183); */
 }
+.title{
+    color: white;
+}
+.collection{
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+.container{
+    box-shadow: 0 1px 10px rgb(183, 183, 183);
+    border-radius: 15px;
+    /* background-color: #f4ede5;  */
     
-    
-.article{
-    background-color: bisque;
+   
+}
+.ingredients{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 8px;
+    padding-bottom: 10px;
+}
+.ingridents-title{
+    padding: 10px;
+}
+.ingredients label{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(224, 224, 224);
+    cursor: pointer;
+}
 
-        padding: 15rem 5rem;
-        grid-column: 3/ 4;
+.article{
+    /* background-color: #f88e28; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2/ 4;
+    border-radius: 15px;
+    line-height: 50px;
+    margin-left: 10px;
+
+}
+button{
+    border-radius: 10px;
+    padding: 5px;
+    height: 30px;
+    transition: 0.3s ease;
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+        background-color: orange;
+        transition: 0.3s;
+        box-shadow: 0 0 5px orange,
+            0 0 5px orange,
+            0 0 5px orange,
+            0 0 5px orange;
+}
+
+@media(max-width: 800px) and (min-width: 0px){
+
+    .header .logo a img{
+        width: 7.5rem;
+    }
+    .navigation ul{
+        position: fixed;
+        border-radius: 1rem;
+        width: 100%;
+        box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
+        height: 16rem;
+        background-color: #00000023;
+        backdrop-filter: blur(6px);
+       
+        
+        margin-top: 2rem;
+        left: -100%;
+        text-align: center;
+        display: block;
+        transition:  all 0.5s ease-in-out;    
+    }
+    button.account{
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    span[class^="material"] {
+        color: #FFA500;
+        vertical-align: top;
+        line-height: 0.7;
+        padding-right: 0.2rem;
+    }
+    .navigation ul li{
+        display: block;
+        float: none;
+    }
+    .navigation #separator{
+        display: none;
+
+    }
+    .navigation ul li a{
+        display: inline-block;
+        /* font-weight: bolder; */
+    }
+    .navigation ul li a span{
+           color: #FFA500;
+    }
+    .navigation ul li a:hover, .navigation ul li a:active{
+        color: black;
+    }
+    .signup, .signup{
+        color: white;
+     }
+   
+   #dropcheckbox_label{
+    font-size: 1rem;
+    font-weight: bolder;
+    display: block;
+   }
+    #dropcheckbox:checked ~ ul{
+        left: 0;
+    }
 }
