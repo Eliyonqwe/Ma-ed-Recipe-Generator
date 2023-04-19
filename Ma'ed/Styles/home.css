@@ -248,6 +248,7 @@ span[class^="material"]{
         height: 16rem;
         background-color: #00000023;
         backdrop-filter: blur(6px);
+       
         
         margin-top: 2rem;
         left: -100%;
