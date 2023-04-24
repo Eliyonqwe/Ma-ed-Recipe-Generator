@@ -30,7 +30,7 @@
 	</div>
 	<div class="form-login sign-in-login">
 		<form action="#">
-			<h1>Sign in</h1>
+			<h1>Sign up</h1>
 			<div class="icon-login">
 				<a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
@@ -40,7 +40,7 @@
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<button>Sign Up</button>
 		</form>
 	</div>
 
@@ -54,11 +54,47 @@
 			<div class="signup-panel signup-right">
 				<h1>Welcome to our blah blah</h1>
 				<p>Enter your personal details and start journey with us</p>
-				<button class="Sign" id="signUp">Sign Up</button>
+				<button onclick="document.getElementById('id01').style.display='block'" class="Sign" id="signUp">Sign In</button>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+          <!-- Login Form  -->
+          <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+             
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Model">&times;</span>
+                <img src="../pics/256-512.webp" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="pass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+                 <button type="submit">Login</button>
+                 <label>
+                  <input type="checkbox" checked="checked" name="remeber">Remember Me
+                 </label>
+
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+
+
+            </form>
+
+          </div>
+		  <!-- /log in -->
 
 
     
@@ -67,3 +103,14 @@
 
 
 <script src="../Scripts/login.js"></script>
+<script>
+	// Get the modal
+	var modal = document.getElementById('id01');
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+	</script>
