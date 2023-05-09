@@ -1,57 +1,6 @@
-
-
 * {
 	box-sizing: border-box;
 	/* overflow: hidden; */
-}
-
-.logo a {
-
-    /* display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column; */
-
-
-	position: absolute;
-	top: 30%;
-	right: 70%;
-	
-	
-
-	z-index: 100;
-	animation: floatingMotion 3s ease-in-out infinite;
-}
-@keyframes floatingMotion {
-    0%,
-    100% {
-       
-        transform: translateY(0,0);
-        /* transform: translateX(0); */
-    }
-    50% {
-        transform: translateY(-0.4rem);
-        /* transform: translateX(-0.5rem); */
-    }
-}
- 
-
-.logo a img{
-   
-    width: calc(0.3 * 100vw );
-	
-
-} 
-
-body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	/* margin: -20px 0 50px; */
 }
 
 h1 {
@@ -88,8 +37,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 3px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 3px solid rgb(233, 233, 233);
+	background-color: orange;
 	color: white;
 	font-size: 12px;
 	font-weight: bold;
@@ -138,308 +87,174 @@ input {
 }
 
 
+.item1{
 
-.login {
-	background-color: #fff;
-	border-radius: 10px;
+    grid-area: item1;
+}
+
+.item2{
+
+    grid-area: item2;
+
+}
+.item3{
+
+    grid-area: item3;
+    
+    
+}
+.item4{
+   
+    grid-area: item4;
+    background-color: white;
   	box-shadow: 0 10px 10px gray, 
 			    0 10px 10px silver;
 	position: relative;
 	overflow: hidden;
-	width: 800px;
-	max-width: 100%;
-	min-height: 500px;
-	border-top-right-radius: 50px;
 	border-top-left-radius: 50px;
-	border-bottom-right-radius: 25px;
 	border-bottom-left-radius: 25px;
-	left: 10%;
-	
-
-}
-
-.form-login {
-	/* margin-left: 50px; */
-	position: absolute;
-	width: 50%;
-	height: 100%;
-	/* transition: background 0.5s; */
-	
-}
-.form-login h4{
-overflow: visible;
-}
-
-
-
-
-
-
-
-
-
-.signin-login {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
-	overflow: hidden;
-
-	z-index: 100;
-	
-}
-
-
-.signin{
-	background:orange ;
-	/* background-repeat: no-repeat; */
-	/* background-size: cover; */
-	/* background-position: 0 0; */
-	color: white;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-
-}
-
-
-.signup-panel {
-	position: absolute;
-	display: flex;
+    display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 40px;
 	text-align: center;
 	top: 0;
-	height: 100%;
-	width: 50%;
+;
 
 }
-.signup-panel button{
-	background-color: white;
-	color: black;
-
-}
-
-
-
-
-.signup-right {
-	right: 0;
-	
-}
-
-
-.icon-login {
-	margin: 20px 0;
-
-}
-
-.icon-login a {
-	border: 1px solid silver;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 5px;
-	height: 50px;
-	width: 50px;
-
-}
-/* Login */
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: orange;
-    color: white;
-    font-weight: bold;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 7px 0;
-    position: relative;
-  }
-  
-  img.avatar {
-    width: 30%;
-    height: 50%;
-    border-radius: 50%;
-	margin-top: 40px;
-  }
-  
-  .container {
-    padding: 16px;
-  }
-  
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-    padding-top: 60px;
-	
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: orangeS;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+.item5{
+    grid-area: item5;
+    background-color:orange;
+  	box-shadow: 0 10px 10px gray, 
+			    0 10px 10px silver;
+	position: relative;
+	overflow: hidden;
 	border-top-right-radius: 50px;
-	border-top-left-radius: 50px;
 	border-bottom-right-radius: 25px;
-	border-bottom-left-radius: 25px;
-  }
-  
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: red;
-    cursor: pointer;
-  }
-  
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  }
-/* /Login */
 
-/* .container{
-	display: flex;
+        display: flex;
+	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+  
+
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+
+}
+
+
+/* body{
+    overflow: hidden;
 } */
 
-.container button{
-	display: flex;
-	justify-content: center;
-} 
+.logo a{
+   
+	position: absolute;
+	top: 30%;
 
-.psw{
-	
-	margin-right: 40%;
-	margin-bottom: 10px;
-}
-.psw a{
-	color: #FF4B2B;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width: 800px){
-
-
-.logo{
-	grid-area: logo;
-}
-.signin-login{
-	grid-area: signin;
-}
-
-body
-{
-	height: 100vh;
+.wrapper{
+    height: 100vh;
     display: grid;
     padding: 10px;
     gap: 3px;
-    margin: 10px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: .2fr 2fr 2fr ;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-areas:
-    'logo logo logo'
-    'signin signin signin'; 
-
+    'item1 item1 item2 item2'
+    'item3 item3 item4 item5'
+    'item3 item3 item4 item5'
+    ;
 }
+
+@media(max-width: 1200px){
+   
+
+    .wrapper{
+        /* overflow: scroll; */
+        height: 130vh;
+        /* width: 100vh; */
+        display: grid;
+        padding: 10px;
+        gap: 3px;
+        grid-template-rows: .2fr 1fr 2fr 2fr 2fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'item1'
+        'item3'
+        'item5'
+        'item5'
+        'item4'
+        'item4'
+        ;
+    
+    }
+
+
+
+    .logo a{
+      position: relative;
+            display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    
+
+    }
+
+
+  
+    .item4{
+   
+        grid-area: item4;
+        background-color: white;
+          box-shadow: 0 10px 10px gray, 
+                    0 10px 10px silver;
+        position: relative;
+        /* overflow: scroll; */
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+        height: 80vh;
+       
+    ;
+    
+    }
+
+    .item5{
+   
+        grid-area: item5;
+        background-color: orange;
+          box-shadow: 0 10px 10px gray, 
+                    0 10px 10px silver;
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+    ;
+    
+    }
+
 }
