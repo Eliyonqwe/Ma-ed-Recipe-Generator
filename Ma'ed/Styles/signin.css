@@ -2,6 +2,9 @@
 	box-sizing: border-box;
 	/* overflow: hidden; */
 }
+body{
+    background-image: url('../pics/injera.JPG') 
+}
 
 h1 {
 	font-weight: bold;
@@ -86,7 +89,10 @@ input {
 	text-align: 20px;
 }
 
-
+.item1 a i{
+    color: orange;
+    background-color: white;
+}
 
 .item13 .i1{
     background-color: orange;
@@ -115,15 +121,23 @@ width: 100vw;
     
 }
 .logo a{
-	position: relative;
-    top: -70px;
-    left: -70px;
+   
+	position: absolute;
+	top: 30%;
 }
+
 .logo{
     height: 50px;
     width: 50px;
 }
 
+@media(max-width: 1500px){
+.logo a{
+	position: relative;
+    top: -70px;
+    left: 70px;
+}
+}
 
 @media(max-width: 700px){
 

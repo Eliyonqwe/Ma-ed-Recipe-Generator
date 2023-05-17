@@ -2,6 +2,9 @@
 	box-sizing: border-box;
 	/* overflow: hidden; */
 }
+body{
+    background-image: url('../pics/injera.JPG') 
+}
 
 h1 {
 	font-weight: bold;
@@ -91,6 +94,12 @@ input {
 
     grid-area: item1;
 }
+.item1 a{
+    color: orange;
+    background-color: white;
+    
+    
+}
 
 .item2{
 
@@ -102,6 +111,10 @@ input {
     grid-area: item3;
     
     
+}
+.item3{
+    background-color: white;
+    filter: blur();
 }
 .item4{
    
@@ -120,7 +133,7 @@ input {
 	padding: 0 40px;
 	text-align: center;
 	top: 0;
-;
+    
 
 }
 .item5{
