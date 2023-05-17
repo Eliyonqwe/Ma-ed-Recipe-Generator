@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     $foodID_query = "SELECT foodID from FOOD where foodName='$foodName'";
     $query_run = mysqli_query($con, $foodID_query);
     $foodid = mysqli_fetch_array($query_run);
-    echo $foodid[0];
+
     foreach ($ingList as $ing) {
         $ing_query2 = "SELECT ingID from ingredient where ingName='$ing'";
         $runquery = mysqli_query($con, $ing_query2);
