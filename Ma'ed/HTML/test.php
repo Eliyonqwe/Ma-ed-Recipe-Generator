@@ -1,16 +1,7 @@
   <?php
-    if (isset($_POST["submit"])) {
-        echo "<script>alert('Please adadXxadAAD')</script>";
-        $selected_ingredient_id = [];
+    $arr = array(1, 2, 26, 1, 2);
+    print_r(array_count_values($arr));
 
-
-        if (!empty($_POST["check"])) {
-            foreach ($_POST["check"] as $checked) {
-                echo "<script>alert('Please adadXxadAAD')</script>";
-                echo '<h1>' . $checked . '<hq>';
-            }
-        }
-    }
     ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -23,18 +14,6 @@
   </head>
 
   <body>
-      <form action="" method="get">
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-          <p> <input type="checkbox" name="a[]" id="">sd</p>
-
-          <input type="submit" name="find" value="">
-
-      </form>
-
 
   </body>
 

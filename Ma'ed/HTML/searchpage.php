@@ -1,4 +1,8 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -258,7 +262,7 @@
 
                     if (isset($_POST["find"])) {
 
-                        $selected_ingredient_id = [];
+                        $selected_ingredient_id = []; //holds selected ingredients id
 
 
                         if (!empty($_POST["check"])) {
@@ -272,6 +276,51 @@
                                 $foodid = mysqli_fetch_array($query_run);
                                 array_push($selected_ingredient_id, $foodid[0]);
                             }
+                            function foodIng()
+                            {
+                                $data = [[]];
+                                $con = mysqli_connect("localhost", "root", "", "maed");
+                                $query = "SELECT *from fooding";
+                                $get_fooding = mysqli_query($con, $query);
+                                while ($row = mysqli_fetch_array($get_fooding)) {
+                                    array_push($data, array($row["foodID"], $row["ingID"]));
+                                }
+                                return $data;
+                            }
+                            $food_ing_Table = foodIng();
+                            $foodList_id = [];
+                            foreach ($selected_ingredient_id as $ing_id) {
+                                foreach ($food_ing_Table as $f) {
+                                    if (isset($f[1])) {
+                                        if ($ing_id == $f[1]) {
+                                            array_push($foodList_id, $f[0]);
+                                        }
+                                    }
+                                }
+                            }
+                            $distinct_foodList_id = array_unique($foodList_id);
+                            $count_foodList_id = array_count_values($foodList_id);
+                            ksort($count_foodList_id);
+
+
+
+
+                            $displayedfoodid = [];
+                            foreach ($count_foodList_id as $foodid => $count) {
+
+                                $con = mysqli_connect("localhost", "root", "", "maed");
+                                $query = "SELECT Count(ingid) from fooding where foodid='$foodid'";
+                                $get_fooding = mysqli_query($con, $query);
+                                $requiredIngredient_count = mysqli_fetch_array($get_fooding);
+                                if ($requiredIngredient_count[0] == $count) {
+                                    echo 'Exact Match </br>';
+                                    array_push($displayedfoodid, $foodid);
+                                }
+                                if ($count > count($selected_ingredient_id) / (4 / 3)) {
+                                    array_push($displayedfoodid, $foodid);
+                                }
+                            }
+                            print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
                         } else {
 
                             echo "<script>alert('Please Select an Ingredient')</script>";
