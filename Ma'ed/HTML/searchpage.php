@@ -58,10 +58,12 @@
 
         <!-- ---------------------------------------------- -->
 
-        <div class="main">
-            <aside class="ingredient">
-                <section class="type1">
-                    <form action="" method="get">
+        <form action="" method="post">
+
+            <div class="main">
+                <aside class="ingredient">
+                    <section class="type1">
+
 
                         <header class="title">
                             <h2>Pantry</h2>
@@ -89,7 +91,7 @@
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach ($query_run as $ing) {
                                     ?>
-                                            <input type="checkbox" id="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
                                     <?php
                                         }
                                     } else {
@@ -115,7 +117,7 @@
                                         foreach ($query_run as $ing) {
                                     ?>
 
-                                            <input type="checkbox" id="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
                                     <?php
                                         }
                                     } else {
@@ -138,7 +140,8 @@
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach ($query_run as $ing) {
                                     ?>
-                                            <input type="checkbox" id="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+
                                     <?php
                                         }
                                     } else {
@@ -162,7 +165,7 @@
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach ($query_run as $ing) {
                                     ?>
-                                            <input type="checkbox" id="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
                                     <?php
                                         }
                                     } else {
@@ -186,7 +189,7 @@
                                     if (mysqli_num_rows($query_run) > 0) {
                                         foreach ($query_run as $ing) {
                                     ?>
-                                            <input type="checkbox" id="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
+                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
                                     <?php
                                         }
                                     } else {
@@ -228,23 +231,59 @@
                                 </p>
                             </fieldset>
                         </div>
-                    </form>
-                </section>
-                <section class="type2"></section>
-                <section class="type3"></section>
-                <section class="type4"></section>
-                <section class="type5"></section>
-                <section class="type6"></section>
-            </aside>
-            <article class="article">
-                <h1>
-                    Add your ingredients to get started Every ingredient you add unlocks
-                    more recipes
-                </h1>
-                <br />
-                <h2><button>Find my recipe</button></h2>
-            </article>
-        </div>
+
+                    </section>
+                    <section class="type2"></section>
+                    <section class="type3"></section>
+                    <section class="type4"></section>
+                    <section class="type5"></section>
+                    <section class="type6"></section>
+                </aside>
+                <article class="article">
+                    <h1>
+                        Add your ingredients to get started Every ingredient you add unlocks
+                        more recipes
+                    </h1>
+                    <br />
+                    <input type="submit" name="find" value="Find My Recipe">
+
+                    <?php
+                    // if (array_key_exists('read', $_POST)) {
+                    //     button();
+                    // }
+                    // function button()
+                    // {
+                    // }
+
+
+                    if (isset($_POST["find"])) {
+
+                        $selected_ingredient_id = [];
+
+
+                        if (!empty($_POST["check"])) {
+                            foreach ($_POST["check"] as $checked) {
+                                $con = mysqli_connect("localhost", "root", "", "maed");
+                                if (!$con) {
+                                    die('Could not connect: ' . mysqli_connect_error());
+                                }
+                                $getID_query = "SELECT ingID from ingredient where ingName='$checked'";
+                                $query_run = mysqli_query($con, $getID_query);
+                                $foodid = mysqli_fetch_array($query_run);
+                                array_push($selected_ingredient_id, $foodid[0]);
+                            }
+                        } else {
+
+                            echo "<script>alert('Please Select an Ingredient')</script>";
+                        }
+                    }
+                    ?>
+
+
+
+                </article>
+        </form>
+    </div>
     </div>
 </body>
 

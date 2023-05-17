@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
+    echo "<script>alert('Please adadXxadAAD')</script>";
     $foodName = $_POST["name"];
     $ingList = $_POST["ingList"];
     $ingid = 0;
