@@ -28,7 +28,7 @@
         <p>Enter your Email address <br>and password to LogIn</p>
         <input type="text" placeholder="   username" name="username" />
         <input type="password" placeholder=" Password" name="password" />
-       <a href="home.html"> <button>Sign In</button> </a>
+        <button name="signin_user">Sign In</button>
        <input type="checkbox" checked="checked" name="remeber">Remember Me
     </form>
        

@@ -6,8 +6,15 @@ $username = "";
 $email    = "";
 $errors = array(); 
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'mead');
+if (!$db) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -56,7 +63,7 @@ if (isset($_POST['reg_user'])) {
 }
 
 // LOGIN USER
-if (isset($_POST['login_user'])) {
+if (isset($_POST['signin_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
 
@@ -74,7 +81,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: index.php');
+  	  header('location: searchpage.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
