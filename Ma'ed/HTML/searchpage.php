@@ -70,7 +70,7 @@ error_reporting(E_ALL ^ E_NOTICE);
                 <aside class="ingredient">
                     <header class="title">
                         <h2>Pantry</h2>
-                        <h4>You have selected 0 ingredients</h4>
+                        <h4 id="ingredient-count">You have selected 0 ingredients</h4>
                         <label for="search">Search for Ingredient</label>
                         <a href="#"> <input type="search" id="pantry_search" placeholder="search" list="pantry_options" />
                             <span id="pantry_searchbtn" class="material-symbols-outlined" style="background-color: white;
