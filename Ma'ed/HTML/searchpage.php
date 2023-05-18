@@ -12,7 +12,8 @@ error_reporting(E_ALL ^ E_NOTICE);
     <title>Document</title>
     <link rel="stylesheet" href="../Styles/searchpage.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -30,7 +31,8 @@ error_reporting(E_ALL ^ E_NOTICE);
 
                     <ul>
                         <li id="normal">
-                            <a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
+                            <a href="#"><span class="material-symbols-outlined style"
+                                    style="line-height: 1">Home</span>Home</a>
                         </li>
                         <li id="normal">
                             <a href="#"><span class="material-symbols-outlined">groups</span> About
@@ -66,182 +68,76 @@ error_reporting(E_ALL ^ E_NOTICE);
 
             <div class="main">
                 <aside class="ingredient">
-                    <section class="type1">
+                    <header class="title">
+                        <h2>Pantry</h2>
+                        <h4>You have selected 0 ingredients</h4>
+                        <label for="search">Search for Ingredient</label>
+                        <a href="#"> <input type="search" id="pantry_search" placeholder="search" list="pantry_options" />
+                            <span id="pantry_searchbtn" class="material-symbols-outlined" style="background-color: white;
+                            color: black;">search
+                            </span>
+                            <datalist id="pantry_options">
+                                <?php
+                                include('connect.php');
+                                $sql = "SELECT * FROM ingredient ORDER BY ingName ASC";
+                                $result = mysqli_query($conn, $sql);
 
+                                // Loop through the results and display them by type
+                                $current_type = "";
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    // Display the ingredient name and description
+                                    echo "<option value='" . strtolower($row['ingName']) . "'>" . "</option>";
+                                }
 
-                        <header class="title">
-                            <h2>Pantry</h2>
-                            <h4>You have selected 0 ingredients</h4>
-                            <label for="search">Search for Ingredient</label>
-                            <a href="#"> <input type="search" id="search" placeholder="search" />
-                                <span class="material-symbols-outlined" style="background-color: white;
-                 color: black;">search
-                                </span>
+                                // Close the database connection
+                                mysqli_close($conn);
+                                ?>
+                            </datalist>
+                        </a>
+                    </header>
+                    <div class="collection">
+                        <?php
+                        include('connect.php');
+                        $sql = "SELECT * FROM ingredient ORDER BY ingType";
+                        $result = mysqli_query($conn, $sql);
 
-                            </a>
-                        </header>
-                        <div class="collection">
+                        // Loop through the results and display them by type
+                        $current_type = "";
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            if ($row['ingType'] != $current_type) {
+                                // Close the previous container div if it exists
+                                if ($current_type != "") {
+                                    echo "</div>";
+                                    echo "</div>";
+                                }
+                                // Start a new section for this type
+                                $current_type = $row['ingType'];
+                                echo "<div class='container " . strtolower($current_type) . "'>";
+                                echo "<div class='ingredients-title'>";
+                                echo "<h4>" . $current_type . "</h4>";
+                                echo "</div>";
+                                echo "<div class='ingredients " . strtolower($current_type) . "'>";
+                            }
+                            // Display the ingredient name and description
+                            // echo " <label id='" . strtolower($row['name']) . "'>" . $row['name'] . "</label>";
+                            ?>
+                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>"
+                                value="<?= $row['ingName']; ?>" /><label for="<?= strtolower($row['ingName']); ?>"><?= $row['ingName']; ?></label>
+                            <?php
+                        }
+                        // Close the last container div
+                        echo "</div>";
+                        echo "</div>";
+                        // Close the database connection
+                        mysqli_close($conn);
+                        ?>
+                    </div>
+                    <fieldset>
+                        <p>
+                            The only thing we assume you already have is salt and water
+                        </p>
+                    </fieldset>
 
-                            <div class="container one">
-                                <div class="ingridents-title">
-                                    <h4>Vegetables</h4>
-                                </div>
-                                <div class="ingredients one">
-                                    <?php
-                                    $con = mysqli_connect("localhost", "root", "", "maed");
-                                    $ing_query = "Select *from ingredient where ingType='Vegetables'";
-                                    $query_run = mysqli_query($con, $ing_query);
-
-                                    if (mysqli_num_rows($query_run) > 0) {
-                                        foreach ($query_run as $ing) {
-                                    ?>
-                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
-                                    <?php
-                                        }
-                                    } else {
-                                        echo '<p>No record found</p>';
-                                    }
-                                    ?>
-
-                                </div>
-                            </div>
-
-                            <div class="container two">
-
-                                <div class="ingridents-title">
-                                    <h4>Fruit</h4>
-                                </div>
-                                <div class="ingredients two">
-                                    <?php
-                                    $con = mysqli_connect("localhost", "root", "", "maed");
-                                    $ing_query = "Select *from ingredient where ingType='fruit'";
-                                    $query_run = mysqli_query($con, $ing_query);
-
-                                    if (mysqli_num_rows($query_run) > 0) {
-                                        foreach ($query_run as $ing) {
-                                    ?>
-
-                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
-                                    <?php
-                                        }
-                                    } else {
-                                        echo '<p>No record found</p>';
-                                    }
-                                    ?>
-                                </div>
-                            </div>
-                            <div class="container three">
-
-                                <div class="ingridents-title">
-                                    <h4>Dairy</h4>
-                                </div>
-                                <div class="ingredients three">
-                                    <?php
-                                    $con = mysqli_connect("localhost", "root", "", "maed");
-                                    $ing_query = "Select *from ingredient where ingType='dairy'";
-                                    $query_run = mysqli_query($con, $ing_query);
-
-                                    if (mysqli_num_rows($query_run) > 0) {
-                                        foreach ($query_run as $ing) {
-                                    ?>
-                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
-
-                                    <?php
-                                        }
-                                    } else {
-                                        echo '<p>No record found</p>';
-                                    }
-                                    ?>
-
-                                </div>
-                            </div>
-                            <div class="container four">
-
-                                <div class="ingridents-title">
-                                    <h4>Essentials</h4>
-                                </div>
-                                <div class="ingredients four">
-                                    <?php
-                                    $con = mysqli_connect("localhost", "root", "", "maed");
-                                    $ing_query = "Select *from ingredient where ingType='essentials'";
-                                    $query_run = mysqli_query($con, $ing_query);
-
-                                    if (mysqli_num_rows($query_run) > 0) {
-                                        foreach ($query_run as $ing) {
-                                    ?>
-                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
-                                    <?php
-                                        }
-                                    } else {
-                                        echo '<p>No record found</p>';
-                                    }
-                                    ?>
-
-                                </div>
-                            </div>
-                            <div class="container five">
-
-                                <div class="ingridents-title">
-                                    <h4>Stew</h4>
-                                </div>
-                                <div class="ingredients five">
-                                    <?php
-                                    $con = mysqli_connect("localhost", "root", "", "maed");
-                                    $ing_query = "Select *from ingredient where ingType='stew   '";
-                                    $query_run = mysqli_query($con, $ing_query);
-
-                                    if (mysqli_num_rows($query_run) > 0) {
-                                        foreach ($query_run as $ing) {
-                                    ?>
-                                            <input name="check[]" type="checkbox" id="<?= $ing['ingName']; ?>" value="<?= $ing['ingName']; ?>" /><label for="<?= $ing['ingName']; ?>"><?= $ing['ingName']; ?></label>
-                                    <?php
-                                        }
-                                    } else {
-                                        echo '<p>No record found</p>';
-                                    }
-                                    ?>
-                                </div>
-                            </div>
-
-                            <div class="container six">
-
-                                <div class="ingridents-title">
-                                    <h4>Type 1</h4>
-                                </div>
-                                <div class="ingredients six">
-                                    <label for="ing1">ing1</label>
-
-                                    <label for="ing2">ing2</label>
-
-                                    <label for="ing3">ing3</label>
-
-                                    <label for="ing4">ing4</label>
-
-                                    <label for="ing1">ing1</label>
-
-                                    <label for="ing2">ing2</label>
-
-                                    <label for="ing3">ing3</label>
-
-                                    <label for="ing4">ing4</label>
-
-                                </div>
-                            </div>
-
-
-                            <fieldset>
-                                <p>
-                                    The only thing we assume you already have is salt and water
-                                </p>
-                            </fieldset>
-                        </div>
-
-                    </section>
-                    <section class="type2"></section>
-                    <section class="type3"></section>
-                    <section class="type4"></section>
-                    <section class="type5"></section>
-                    <section class="type6"></section>
                 </aside>
                 <article class="article">
                     <h1>
@@ -258,12 +154,12 @@ error_reporting(E_ALL ^ E_NOTICE);
                     // function button()
                     // {
                     // }
-
+                    
 
                     if (isset($_POST["find"])) {
 
                         $selected_ingredient_id = []; //holds selected ingredients id
-
+                    
 
                         if (!empty($_POST["check"])) {
                             foreach ($_POST["check"] as $checked) {
@@ -334,6 +230,9 @@ error_reporting(E_ALL ^ E_NOTICE);
         </form>
     </div>
     </div>
+    <script type="module" src="../Scripts/jquery.js"></script>
+    <script type="module" src="../Scripts/searchpage.js"></script>
+
 </body>
 
 </html>

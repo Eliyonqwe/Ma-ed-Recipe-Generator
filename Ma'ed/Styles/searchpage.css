@@ -126,12 +126,6 @@ span[class^="material"]{
     display: none;
 }
 
-.wrapper{
-
-    
-}
-
-
 .main{
     display: grid;
     width: 100vw;
@@ -140,49 +134,56 @@ span[class^="material"]{
 
 
 .ingredient{
-        /* background-color: #213037; */
-        background-color: #f88e28;
-        height: 95vh;
-        /* padding: 1rem 1rem;
-        padding-right: 5rem;  */
-        grid-column: 1/2;
-         overflow-x: hidden; /*hide horizontal scroll*/
-        overflow-y: auto; /*enable vertical scroll for div when needed*/
-        text-align: center;
-        border-radius: 15px;
-        /* box-shadow: 0 1px 10px rgb(183, 183, 183); */
+    /* background-color: #213037; */
+    background-color: #f88e28;
+    height: 75vh;
+    /* padding: 1rem 1rem;
+    padding-right: 5rem;  */
+    grid-column: 1/2;
+    text-align: center;
+    border-radius: 15px;
+    /* box-shadow: 0 1px 10px rgb(183, 183, 183); */
 }
 .title{
-    color: white;
+color: white;
 }
 .collection{
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
+background-color: white;
+margin-top: 10px;
+border-radius: 15px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 10px;
+overflow-x: hidden; /*hide horizontal scroll*/
+overflow-y: auto; /*enable vertical scroll for div when needed*/
+height: 62vh;
 }
 .container{
-    box-shadow: 0 1px 10px rgb(183, 183, 183);
-    border-radius: 15px;
-    /* background-color: #f4ede5;  */
-    
-   
+box-shadow: 0 1px 10px rgb(183, 183, 183);
+border-radius: 15px;
+/* background-color: #f4ede5;  */
+
+
 }
 .ingredients{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap:wrap;
-    gap: 8px;
-    padding-bottom: 10px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap:wrap;
+
+gap: 8px;
+padding-bottom: 10px;
 }
 .ingridents-title{
-    padding: 10px;
+padding: 10px;
 }
-
+.ingredients label{
+border-radius: 10px;
+padding: 5px;
+background-color: rgb(224, 224, 224);
+cursor: pointer;
+}
 
 .article{
     /* background-color: #f88e28; */
