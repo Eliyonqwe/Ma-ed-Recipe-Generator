@@ -184,6 +184,9 @@ padding: 5px;
 background-color: rgb(224, 224, 224);
 cursor: pointer;
 }
+fieldset{
+    background-color: white;
+}
 
 .article{
     /* background-color: #f88e28; */
@@ -277,4 +280,37 @@ button:hover{
     #dropcheckbox:checked ~ ul{
         left: 0;
     }
+    
+    .main{
+        display: flex;
+        width: 100vw;
+        gap: 30px;
+        flex-direction: column;
+    }
+    
+    
+    .ingredient{
+        height: 40vh;
+       display: flex;
+       flex-direction: column;
+    }
+   
+    .ingredients{
+    flex-direction: row;
+    }
+
+
+    
+    .article{
+        /* background-color: #f88e28; */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+        line-height: 50px;
+    
+    }
+    
 }
