@@ -12,6 +12,15 @@ menuBtn.onchange = function() {
          menuLogo.innerHTML = 'menu';
     }
 }
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+      document.getElementById("header").style.top = "0";
+    } else {
+      document.getElementById("header").style.top = "-50px";
+    }
+ }
 
 const sr = ScrollReveal({
     distance : '45px',

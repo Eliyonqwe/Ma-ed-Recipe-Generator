@@ -13,7 +13,10 @@
 body{
     min-height: 100vh;
     
-    }
+        background-image: url('../pics/injera.JPG') ;
+   
+  
+}
 
 .header{
     /* position: fixed; */
@@ -27,6 +30,9 @@ body{
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  
     
 }
 .header .logo{
@@ -62,9 +68,12 @@ body{
 .navigation ul li a{
     font-size: calc(100% * 16px);
     padding: 1.3rem;
-    color: black;
+    color: white;
     display: block;
 
+}
+.navigation ul li a:hover{
+    color: #ffc107;
 }
 .navigation ul li#normal a::after{
     content: '';
@@ -267,6 +276,7 @@ input[type=text], input[type=password] {
     grid-template-columns: 50% 50%;
     gap: 5px;
     position: default;
+    
     /* height: 100vh; */
 }
 .main_box .floatingimg{
@@ -286,6 +296,13 @@ input[type=text], input[type=password] {
     min-width: 290px;
     max-width: 500px;
     animation: floatingMotion 3s ease-in-out infinite;
+}
+
+.main_box .text{
+    text-align: center;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+
 }
 @keyframes floatingMotion {
     0%,
@@ -313,12 +330,15 @@ input[type=text], input[type=password] {
     
 }
 
+.text> h1{
+    color: white;
+}
 .text > h3{
-    color: rgb(38, 38, 38);
+    color:white;
 }
 .text > h5{
     font-weight:400;
-    color: grey;
+    color: silver;
 }
  span#orange{
     color: #FFA500;
@@ -589,6 +609,7 @@ input[type=text], input[type=password] {
     
 }
 .aboutus_text{
+    
       padding-right: 15%;
       color: black;
     overflow:hidden;      
@@ -615,11 +636,18 @@ input[type=text], input[type=password] {
     grid-template-rows: 0.5fr 1fr;
 }
 .exploretitle{
+    color: white;
     grid-row: 1/2 ;
     padding: 5% 0;
     font-size: 2rem;
     grid-column: 1/4;
     text-align: center;
+    font-size: calc(1rem + 1.5vw);
+}
+.exploretitle h3{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+ 
     font-size: calc(1rem + 1.5vw);
 }
 .gridone{

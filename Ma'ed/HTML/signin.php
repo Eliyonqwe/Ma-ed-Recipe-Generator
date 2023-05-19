@@ -10,9 +10,9 @@
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="item1">  <a href="login.php"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
+  <div class="item1">  <a href="signup.php"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
     <div class="logo">
-      <a href="home.html"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
+      <a href="home.php"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
      </div>
     </div>
   
@@ -30,6 +30,7 @@
         <input type="password" placeholder=" Password" name="password" />
         <button name="signin_user">Sign In</button>
        <input type="checkbox" checked="checked" name="remeber">Remember Me
+       <p class="new">create new account!! <br>  <span><a href="signup.php">CLICK HERE!!!</a></span></p>
     </form>
        
       

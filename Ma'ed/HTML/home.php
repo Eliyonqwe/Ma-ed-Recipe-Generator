@@ -27,13 +27,13 @@
   <body>
     <noscript>You need to enable JavaScript to run this site.</noscript>
     <div class="wrapper">
-      <header class="header">
-        <section class="logo">
+      <header class="header" id="header">
+        <section class="logo" id="logo">
           <a href="home.html"
             ><img src="../pics/Maed_logo1-removebg.png" alt=""
           /></a>
         </section>
-        <section class="navigation">
+        <section class="navigation" id="navigation">
           <input type="checkbox" id="dropcheckbox" />
 
           <label id="dropcheckbox_label" for="dropcheckbox">
@@ -68,98 +68,13 @@
               <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
             </li> -->
             <li id="account">
-              <a href="login.html"
+              <a href="signup.php"
                 ><button class="account" onclick="">
                   <span class="material-symbols-outlined">person</span>Account
                 </button>
               </a>
             </li>
           </ul>
-       
-        
-        
-          <!-- Login Form  -->
-          <div id="id01" class="modal">
-            <form class="modal-content animate" action="/action_page.php" method="post">
-             
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                title="Close Model">&times;</span>
-                <img src="../pics/256-512.webp" alt="Avatar" class="avatar">
-              </div>
-            
-            
-              <div class="container">
-                <!-- <div class="wrappper">
-                  <div class="box">
-                    <div class="login">
-                      <div class="title"></div>
-                      <h2>Login</h2>
-                      <p>please login to use platform</p>
-                    </div>
-
-                    <form action="#">
-                      <div class="inputBox">
-                        <span class="icon"><box-icon type='solid' name='envelope'></box-icon></span> 
-                        <input type="email"  required>
-                        <label>email</label>
-                      </div>
-
-                      <div class="inputBox">
-                        <span class="icon"><box-icon name='lock' type='solid' ></box-icon></span> 
-                        <input type="text" required>
-                        <label >password</label>
-                      </div>
-                      <div class="forget">
-                        <label for=""><input type="checkbox"> remeber me</label>
-                        <a href="#">forget password?</a>
-                      </div>
-
-                      <button type="submit" class="btn">login</button>
-
-                      <div class="register">
-                        <p>dont have an account? <a href="#" class="link">Register</a></p>
-                      </div>
-
-
-                    </form>
-                  </div>
-                </div> -->
-
-
-
-
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="pass"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pass" required>
-
-                 <button type="submit">Login</button>
-                 <label>
-                  <input type="checkbox" checked="checked" name="remeber">Remember Me
-                 </label>
-
-              </div>
-
-              <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-              </div>
-
-
-            </form>
-
-          </div> 
-         <!--  /Login Form
-
-
-
-
-
-          <!-- <button id="dropdown">
-            <span class="material-symbols-outlined">menu</span> Menu
-          </button> -->
         </section>
       </header>
 

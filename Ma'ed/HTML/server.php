@@ -11,7 +11,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'mead');
+$db = mysqli_connect('localhost', 'root', '', 'maed');
 if (!$db) {
   die("Connection failed: " . mysqli_connect_error());
 }

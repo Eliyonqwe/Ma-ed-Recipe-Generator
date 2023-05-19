@@ -15,13 +15,13 @@
   <body>
     <div class="wrapper">
       <div class="item1">
-        <a href="home.html"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
+        <a href="home.php"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
       </div>
       <div class="item2"></div>
 
       <div class="item3">
         <div class="logo">
-          <a href="home.html"
+          <a href="home.php"
             ><img src="../pics/Maed_logo1-removebg.png" alt=""
           /></a>
         </div>

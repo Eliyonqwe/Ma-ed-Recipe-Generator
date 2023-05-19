@@ -110,6 +110,9 @@ input {
     width: 30%;
     height: 30%
 }
+.item13 p a{
+	color: white;
+}
 
 .containers555{
     height: 100vh;

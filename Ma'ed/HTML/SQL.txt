@@ -1,6 +1,174 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 17, 2023 at 11:22 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `maed`
+--
+
+-- --------------------------------------------------------
+--Table for user login
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+--
+-- Table structure for table `food`
+--
+
+
+CREATE TABLE `food` (
+  `foodID` int(11) NOT NULL,
+  `foodName` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `food`
+--
+
+INSERT INTO `food` (`foodID`, `foodName`) VALUES
+(1, 'Salad'),
+(2, 'Shiro'),
+(26, 'Burger');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fooding`
+--
+
+CREATE TABLE `fooding` (
+  `foodID` int(11) NOT NULL,
+  `ingID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fooding`
+--
+
+INSERT INTO `fooding` (`foodID`, `ingID`) VALUES
+(1, 101),
+(1, 102),
+(2, 101),
+(2, 102),
+(2, 103),
+(26, 101),
+(26, 115),
+(26, 118),
+(26, 121),
+(26, 123);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ingredient`
+--
+
+CREATE TABLE `ingredient` (
+  `ingID` int(11) NOT NULL,
+  `ingName` varchar(40) NOT NULL,
+  `ingType` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ingredient`
+--
+
+INSERT INTO `ingredient` (`ingID`, `ingName`, `ingType`) VALUES
+(101, 'Onion', 'Vegetables'),
+(102, 'Tomato', 'Vegetables'),
+(103, 'Shiro Powder', 'Stew'),
+(104, 'Garlic', 'Vegetables'),
+(105, 'pepper', 'Vegetables'),
+(106, 'carrot', 'Vegetables'),
+(107, 'potato', 'Vegetables'),
+(108, 'lemon', 'Fruit'),
+(109, 'apple', 'Fruit'),
+(110, 'orange', 'Fruit'),
+(111, 'bannana', 'Fruit'),
+(112, 'avocado', 'Fruit'),
+(113, 'mango', 'Fruit'),
+(114, 'milk', 'Dairy'),
+(115, 'cheese', 'Dairy'),
+(116, 'butter', 'Dairy'),
+(117, 'Egg', 'Essentials'),
+(118, 'oil', 'Essentials'),
+(119, 'sugar', 'Essentials'),
+(120, 'flour', 'Essentials'),
+(121, 'bread', 'Essentials'),
+(122, 'vinegar', 'Essentials'),
+(123, 'Beef', 'meat'),
+(124, 'chicken', 'meat'),
+(125, 'fish', 'meat');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `food`
+--
+ALTER TABLE `food`
+  ADD PRIMARY KEY (`foodID`);
+
+--
+-- Indexes for table `fooding`
+--
+ALTER TABLE `fooding`
+  ADD PRIMARY KEY (`foodID`,`ingID`),
+  ADD KEY `FK_ing` (`ingID`);
+
+--
+-- Indexes for table `ingredient`
+--
+ALTER TABLE `ingredient`
+  ADD PRIMARY KEY (`ingID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `food`
+--
+ALTER TABLE `food`
+  MODIFY `foodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `ingredient`
+--
+ALTER TABLE `ingredient`
+  MODIFY `ingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `fooding`
+--
+ALTER TABLE `fooding`
+  ADD CONSTRAINT `FK_food` FOREIGN KEY (`foodID`) REFERENCES `food` (`foodID`),
+  ADD CONSTRAINT `FK_ing` FOREIGN KEY (`ingID`) REFERENCES `ingredient` (`ingID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
