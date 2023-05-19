@@ -12,8 +12,7 @@ error_reporting(E_ALL ^ E_NOTICE);
     <title>Document</title>
     <link rel="stylesheet" href="../Styles/searchpage.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -31,8 +30,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
                     <ul>
                         <li id="normal">
-                            <a href="#"><span class="material-symbols-outlined style"
-                                    style="line-height: 1">Home</span>Home</a>
+                            <a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
                         </li>
                         <li id="normal">
                             <a href="#"><span class="material-symbols-outlined">groups</span> About
@@ -120,10 +118,9 @@ error_reporting(E_ALL ^ E_NOTICE);
                             }
                             // Display the ingredient name and description
                             // echo " <label id='" . strtolower($row['name']) . "'>" . $row['name'] . "</label>";
-                            ?>
-                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>"
-                                value="<?= $row['ingName']; ?>" /><label for="<?= strtolower($row['ingName']); ?>"><?= $row['ingName']; ?></label>
-                            <?php
+                        ?>
+                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
+                        <?php
                         }
                         // Close the last container div
                         echo "</div>";
@@ -154,12 +151,12 @@ error_reporting(E_ALL ^ E_NOTICE);
                     // function button()
                     // {
                     // }
-                    
+
 
                     if (isset($_POST["find"])) {
 
                         $selected_ingredient_id = []; //holds selected ingredients id
-                    
+
 
                         if (!empty($_POST["check"])) {
                             foreach ($_POST["check"] as $checked) {
@@ -208,11 +205,11 @@ error_reporting(E_ALL ^ E_NOTICE);
                                 $query = "SELECT Count(ingid) from fooding where foodid='$foodid'";
                                 $get_fooding = mysqli_query($con, $query);
                                 $requiredIngredient_count = mysqli_fetch_array($get_fooding);
-                                if ($requiredIngredient_count[0] == $count) {
-                                    echo 'Exact Match </br>';
-                                    array_push($displayedfoodid, $foodid);
-                                }
-                                if ($count > count($selected_ingredient_id) / (4 / 3)) {
+
+                                if ($count >= floor((($requiredIngredient_count[0]) * 0.75))) {
+                                    if ($requiredIngredient_count[0] == $count) {
+                                        echo 'Exact Match </br>';
+                                    }
                                     array_push($displayedfoodid, $foodid);
                                 }
                             }
