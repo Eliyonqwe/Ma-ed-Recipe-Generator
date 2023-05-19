@@ -119,7 +119,7 @@ error_reporting(E_ALL ^ E_NOTICE);
                             // Display the ingredient name and description
                             // echo " <label id='" . strtolower($row['name']) . "'>" . $row['name'] . "</label>";
                         ?>
-                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label for="<?= strtolower($row['ingName']); ?>"><?= $row['ingName']; ?></label>
+                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
                         <?php
                         }
                         // Close the last container div
