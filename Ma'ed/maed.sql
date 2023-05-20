@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2023 at 03:41 PM
+-- Generation Time: May 20, 2023 at 09:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -208,6 +208,26 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `username`, `gender`, `age`,
 (1, 'Tamiru', 'Kebede', 'tammy', 'M', 54, 'tammyking'),
 (2, 'Girma', 'Abebe', 'ggabe', 'M', 43, 'ggabebe');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_foods`
+--
+
+CREATE TABLE `user_foods` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `foodID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_foods`
+--
+
+INSERT INTO `user_foods` (`id`, `user_id`, `foodID`) VALUES
+(1, 1, 1),
+(2, 1, 2);
+
 --
 -- Indexes for dumped tables
 --
@@ -260,6 +280,14 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `user_foods`
+--
+ALTER TABLE `user_foods`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `foodID` (`foodID`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -300,6 +328,12 @@ ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `user_foods`
+--
+ALTER TABLE `user_foods`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -321,6 +355,13 @@ ALTER TABLE `nutritionfact`
 --
 ALTER TABLE `suggestion`
   ADD CONSTRAINT `FK_User` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `user_foods`
+--
+ALTER TABLE `user_foods`
+  ADD CONSTRAINT `user_foods_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `user_foods_ibfk_2` FOREIGN KEY (`foodID`) REFERENCES `food` (`foodID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
