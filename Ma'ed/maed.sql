@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2023 at 09:59 PM
+-- Generation Time: May 21, 2023 at 12:03 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -197,16 +197,17 @@ CREATE TABLE `users` (
   `username` varchar(30) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `age` int(11) NOT NULL,
-  `password` varchar(30) NOT NULL
+  `password` varchar(30) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `username`, `gender`, `age`, `password`) VALUES
-(1, 'Tamiru', 'Kebede', 'tammy', 'M', 54, 'tammyking'),
-(2, 'Girma', 'Abebe', 'ggabe', 'M', 43, 'ggabebe');
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `username`, `gender`, `age`, `password`, `email`) VALUES
+(1, 'Tamiru', 'Kebede', 'tammy', 'M', 54, 'tammyking', ''),
+(2, 'Girma', 'Abebe', 'ggabe', 'M', 43, 'ggabebe', '');
 
 -- --------------------------------------------------------
 
@@ -325,7 +326,7 @@ ALTER TABLE `suggestion`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_foods`
