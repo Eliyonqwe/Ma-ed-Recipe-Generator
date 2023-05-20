@@ -1,8 +1,3 @@
-<?php
-
-
-error_reporting(E_ALL ^ E_NOTICE);
-?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -140,12 +135,14 @@ error_reporting(E_ALL ^ E_NOTICE);
                 </aside>
                 <article class="article">
                     <h1>
-                        Add your ingredients to get started Every ingredient you add unlocks
+                        Select your ingredients to get started Every ingredient you add unlocks
                         more recipes
                     </h1>
                     <br />
                     <input type="submit" name="find" value="Find My Recipe">
-
+                   
+                   
+                   
                     <?php
                     // if (array_key_exists('read', $_POST)) {
                     //     button();
@@ -215,7 +212,37 @@ error_reporting(E_ALL ^ E_NOTICE);
                                     array_push($displayedfoodid, $foodid);
                                 }
                             }
+
                             print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
+                            
+                            include('connect.php');
+                            // Create a comma-separated string of IDs
+                            $id_list = (count($displayedfoodid)>2) ? $displayedfoodid : implode(',', $displayedfoodid);
+                            
+                             // Build the SQL query
+                             $sql = "SELECT * FROM food WHERE foodID IN ($id_list)";
+     
+                             // Execute the query
+                             $result = mysqli_query($conn, $sql);
+                            ?>
+                             <div class="search_results">
+                            
+                            <?php
+
+                             // Loop through the results
+                             while ($row = mysqli_fetch_assoc($result)) {
+                             // Do something with each row
+                              ?>
+                              <div class="<?= $row['foodName'].' '.'result'; ?>">
+                              <img src="<?= $row['foodImg']; ?>"alt="<?= $row['foodName'].' '.'picture';  ?> ">
+                              <h3><?=$row['foodName']; ?></h3>  
+                              <p><?=$row['description']; ?> description</p>
+                              </div>
+                             <?php
+                             }
+                             ?>
+                              </div>
+                             <?php
                         } else {
 
                             echo "<script>alert('Please Select an Ingredient')</script>";
