@@ -6,8 +6,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>signup</title>
+  <title>Signup</title>
   <link rel="stylesheet" href="../styles/signup.css" />
+  <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
+
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -40,18 +42,20 @@
         </p>
         <input required type="text" placeholder="First Name" name="fname" value="" />
         <input required type="text" placeholder="Last Name" name="lname" value="" />
-        <input required type="number" id="age" name="age" min="0" max="150">
-        <label for="gender">Gender:</label>
+        <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
+
         <select id="gender" name="gender">
+          <option value="" style="color:grey" disabled selected hidden>Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select>
+
 
         <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" />
         <input type="email" placeholder="  Email" name="email" value="<?php echo $email; ?>" />
         <input type="password" placeholder=" Password" name="password_1" />
         <input type="password" placeholder="Repeat Password" name="password_2" />
-        <button type="submit" name="reg_user">Sign Up</button>
+        <button type="submit" class="signup" name="reg_user">Sign Up</button>
       </form>
     </div>
 
@@ -61,7 +65,7 @@
         The First Recipe Generator Site in Ethiopia.
       </h1>
       <p>Sign In your Account and start journey with us</p>
-      <a href="signin.php"><button>Sign In</button></a>
+      <button class="signin"><a href="signin.php">Sign In</a></button>
     </div>
 
     <div class="item6"></div>
