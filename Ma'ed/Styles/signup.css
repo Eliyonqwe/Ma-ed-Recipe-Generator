@@ -1,6 +1,10 @@
 * {
-    box-sizing: border-box;
-    /* overflow: hidden; */
+    margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+        text-decoration: none;
+
 }
 
 body {
@@ -11,11 +15,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 100vw;
-    backdrop-filter: blur(5px);
-
+    width: 100%;
+    backdrop-filter: blur(2px);
 }
-
 h1 {
     font-weight: bold;
 }
@@ -23,64 +25,38 @@ h1 {
 h2 {
     text-align: center;
 }
-
-h4 {
-    text-align: center;
-    font-weight: bold;
-    bottom: 10%;
+h4{
+	text-align: center;
+	font-weight: bold;
+    margin-top: 1rem;
+	bottom: 10%;
 }
 
 p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 1px;
-    margin: 20px 0 30px;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 1px;
+	margin: 20px 0 30px;
+
+}
+.item4 p{
+        color: #282828;
+            font-weight: bolder;
 }
 
 span {
     font-size: 12px;
 }
 
-a {
-    color: black;
-    font-size: 15px;
-    text-decoration: none;
-    margin: 15px;
+.icon-login a {
+	color: black;
+	font-size: 15px;
+    border-radius: 10rem;
+	text-decoration: none;
+	margin: 15px ;
 }
 
-button {
-    border-radius: 20px;
-    border: 3px solid rgb(233, 233, 233);
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 2px;
-    text-transform: uppercase; 
-    background-color: #ff7141;
-	transition: background-color 0.5s,transform 0.3s;
-	transform: scale(0.95);
-    cursor: pointer;
-}
-
-button:hover {
-	transform: scale(1);
-	background-color:#ff642f;
-}
-
-
-
-
-button.Sign {
-    background-color: transparent;
-    border-color: #FFFFFF;
-    transition: background 0.5s;
-}
-
-button.Sign:active {
-    background-color: white;
-}
 
 form {
     background-color: white;
@@ -94,29 +70,43 @@ form {
 }
 
 input {
-    border-radius: 5px;
+    background-color: rgb(195, 185, 185);
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	color: white;
+	text-align: 20px;
+    border-radius: 0.4rem;
+}
+select {
+    border-radius: 0.4rem;
+    border: none;
+    
+    background-color: rgb(195, 185, 185);
+    width: 100%;
     padding: 12px 15px;
     margin: 8px 0;
-    width: 100%;
-    color: black;
-    text-align: 20px;
-}
+    color: #777777;
 
+}
+option{
+    background-color: #ffffff;
+}
 
 .item1 {
 
     grid-area: item1;
 }
-
-.item1 a {
-    color: orange;
+.item1 a{
+    color: #ffa500;
     background-color: white;
 
 
 }
 
-.item2 {
-
+.item2{
+    
     grid-area: item2;
 
 }
@@ -154,14 +144,15 @@ input {
 
 }
 
-.item5 {
+.item5{
     grid-area: item5;
-    background-color: #ffd7c9;
-    box-shadow: -4.58962px 47.0436px 137.689px rgba(0, 0, 0, 0.14);
-    position: relative;
-    overflow: hidden;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 25px;
+    background-color:#ffa500;
+  	box-shadow: 0 10px 10px gray, 
+			    0 10px 10px silver;
+	position: relative;
+	overflow: hidden;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 25px;
 
     display: flex;
     align-items: center;
@@ -174,11 +165,62 @@ input {
     top: 0;
 
 }
+button.signup{
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 10rem;
+    background-color: #ffa500;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+        padding: 0.5rem 0.5rem;
+    color: white;
+    transition: 0.3s ease;
+    margin-top: 2rem;
+    
+}
+button.signin {
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 10rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
 
 
-/* body{
-    overflow: hidden;
-} */
+    padding: 0.5rem 0.5rem;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.signin a {
+    text-decoration: none;
+    color: black;
+    
+}
+.signin:hover{
+    cursor: pointer;
+        transform: scale(0.9);
+        background-color: white;
+        transition: 0.3s;
+        box-shadow: 0 0 5px white,
+            0 0 5px white,
+            0 0 5px white,
+            0 0 5px white;
+}
+.signup:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    background-color: #FFA500;
+    transition: 0.3s;
+    box-shadow: 0 0 5px orange,
+        0 0 5px orange,
+        0 0 5px orange,
+        0 0 5px orange;
+}
 
 .logo a {
 
@@ -267,9 +309,9 @@ input {
     .item5 {
 
         grid-area: item5;
-        background-color: orange;
-        box-shadow: 0 10px 10px gray,
-            0 10px 10px silver;
+        background-color: #ffa500;
+          box-shadow: 0 10px 10px gray, 
+                    0 10px 10px silver;
         position: relative;
         overflow: hidden;
         border-top-left-radius: 50px;
