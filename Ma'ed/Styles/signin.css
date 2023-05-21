@@ -1,9 +1,18 @@
 * {
-	box-sizing: border-box;
-	/* overflow: hidden; */
+	margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+		text-decoration: none;
 }
 body{
-    background-image: url('../pics/injera.JPG') 
+    background-image: url('../pics/injera.JPG');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
 }
 
 h1 {
@@ -38,34 +47,34 @@ a {
 	margin: 15px ;
 }
 
-button {
-	border-radius: 20px;
-	border: 3px solid rgb(233, 233, 233);
-	background-color: orange;
-	color: white;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	transition: background 0.5s;
+
+input[name="password"]{
+	margin-bottom: 2rem;
 }
 
-button:active {
-	transform: scale(0.95);
-	background-color:white;
-}
-
-
-
-button.Sign {
-	background-color: transparent;
-	border-color: #FFFFFF;
-	transition: background 0.5s;
-}
-
-button.Sign:active{
+button.signin {
+	border: none;
+	outline: none;
+	height: 2rem;
+	width: 10rem;
 	background-color: white;
+	border-radius: 1.5rem;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem 0.5rem;
+	color: black;
+	transition: 0.3s ease;
+
+}
+button.signin:hover {
+	cursor: pointer;
+	transform: scale(0.9);
+	background-color: white;
+	transition: 0.3s;
+	box-shadow: 0 0 5px white,
+		0 0 5px white,
+		0 0 5px white,
+		0 0 5px white;
 }
 
 form {
