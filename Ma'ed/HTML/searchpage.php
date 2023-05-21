@@ -224,7 +224,7 @@
                             if (count($displayedfoodid) == 0) {
                                 echo "<h3>No foods found!</h3>";
                             } else {
-                                $id_list = (count($displayedfoodid) > 2) ? $displayedfoodid : implode(',', $displayedfoodid);
+                                $id_list = (count($displayedfoodid) < 2) ? implode("",$displayedfoodid) : implode(',', $displayedfoodid);
 
                                 // Build the SQL query
                                 $sql = "SELECT * FROM food WHERE foodID IN ($id_list)";
