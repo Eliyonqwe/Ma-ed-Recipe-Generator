@@ -40,7 +40,7 @@
           Enter your personal details <br />
           to Resgister
         </p>
-        <input required type="text" placeholder="First Name" name="fname" value="" />
+        <input required type="text" placeholder="First Name" name="fname" value="<?php echo $fname; ?>" />
         <input required type="text" placeholder="Last Name" name="lname" value="" />
         <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
 
