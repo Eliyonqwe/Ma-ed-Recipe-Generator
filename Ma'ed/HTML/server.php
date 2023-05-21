@@ -25,8 +25,8 @@ if (!$db) {
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $fname = mysqli_real_escape_string($db, $_POST['fname']);
-  $lname = mysqli_real_escape_string($db, $_POST['lname']);
+  $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
+  $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
   $age = mysqli_real_escape_string($db, $_POST['age']);
   $gender = mysqli_real_escape_string($db, $_POST['gender']);
   $username = mysqli_real_escape_string($db, $_POST['username']);

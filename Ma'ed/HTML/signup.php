@@ -43,7 +43,6 @@
         <input required type="text" placeholder="First Name" name="fname" value="<?php echo $fname; ?>" />
         <input required type="text" placeholder="Last Name" name="lname" value="" />
         <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
-
         <select id="gender" name="gender">
           <option value="" style="color:grey" disabled selected hidden>Gender</option>
           <option value="male">Male</option>

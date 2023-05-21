@@ -6,7 +6,10 @@
         text-decoration: none;
 
 }
-body{
+
+body {
+    font-family: 'Lexend', serif;
+    font-style: normal;
     background-image: url('../pics/injera.JPG');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -16,11 +19,11 @@ body{
     backdrop-filter: blur(2px);
 }
 h1 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 h2 {
-	text-align: center;
+    text-align: center;
 }
 h4{
 	text-align: center;
@@ -43,7 +46,7 @@ p {
 }
 
 span {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 .icon-login a {
@@ -56,14 +59,14 @@ span {
 
 
 form {
-	background-color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 50px;
-	height: 100%;
-	text-align: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    height: 100%;
+    text-align: center;
 }
 
 input {
@@ -91,15 +94,15 @@ option{
     background-color: #ffffff;
 }
 
-.item1{
+.item1 {
 
     grid-area: item1;
 }
 .item1 a{
     color: #ffa500;
     background-color: white;
-    
-    
+
+
 }
 
 .item2{
@@ -107,34 +110,37 @@ option{
     grid-area: item2;
 
 }
-.item3{
+
+.item3 {
 
     grid-area: item3;
-    
-    
+
+
 }
-.item3{
+
+.item3 {
     /* background-color: ; */
     filter: blur();
 }
-.item4{
-   
+
+.item4 {
+
     grid-area: item4;
     background-color: white;
-  	box-shadow: 0 10px 10px rgb(185, 180, 180), 
-			    0 10px 10px silver;
-	position: relative;
-	overflow: hidden;
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 25px;
+    box-shadow: 0 10px 10px rgb(185, 180, 180),
+        0 10px 10px silver;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 25px;
     display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+
 
 }
 
@@ -148,15 +154,15 @@ option{
 	border-top-right-radius: 50px;
 	border-bottom-right-radius: 25px;
 
-        display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
+
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
 
 }
 button.signup{
@@ -216,31 +222,31 @@ button.signin {
         0 0 5px orange;
 }
 
-.logo a{
-   
-	position: absolute;
-	top: 30%;
+.logo a {
+
+    position: absolute;
+    top: 30%;
 
 }
 
-.wrapper{
+.wrapper {
     height: 100vh;
     display: grid;
     padding: 10px;
     gap: 3px;
-    grid-template-rows: .2fr 2fr 2fr ;
+    grid-template-rows: .2fr 2fr 2fr;
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-areas:
-    'item1 item1 item2 item2'
-    'item3 item3 item4 item5'
-    'item3 item3 item4 item5'
+        'item1 item1 item2 item2'
+        'item3 item3 item4 item5'
+        'item3 item3 item4 item5'
     ;
 }
 
-@media(max-width: 1200px){
-   
+@media(max-width: 1200px) {
 
-    .wrapper{
+
+    .wrapper {
         /* overflow: scroll; */
         height: 130vh;
         /* width: 100vh; */
@@ -250,37 +256,37 @@ button.signin {
         grid-template-rows: .2fr 1fr 2fr 2fr 2fr 2fr;
         grid-template-columns: 1fr;
         grid-template-areas:
-        'item1'
-        'item3'
-        'item5'
-        'item5'
-        'item4'
-        'item4'
+            'item1'
+            'item3'
+            'item5'
+            'item5'
+            'item4'
+            'item4'
         ;
-    
+
     }
 
 
 
-    .logo a{
-      position: relative;
-            display: flex;
+    .logo a {
+        position: relative;
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
-    
+
+
 
     }
 
 
-  
-    .item4{
-   
+
+    .item4 {
+
         grid-area: item4;
         background-color: white;
-          box-shadow: 0 10px 10px gray, 
-                    0 10px 10px silver;
+        box-shadow: 0 10px 10px gray,
+            0 10px 10px silver;
         position: relative;
         /* overflow: scroll; */
         border-top-left-radius: 50px;
@@ -295,13 +301,13 @@ button.signin {
         text-align: center;
         top: 0;
         height: 80vh;
-       
-    ;
-    
+
+        ;
+
     }
 
-    .item5{
-   
+    .item5 {
+
         grid-area: item5;
         background-color: #ffa500;
           box-shadow: 0 10px 10px gray, 
@@ -319,8 +325,8 @@ button.signin {
         padding: 0 40px;
         text-align: center;
         top: 0;
-    ;
-    
+        ;
+
     }
 
 }
