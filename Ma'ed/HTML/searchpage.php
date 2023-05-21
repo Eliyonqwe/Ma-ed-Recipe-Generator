@@ -236,33 +236,52 @@
 
                                     <?php
 
-
                                     // Loop through the results
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         // Do something with each row
                                         ?>
                                         <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
                                             <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
-                                            <h3>
+                                            <h3 id="<?= $row['foodID']; ?>">
                                                 <?= $row['foodName']; ?>
                                             </h3>
                                             <p>
-                                                <?= $row['description']; ?> description
+                                                <?= $row['description']; ?>
                                             </p>
                                         </div>
                                         <?php
+                                    
                                     }
                             }
                             ?>
                             </div>
                             <?php
+
                         } else {
 
-                            echo "<script>alert('Please Select an Ingredient')</script>";
+                            echo "<h3>Please Select an Ingredient</h3>";
                         }
                     }
                     ?>
+                    <script>
+                        // Get all the div elements with class "result"
+                        // Get all the div elements with class "result"
+                        var results = document.querySelectorAll('.result');
+                        //
+                        // Loop through each div and add an event listener
+                        results.forEach(function (div) {
+                            div.addEventListener('click', function () {
+                                // Do something when the div is clicked
+                                console.log('Div clicked!');
+                                id = this.querySelector('h3').getAttribute('id');
+                                //console.log(id);
+                                window.location.href = 'ResultPage.php?id=' + id;
+                    
+                            });
+                        });
 
+
+                    </script>
 
 
                 </article>

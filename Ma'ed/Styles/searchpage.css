@@ -204,6 +204,7 @@ fieldset{
         padding: 20px;
         height: auto;
         border-radius: 10px;
+        cursor: pointer;
       }
       .result img{
         float: left;
