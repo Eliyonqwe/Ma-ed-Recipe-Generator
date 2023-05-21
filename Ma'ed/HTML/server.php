@@ -25,8 +25,8 @@ if (!$db) {
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
-  $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
+  $fname = mysqli_real_escape_string($db, $_POST['fname']);
+  $lname = mysqli_real_escape_string($db, $_POST['lname']);
   $age = mysqli_real_escape_string($db, $_POST['age']);
   $gender = mysqli_real_escape_string($db, $_POST['gender']);
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -104,7 +104,9 @@ if (isset($_POST['signin_user'])) {
   }
 
   if (count($errors) == 0) {
+    echo $username;
     $password = md5($password);
+    echo $password;
     $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
