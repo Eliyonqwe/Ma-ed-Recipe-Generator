@@ -2,6 +2,8 @@
 session_start();
 
 // initializing variables
+$firstName="";
+$lastName="";
 $username = "";
 $email    = "";
 $errors = array(); 
@@ -19,8 +21,8 @@ if (!$db) {
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $fname = mysqli_real_escape_string($db, $_POST['fname']);
-  $lname = mysqli_real_escape_string($db, $_POST['lname']);
+  $firstName = mysqli_real_escape_string($db, $_POST['firstName']);
+  $lastName = mysqli_real_escape_string($db, $_POST['lastName']);
   $age = mysqli_real_escape_string($db, $_POST['age']);
   $gender = mysqli_real_escape_string($db, $_POST['gender']);
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -30,8 +32,8 @@ if (isset($_POST['reg_user'])) {
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
-  if (empty($fname)) { array_push($errors, "First Name is required"); }
-  if (empty($lname)) { array_push($errors, "Last Name is required"); }
+  if (empty($firstName)) { array_push($errors, "First Name is required"); }
+  if (empty($lastName)) { array_push($errors, "Last Name is required"); }
   if (empty($age)) { array_push($errors, "Age is required"); }
   if ($age>200) { array_push($errors, "Age invalid age input!"); }
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -61,8 +63,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO users (firstName, lastName, username, gender, age, password, email) 
+  			  VALUES('$firstName','$lastName','$username','$gender','$age','$password','$email')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";

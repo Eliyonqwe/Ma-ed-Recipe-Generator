@@ -40,9 +40,9 @@
             Enter your personal details <br />
             to Resgister
           </p>
-          <input required type="text" placeholder="First Name" name="fname" value=""/>
-          <input required  type="text" placeholder="Last Name" name="lname" value=""/> 
-          <input required  type="number" id="age" name="age" min="0" max="150" >  
+          <input required type="text" placeholder="First Name" name="firstName" value="<?php echo $firstName; ?>"/>
+          <input required  type="text" placeholder="Last Name" name="lastName" value="<?php echo $lastName; ?>"/> 
+          <input required  type="number" placeholder="age" id="age" name="age" min="0" max="150" >  
             <label for="gender">Gender:</label>
             <select id="gender" name="gender">
                 <option value="male">Male</option>
