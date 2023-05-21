@@ -3,7 +3,14 @@
 	/* overflow: hidden; */
 }
 body{
-    background-image: url('../pics/injera.JPG') 
+    background-image: url('../pics/injera.JPG');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+  
 }
 
 h1 {
