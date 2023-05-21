@@ -1,9 +1,16 @@
+
+/* Set the font family for body text */
+body {
+	font-family: 'Lexend',serif;
+	font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
 	/* overflow: hidden; */
 }
 body{
-    background-image: url('../pics/injera.JPG') 
+    /* background-image: url('../pics/injera.JPG')  */
 }
 
 h1 {
@@ -32,7 +39,6 @@ span {
 }
 
 a {
-	color: black;
 	font-size: 15px;
 	text-decoration: none;
 	margin: 15px ;
@@ -41,19 +47,22 @@ a {
 button {
 	border-radius: 20px;
 	border: 3px solid rgb(233, 233, 233);
-	background-color: orange;
 	color: white;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	transition: background 0.5s;
+	background-color: #ff7141;
+	transition: background-color 0.5s,transform 0.3s;
+	transform: scale(0.95);
+	cursor: pointer;
+	margin-top: 10px;
 }
 
-button:active {
-	transform: scale(0.95);
-	background-color:white;
+button:hover {
+	transform: scale(1);
+	background-color:#ff642f;
 }
 
 
@@ -80,12 +89,12 @@ form {
 }
 
 input {
-	background-color: rgb(195, 185, 185);
 	border: none;
+	border-bottom:1px solid grey ;
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
-	color: white;
+	color: black;
 	text-align: 20px;
 }
 
@@ -95,8 +104,8 @@ input {
 }
 
 .item13 .i1{
-    background-color: orange;
-    
+    background-color: white;
+    box-shadow: -4.58962px 47.0436px 137.689px rgba(0, 0, 0, 0.14);	
    width: 500px;
    border-top-left-radius: 50px;
    border-top-right-radius: 50px;

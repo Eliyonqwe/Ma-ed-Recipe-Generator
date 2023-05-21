@@ -9,7 +9,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../Styles/searchpage.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -27,7 +28,8 @@
 
                     <ul>
                         <li id="normal">
-                            <a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
+                            <a href="#"><span class="material-symbols-outlined style"
+                                    style="line-height: 1">Home</span>Home</a>
                         </li>
                         <li id="normal">
                             <a href="#"><span class="material-symbols-outlined">groups</span> About
@@ -67,7 +69,8 @@
                         <h2>Pantry</h2>
                         <h4 id="ingredient-count">You have selected 0 ingredients</h4>
                         <label for="search">Search for Ingredient</label><br>
-                        <a href="#"> <input type="search" id="pantry_search" placeholder="search" list="pantry_options" />
+                        <a href="#"> <input type="search" id="pantry_search" placeholder="search"
+                                list="pantry_options" />
                             <span id="pantry_searchbtn" class="material-symbols-outlined" style="background-color: white;
                             color: black;">search
                             </span>
@@ -115,9 +118,10 @@
                             }
                             // Display the ingredient name and description
                             // echo " <label id='" . strtolower($row['name']) . "'>" . $row['name'] . "</label>";
-                        ?>
-                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
-                        <?php
+                            ?>
+                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>"
+                                value="<?= $row['ingName']; ?>" /><label for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
+                            <?php
                         }
                         // Close the last container div
                         echo "</div>";
@@ -140,9 +144,9 @@
                     </h1>
                     <br />
                     <input type="submit" name="find" value="Find My Recipe">
-                   
-                   
-                   
+
+
+
                     <?php
                     // if (array_key_exists('read', $_POST)) {
                     //     button();
@@ -150,12 +154,12 @@
                     // function button()
                     // {
                     // }
-
+                    
 
                     if (isset($_POST["find"])) {
 
                         $selected_ingredient_id = []; //holds selected ingredients id
-
+                    
 
                         if (!empty($_POST["check"])) {
                             foreach ($_POST["check"] as $checked) {
@@ -214,35 +218,44 @@
                             }
 
                             print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
-                            
+                    
                             include('connect.php');
                             // Create a comma-separated string of IDs
-                            $id_list = (count($displayedfoodid)>2) ? $displayedfoodid : implode(',', $displayedfoodid);
-                            
-                             // Build the SQL query
-                             $sql = "SELECT * FROM food WHERE foodID IN ($id_list)";
-     
-                             // Execute the query
-                             $result = mysqli_query($conn, $sql);
-                            ?>
-                             <div class="search_results">
-                            
-                            <?php
+                            if (count($displayedfoodid) == 0) {
+                                echo "<h3>No foods found!</h3>";
+                            } else {
+                                $id_list = (count($displayedfoodid) > 2) ? $displayedfoodid : implode(',', $displayedfoodid);
 
-                             // Loop through the results
-                             while ($row = mysqli_fetch_assoc($result)) {
-                             // Do something with each row
-                              ?>
-                              <div class="<?= $row['foodName'].' '.'result'; ?>">
-                              <img src="<?= $row['foodImg']; ?>"alt="<?= $row['foodName'].' '.'picture';  ?> ">
-                              <h3><?=$row['foodName']; ?></h3>  
-                              <p><?=$row['description']; ?> description</p>
-                              </div>
-                             <?php
-                             }
-                             ?>
-                              </div>
-                             <?php
+                                // Build the SQL query
+                                $sql = "SELECT * FROM food WHERE foodID IN ($id_list)";
+
+                                // Execute the query
+                                $result = mysqli_query($conn, $sql);
+                                ?>
+                                <div class="search_results">
+
+                                    <?php
+
+
+                                    // Loop through the results
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        // Do something with each row
+                                        ?>
+                                        <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
+                                            <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
+                                            <h3>
+                                                <?= $row['foodName']; ?>
+                                            </h3>
+                                            <p>
+                                                <?= $row['description']; ?> description
+                                            </p>
+                                        </div>
+                                        <?php
+                                    }
+                            }
+                            ?>
+                            </div>
+                            <?php
                         } else {
 
                             echo "<script>alert('Please Select an Ingredient')</script>";

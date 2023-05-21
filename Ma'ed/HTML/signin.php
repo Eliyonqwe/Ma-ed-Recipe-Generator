@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>signin</title>
   <link rel="stylesheet" href="../styles/signin.css">
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lexend">
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -30,7 +32,7 @@
         <input type="password" placeholder=" Password" name="password" />
         <button name="signin_user">Sign In</button>
        <input type="checkbox" checked="checked" name="remeber">Remember Me
-       <p class="new">create new account!! <br>  <span><a href="signup.php">CLICK HERE!!!</a></span></p>
+       <p class="new">Don't have an account?</p><a href="signup.php">CLICK HERE!</a>
     </form>
        
       

@@ -1,8 +1,11 @@
 * {
-	box-sizing: border-box;
-	/* overflow: hidden; */
+    box-sizing: border-box;
+    /* overflow: hidden; */
 }
-body{
+
+body {
+    font-family: 'Lexend', serif;
+    font-style: normal;
     background-image: url('../pics/injera.JPG');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -10,158 +13,165 @@ body{
     height: 100%;
     width: 100vw;
     backdrop-filter: blur(5px);
-  
+
 }
 
 h1 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 h2 {
-	text-align: center;
+    text-align: center;
 }
-h4{
-	text-align: center;
-	font-weight: bold;
-	bottom: 10%;
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    bottom: 10%;
 }
 
 p {
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 1px;
-	margin: 20px 0 30px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 20px 0 30px;
 }
 
 span {
-	font-size: 12px;
+    font-size: 12px;
 }
 
 a {
-	color: black;
-	font-size: 15px;
-	text-decoration: none;
-	margin: 15px ;
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 15px;
 }
 
 button {
-	border-radius: 20px;
-	border: 3px solid rgb(233, 233, 233);
-	background-color: orange;
-	color: white;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	transition: background 0.5s;
+    border-radius: 20px;
+    border: 3px solid rgb(233, 233, 233);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 2px;
+    text-transform: uppercase; 
+    background-color: #ff7141;
+	transition: background-color 0.5s,transform 0.3s;
+	transform: scale(0.95);
+    cursor: pointer;
 }
 
-button:active {
-	transform: scale(0.95);
-	background-color:white;
+button:hover {
+	transform: scale(1);
+	background-color:#ff642f;
 }
+
 
 
 
 button.Sign {
-	background-color: transparent;
-	border-color: #FFFFFF;
-	transition: background 0.5s;
+    background-color: transparent;
+    border-color: #FFFFFF;
+    transition: background 0.5s;
 }
 
-button.Sign:active{
-	background-color: white;
+button.Sign:active {
+    background-color: white;
 }
 
 form {
-	background-color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 50px;
-	height: 100%;
-	text-align: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    height: 100%;
+    text-align: center;
 }
 
 input {
-	background-color: rgb(195, 185, 185);
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-	color: white;
-	text-align: 20px;
+    border-radius: 5px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    color: black;
+    text-align: 20px;
 }
 
 
-.item1{
+.item1 {
 
     grid-area: item1;
 }
-.item1 a{
+
+.item1 a {
     color: orange;
     background-color: white;
-    
-    
+
+
 }
 
-.item2{
+.item2 {
 
     grid-area: item2;
 
 }
-.item3{
+
+.item3 {
 
     grid-area: item3;
-    
-    
+
+
 }
-.item3{
+
+.item3 {
     /* background-color: ; */
     filter: blur();
 }
-.item4{
-   
+
+.item4 {
+
     grid-area: item4;
     background-color: white;
-  	box-shadow: 0 10px 10px rgb(185, 180, 180), 
-			    0 10px 10px silver;
-	position: relative;
-	overflow: hidden;
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 25px;
+    box-shadow: 0 10px 10px rgb(185, 180, 180),
+        0 10px 10px silver;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 25px;
     display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+
 
 }
-.item5{
+
+.item5 {
     grid-area: item5;
-    background-color:orange;
-  	box-shadow: 0 10px 10px gray, 
-			    0 10px 10px silver;
-	position: relative;
-	overflow: hidden;
-	border-top-right-radius: 50px;
-	border-bottom-right-radius: 25px;
+    background-color: #ffd7c9;
+    box-shadow: -4.58962px 47.0436px 137.689px rgba(0, 0, 0, 0.14);
+    position: relative;
+    overflow: hidden;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 25px;
 
-        display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
+
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
 
 }
 
@@ -170,31 +180,31 @@ input {
     overflow: hidden;
 } */
 
-.logo a{
-   
-	position: absolute;
-	top: 30%;
+.logo a {
+
+    position: absolute;
+    top: 30%;
 
 }
 
-.wrapper{
+.wrapper {
     height: 100vh;
     display: grid;
     padding: 10px;
     gap: 3px;
-    grid-template-rows: .2fr 2fr 2fr ;
+    grid-template-rows: .2fr 2fr 2fr;
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-areas:
-    'item1 item1 item2 item2'
-    'item3 item3 item4 item5'
-    'item3 item3 item4 item5'
+        'item1 item1 item2 item2'
+        'item3 item3 item4 item5'
+        'item3 item3 item4 item5'
     ;
 }
 
-@media(max-width: 1200px){
-   
+@media(max-width: 1200px) {
 
-    .wrapper{
+
+    .wrapper {
         /* overflow: scroll; */
         height: 130vh;
         /* width: 100vh; */
@@ -204,37 +214,37 @@ input {
         grid-template-rows: .2fr 1fr 2fr 2fr 2fr 2fr;
         grid-template-columns: 1fr;
         grid-template-areas:
-        'item1'
-        'item3'
-        'item5'
-        'item5'
-        'item4'
-        'item4'
+            'item1'
+            'item3'
+            'item5'
+            'item5'
+            'item4'
+            'item4'
         ;
-    
+
     }
 
 
 
-    .logo a{
-      position: relative;
-            display: flex;
+    .logo a {
+        position: relative;
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
-    
+
+
 
     }
 
 
-  
-    .item4{
-   
+
+    .item4 {
+
         grid-area: item4;
         background-color: white;
-          box-shadow: 0 10px 10px gray, 
-                    0 10px 10px silver;
+        box-shadow: 0 10px 10px gray,
+            0 10px 10px silver;
         position: relative;
         /* overflow: scroll; */
         border-top-left-radius: 50px;
@@ -249,17 +259,17 @@ input {
         text-align: center;
         top: 0;
         height: 80vh;
-       
-    ;
-    
+
+        ;
+
     }
 
-    .item5{
-   
+    .item5 {
+
         grid-area: item5;
         background-color: orange;
-          box-shadow: 0 10px 10px gray, 
-                    0 10px 10px silver;
+        box-shadow: 0 10px 10px gray,
+            0 10px 10px silver;
         position: relative;
         overflow: hidden;
         border-top-left-radius: 50px;
@@ -273,8 +283,8 @@ input {
         padding: 0 40px;
         text-align: center;
         top: 0;
-    ;
-    
+        ;
+
     }
 
 }
