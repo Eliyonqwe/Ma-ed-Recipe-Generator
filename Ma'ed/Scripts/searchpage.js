@@ -5,6 +5,7 @@ var selectedIngredientsNum=document.getElementById('ingredient-count');
 
 // Get all the checkbox elements
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var moreBtn = document.getElementsByClassName('moreBtn');
 
 // Add event listeners to each checkbox
 for (var i = 0; i < checkboxes.length; i++) {
@@ -22,7 +23,12 @@ for (var i = 0; i < checkboxes.length; i++) {
     console.log(this.id + ' is now ' + (this.checked ? 'selected' : 'unselected'));
   });
 }
+// var resultDiv = document.getElementsByClassName('search_results').getElementsByTagName("div");
 
+// for(var i=0; i<resultDiv.length; i++) {
+//      resultDiv[i].text(childNodes.text().substring(0,20) + '<a href="">Read more</a>');
+   
+// }
 
 $('#pantry_searchbtn').click(function() {
     var searchText = document.getElementById('pantry_search').value.toLowerCase();
@@ -45,3 +51,11 @@ $('#pantry_searchbtn').click(function() {
       console.log('Label not found.');
     }
 });
+
+
+// var currentFoodID = null;
+// moreBtn.addEventListener("click", actionfn);
+
+// function actionfn(){
+//   currentFoodID=moreBtn.getAttribute('id');
+// }

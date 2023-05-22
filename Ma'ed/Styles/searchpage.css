@@ -193,23 +193,32 @@ fieldset{
 }
 .search_results{
     /* background-color: #f88e28; */
-        padding: 10px;
+     padding: 10px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
-      }
-      
-      .result {
+    }
+    
+    
+    .result {
         background-color: rgb(229, 229, 229);
         padding: 20px;
-        height: auto;
+        height: 15rem;
+        height: 100%;
+        width: 80%;
         border-radius: 10px;
-        cursor: pointer;
-      }
-      .result img{
+        overflow: hidden;
+    }
+    .result p {
+        /* overflow: hidden; */
+        font-size: 1rem;
+        
+    }
+    .result img{
         float: left;
-        height: 100px;
-        width: 100px;
+        height: 50%;
+        
+        width: 100%;
         border: 1px solid white;
         border-radius: 15px;
       }
