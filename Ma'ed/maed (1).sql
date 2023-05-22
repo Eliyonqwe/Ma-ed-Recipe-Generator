@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2023 at 03:35 PM
+-- Generation Time: May 22, 2023 at 10:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,9 +64,9 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`foodID`, `foodName`, `foodImg`, `foodType`, `prepTime`, `servingSize`, `description`, `ingredients`, `instructions`) VALUES
-(1, 'Salad', '', '', '', 0, '', '', ''),
-(2, 'Shiro', '', '', '', 0, '', '', ''),
-(26, 'Burger', '', '', '', 0, '', '', '');
+(1, 'Salad', '', 'Vegan', '10min', 0, 'Salad is a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, or other ingredients.', '3 cups of Lettuce\r\n1 cup of Onion\r\n1/4 cup lemon juice\r\n2 garlic cloves, minced\r\n1/2 teaspoon salt\r\n1/2 teaspoon pepper\r\n2 cups chopped tomatoes\r\n', 'In a jar with a tight-fitting lid, combine the oil, lemon juice, garlic, salt and pepper; cover and shake well. Chill.\r\nIn a large serving bowl, toss the romaine, tomatoes, Swiss cheese, almonds if desired, Parmesan cheese and bacon.\r\nShake dressing; pour over salad and toss. Add croutons and serve immediately.'),
+(2, 'Shiro', '', 'Stew', '20mun', 5, 'Shiro is a stew served for either lunch or dinner, originating from Ethiopia and Eritrea. An essential part of Eritrean and Ethiopian cuisine, its primary ingredient is powdered chickpeas or broad bean meal and often prepared with the addition of minced onions, garlic and, depending upon regional variation, ground ginger or chopped tomatoes and chili-peppers.', '½ cup oil\r\n½ cup chickpea flour\r\n2 medium onions pureed\r\n1 roma tomato pureed\r\n4 cloves of garlic chopped\r\n2 tablespoons niter kibbeh Ethiopian spiced clarified butter\r\n2 to 2 ½ cups of water\r\n3 tablespoons berbere spice\r\n1 teaspoon garlic powder\r\n¼ teaspoon sugar\r\nSalt to taste\r\n1 jalepeno chopped (optional)', 'Bring a heavy bottom stockpot to medium heat. Add pureed onions to the dry pan, and saute until they become dry and start to take on color- about 4-5 minutes. Add the oil and berbere spice. Saute for 1-2 minutes until fragrant.\r\nNext add tomato and chopped garlic. Saute for 2-3 minutes more.\r\nNow start whisking in about half of the chickpea flour. Gradually start to add about 1 cup of water. Whisk in the remaining chickpea flour and an additional 1 cup of water. Whisk until mixture is very smooth. Add remaining ½ cup of water if you prefer your shiro a little thinner.\r\nHeat until the shiro begins to pop (simmer). Then add the niter kibbeh, garlic powder, sugar, and salt to taste, stirring until combined.\r\nSimmer for about 5-10 minutes over low heat until the flavors combine and the oil separates slightly from the shiro.\r\nGarnish with jalepeno, if desired.\r\nServe with fresh injera.'),
+(26, 'Burger', '', 'FastFood', '50min', 1, 'A sandwich consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.', '1 pound ground lean (7% fat) beef\r\n1 large egg\r\n100g Slice Cheese\r\n½ cup minced onion\r\n¼ cup fine dried bread crumbs\r\n1 hamburger buns ', 'In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide.\r\nLay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill.\r\nLay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute.\r\nSpread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place.');
 
 -- --------------------------------------------------------
 
@@ -208,7 +208,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `username`, `gender`, `age`, `password`, `email`) VALUES
 (1, 'Tamiru', 'Kebede', 'tammy', 'M', 54, 'tammyking', ''),
 (2, 'Girma', 'Abebe', 'ggabe', 'M', 43, 'ggabebe', ''),
-(16, 'Eliyon', 'Zewgemichael', 'eliyonzm', 'male', 20, '85f774c11616f79c79f197c9447fd181', 'eliyonzmz@gmail.com');
+(18, 'Eliyon', 'Zewgemichael', 'eliyonzm', 'male', 20, 'c4ca4238a0b923820dcc509a6f75849b', 'eliyonzmz@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -327,7 +327,7 @@ ALTER TABLE `suggestion`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `user_foods`
