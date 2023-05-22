@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 ?>
 
 <!DOCTYPE html>
@@ -45,14 +44,38 @@ session_start();
                         </li>
                         <li id="separator"><a href="#">|</a></li>
                         <!--           
-              <li id="signup">
-                <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
-              </li> -->
+                        <li id="signup">
+                            <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
+                        </li> -->
                         <li id="account">
-                            <a href="#"><button class="account">
-                                    <span class="material-symbols-outlined">person</span>Account
-                                </button>
-                            </a>
+                            <?php
+                            if (isset($_SESSION['username'])) {
+                                $username = $_SESSION['username'];
+                                ?>
+                                    <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
+                                    <div  class="profile">
+                                        <ul id="profile">
+                                            <li id="normal">
+                                                <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                                            </li>
+                                            <li id="normal">
+                                                <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                                            </li>
+                                            <li id="normal">
+                                                <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                   
+                                <?php
+                            } else {
+                                ?>
+                                <a href="signin.php"><button class="account">
+                                <span class="material-symbols-outlined">person</span>Account 
+                            </button></a><?php                       
+                            }
+                            ?>
+                            
                         </li>
                     </ul>
 

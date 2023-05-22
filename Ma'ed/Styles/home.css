@@ -90,6 +90,32 @@ body{
 .navigation ul li#separator{
     font-weight: lighter;
 }
+
+.pic img{
+    width: 40px;
+    height: 40px;
+     border-radius: 50%;
+     margin-right: 30px;
+     cursor: pointer;
+}
+
+.profile ul{
+    right: 30px;
+    background-color: rgb(230, 230, 230);
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 200px;
+    overflow: hidden;
+    transition: width 0.5s;
+    backdrop-filter: blur(2px);
+    
+}
+.profile ul li{
+    margin-left: 120px;
+    font-weight:bold;
+}
+
 span[class^="material"]{
     color: #FFA500;
     vertical-align: top;

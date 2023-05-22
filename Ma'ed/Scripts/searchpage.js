@@ -52,6 +52,17 @@ $('#pantry_searchbtn').click(function() {
     }
 });
 
+$('#pic').click(function(){
+  console.log('j');
+    var profile=document.getElementById('profile');
+    if(profile.style.width==='400px'){
+      profile.style.width='0px';
+    }
+    else{
+      profile.style.width='400px';
+    }
+});
+
 
 // var currentFoodID = null;
 // moreBtn.addEventListener("click", actionfn);
