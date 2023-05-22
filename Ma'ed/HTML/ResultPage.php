@@ -52,7 +52,8 @@
     <?php
     $id = $_GET['id'];
     echo "The value of id is: " . $id;
-    $sql = "SELECT * FROM food WHERE foodID IN ($id)";
+    include('connect.php');
+    $sql = "SELECT * FROM `food` WHERE foodID=($id)";
 
     // Execute the query
     $result = mysqli_query($conn, $sql);
@@ -61,104 +62,126 @@
     while ($row = mysqli_fetch_assoc($result)) {
       // Do something with each row
       ?>
-      <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
-        <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
-        <h3 id="<?= $row['foodID']; ?>">
-          <?= $row['foodName']; ?>
-        </h3>
-        <p>
-          <?= $row['description']; ?>
-        </p>
-      </div>
-      <?php
-      $id[] = $row['foodID'];
+      <h1>
+        <?= $row['foodName']; ?>
+      </h1>
+      <p id="information">
+        <?= $row['description']; ?>
+      </p>
+      <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
+      <div class="description">
+        <div class="ingredient-info">
+          <div class="info">
+            <div class="prep-time">
+              <h5>PREP TIME</h5>
+              <p>
+                <?= $row['prepTime']; ?>
+              </p>
+            </div>
+            <div class="cook-time">
+              <h5>COOK TIME</h5>
+              <p>
+                <?= $row['cookTime']; ?>
+              </p>
+            </div>
+            <div class="servings">
+              <h5>SERVINGS</h5>
+              <p>
+                <?= $row['servingSize']; ?>
+              </p>
+            </div>
+          </div>
+          <div class="ingredients">
+            <h3>Ingredients</h3>
+            <?php
+            $string = $row['ingredients'];
+            $array = explode(",", $string);
+
+            foreach ($array as $element) {
+              ?><label><input type="checkbox">
+                <?= $element; ?>
+              </label>
+              <?php
+            }
+            ?>
+          </div>
+          <div class="instructions">
+            <h3>Instructions</h3>
+            <ol>
+              <?php
+              $string = $row['instructions'];
+              $array = explode(".", $string);
+
+              foreach ($array as $element) {
+                ?>
+                <li>
+                  <?= $element . '.'; ?>
+                </li>
+                <?php
+              }
+              ?>
+            </ol>
+          </div>
+        </div>
+        <?php
     }
-
     ?>
-
-
-    <h1>Tibs</h1>
-    <p id="information">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ab suscipit dolorum, obcaecati
-      doloribus vero quidem laboriosam ipsam rerum magni?</p>
-    <img src="../pics/about us_pic.jpg" alt="" srcset="">
-
-    <div class="description">
-      <div class="ingredient-info">
-        <div class="info">
-          <div class="prep-time">
-            <h5>PREP TIME</h5>
-            <p>15 MIN</p>
-          </div>
-          <div class="prep-time">
-            <h5>PREP TIME</h5>
-            <p>15 MIN</p>
-          </div>
-          <div class="servings">
-            <h5>SERVINGS</h5>
-            <p>4 PEOPLE</p>
-          </div>
-        </div>
-        <div class="ingredients">
-          <h3>Ingredients</h3>
-          <label><input type="checkbox">1 pound of beef, cut into small cubes</label>
-          <label><input type="checkbox">1 onion, chopped</label>
-          <label><input type="checkbox">2 tomatoes, chopped</label>
-          <label><input type="checkbox">2-3 jalapeno peppers, chopped</label>
-          <label><input type="checkbox">2 tablespoons of berbere spice</label>
-          <label><input type="checkbox">2 tablespoons of oil or butter</label>
-          <label><input type="checkbox">Salt and pepper to taste</label>
-          <label><input type="checkbox">Injera bread</label>
-        </div>
-        <div class="instructions">
-          <h3>Instructions</h3>
-          <ol>
-            <li>Heat the oil or butter in a large skillet over medium-high heat.</li>
-            <li>Add the chopped onions and sauté until they are translucent.</li>
-            <li>Add the beef cubes to the skillet and cook until they are browned on all sides.</li>
-            <li>Add the chopped tomatoes and jalapeno peppers to the skillet and stir well.</li>
-            <li>Add the berbere spice to the skillet and stir well to coat the meat and vegetables.</li>
-            <li>Reduce the heat to medium-low and let the tibs simmer for 10-15 minutes, stirring occasionally.</li>
-            <li>Season with salt and pepper to taste.</li>
-            <li>Serve the tibs hot with injera bread on the side.</li>
-          </ol>
-        </div>
-
-      </div>
       <div class="nutrition-facts">
         <h3>nutrition Facts</h3>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
-        <section class="nutrition">
-          <label for="" class="left">Calories</label>
-          <label for="" class="rignt">29.5g</label>
-        </section>
+        <?php
+        include('connect.php');
+        $sql = "SELECT * FROM `nutritionfact` WHERE foodID=($id)";
 
+        // Execute the query
+        $result = mysqli_query($conn, $sql);
+
+        // Loop through the results
+        while ($row = mysqli_fetch_assoc($result)) {
+          ?>
+          <section class="nutrition">
+            <label for="" class="left">Calories</label>
+            <label for="" class="rignt">
+              <?= $row['calories']; ?>
+            </label>
+          </section>
+          <section class="nutrition">
+            <label for="" class="left">Fat</label>
+            <label for="" class="rignt">
+              <?= $row['fat']; ?>
+            </label>
+          </section>
+          <section class="nutrition">
+            <label for="" class="left">Protein</label>
+            <label for="" class="rignt">
+              <?= $row['protein']; ?>
+            </label>
+          </section>
+          <section class="nutrition">
+            <label for="" class="left">Carbs</label>
+            <label for="" class="rignt">
+              <?= $row['carbs']; ?>
+            </label>
+          </section>
+          <section class="nutrition">
+            <label for="" class="left">Cholestrol</label>
+            <label for="" class="rignt">
+              <?= $row['cholestrol']; ?>
+            </label>
+          </section>
+          <section class="nutrition">
+            <label for="" class="left">Sodium</label>
+            <label for="" class="rignt">
+              <?= $row['sodium']; ?>
+            </label>
+          </section>
+
+          <?php
+        }
+        ?>
       </div>
+
     </div>
-
   </div>
-
-
-  <script type="module" src="jquery.js"></script>
-  <script type="module" src="searchpage.js"></script>
 
 </body>
 
