@@ -2,6 +2,9 @@
 var checkboxStates = {};
 var count=0;
 var selectedIngredientsNum=document.getElementById('ingredient-count');
+var menuBtn = document.getElementById('dropcheckbox');
+var menuLogo = document.getElementById('dropcheckbox_label').firstElementChild; 
+
 
 // Get all the checkbox elements
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -62,7 +65,14 @@ $('#pic').click(function(){
       profile.style.width='400px';
     }
 });
-
+menuBtn.onchange = function() {
+  if ( menuBtn.checked) {
+      menuLogo.innerHTML = 'close';
+  }
+  else{
+       menuLogo.innerHTML = 'menu';
+  }
+}
 
 // var currentFoodID = null;
 // moreBtn.addEventListener("click", actionfn);

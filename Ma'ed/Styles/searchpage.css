@@ -90,7 +90,9 @@ input[type="checkbox"]:checked + label{
 .profile ul li{
     margin-left: 120px;
 }
-
+.phone{
+    display: none;
+}
 
 
 .navigation ul li a{
@@ -150,6 +152,22 @@ span[class^="material"]{
 #dropcheckbox_label{
     display: none;
 }
+#dropcheckbox{
+    font-size: 2rem;
+    background-color: red ;
+    float: right;
+    line-height: 5rem;
+    margin-right: 1rem;
+    display: none;
+    
+}
+#dropcheckbox_label{
+  display: none;
+}
+
+.phone{
+    display: none;
+  }
 
 .main{
     display: grid;
@@ -274,9 +292,9 @@ button:hover{
     .navigation ul{
         position: fixed;
         border-radius: 1rem;
-        width: 100%;
+        width: 100vw;
         box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
-        height: 16rem;
+        height: 25rem;
         background-color: #00000023;
         backdrop-filter: blur(6px);
        
@@ -292,6 +310,9 @@ button:hover{
         color: black;
         font-weight: bold;
         font-size: 1.4rem;
+    }
+    .phone{
+        display: block;
     }
     span[class^="material"] {
         color: #FFA500;
@@ -320,7 +341,9 @@ button:hover{
     .signup, .signup{
         color: white;
      }
-   
+     .pic img{
+        display: none;
+    }
    #dropcheckbox_label{
     font-size: 1rem;
     font-weight: bolder;
@@ -329,6 +352,7 @@ button:hover{
     #dropcheckbox:checked ~ ul{
         left: 0;
     }
+    
     
     .main{
         display: flex;

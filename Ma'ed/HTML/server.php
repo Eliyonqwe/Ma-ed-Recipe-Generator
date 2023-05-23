@@ -112,7 +112,7 @@ if (isset($_POST['signin_user'])) {
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: searchpage.php');
+      header('location: home.php');
     } else {
       array_push($errors, "Wrong username/password combination");
     }
