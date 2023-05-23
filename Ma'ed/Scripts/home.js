@@ -41,3 +41,14 @@ sr.reveal('.gridthree', { delay:350, origin:'top'})
 sr.reveal('.mobileapp_pic', { delay:350, origin:'left'})
 sr.reveal('.mobileapp_text', { delay:350, origin:'right'})
 
+document.getElementById('pic').addEventListener('click',function(){
+  console.log('j');
+    var profile=document.getElementById('profile');
+    if(profile.style.width==='400px'){
+      profile.style.width='0px';
+    }
+    else{
+      profile.style.width='400px';
+    }
+});
+
