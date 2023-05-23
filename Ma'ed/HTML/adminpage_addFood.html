@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 if (isset($_POST["submit"])) {
     echo "<script>alert('Please adadXxadAAD')</script>";
@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
     }
     echo "<script>alert('Food Added')</script>";
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,6 +41,9 @@ if (isset($_POST["submit"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/adminpage_addFood.css">
+    <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
+
     <style>
         input[type="checkbox"] {
 
@@ -66,13 +69,39 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
+<!-- The sidebar -->
+<div class="sidebar">
+    <section class="logo" id="logo">
+        <a href="home.html"> <img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
+      </section>
+      <div class="link">
+    <a  href="#home"> Add Food</a>
+    <a href="#news">Add Ingredient</a>
+    <a href="#contact"> Users</a>
+    <a href="#about">Billing</a>
+    <div class="footer">
+        <a  href="">Sign out</a>
+        </div>
+</div>
+
+  </div>
+  
+  <!-- Page content -->
+  <div class="content">
+    <h1>Add Food</h1>
+    <form action="" method="post" autocomplete="off">
+        <label for="name">Food Name: </label>
+        <input type="text" name="name" id="name" />
+        <p>Select Ingredient</p>
+  </div>
+
     <h1>Add Food</h1>
     <form action="" method="post" autocomplete="off">
         <label for="name">Food Name: </label>
         <input type="text" name="name" id="name" />
         <p>Select Ingredient</p>
 
-        <?php
+        <!-- <?php
         $con = mysqli_connect("localhost", "root", "", "maed");
         $ing_query = "Select *from ingredient order by ingType,ingName";
         $query_run = mysqli_query($con, $ing_query);
@@ -87,7 +116,7 @@ if (isset($_POST["submit"])) {
         } else {
             echo '<p>No record found</p>';
         }
-        ?>
+        ?> -->
 
         </select>
         <br />

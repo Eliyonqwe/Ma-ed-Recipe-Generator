@@ -1,0 +1,50 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: orange;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+
+
+  
+
+  .sidebar .link a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+        background-color: white;
+        transition: 0.3s;
+        color: orange;
+      
+  }
+
+  .sidebar .logo a img{
+    width: 10.5rem;
+    align-self: center;
+    background-color: white;
+    
+
+  }
+  .sidebar .link .footer{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+  
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+
