@@ -243,10 +243,13 @@ session_start();
                             }
 
                             print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
-
+                            if(count($displayedfoodid)==0){
+                                echo '<h3>No food to display!</h3>';
+                            }
+                            else{
                             include('connect.php');
                             // Create a comma-separated string of IDs
-                            $id_list = (count($displayedfoodid) > 2) ? $displayedfoodid : implode(',', $displayedfoodid);
+                            $id_list = (count($displayedfoodid) < 2) ? implode('', $displayedfoodid) : implode(',', $displayedfoodid);
 
                             // Build the SQL query
                             $sql = "SELECT * FROM food WHERE foodID IN ($id_list)";
@@ -278,6 +281,7 @@ session_start();
                                     </div>
                                 <?php
                                 }
+                            }
                                 ?>
                             </div>
                     <?php

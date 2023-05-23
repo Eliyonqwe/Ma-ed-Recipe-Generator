@@ -233,6 +233,9 @@ fieldset{
         width: 80%;
         border-radius: 10px;
         overflow: hidden;
+        overflow-x: hidden; /*hide horizontal scroll*/
+        overflow-y: auto; /*enable vertical scroll for div when needed*/
+        
     }
     .result p {
         /* overflow: hidden; */
@@ -242,7 +245,6 @@ fieldset{
     .result img{
         float: left;
         height: 50%;
-        
         width: 100%;
         border: 1px solid white;
         border-radius: 15px;
