@@ -36,21 +36,33 @@ for (var i = 0; i < checkboxes.length; i++) {
 $('#pantry_searchbtn').click(function() {
     var searchText = document.getElementById('pantry_search').value.toLowerCase();
     console.log(searchText);
-  
+    var CapitalsearchText = searchText.charAt(0).toUpperCase() + searchText.slice(1).toLowerCase();
+    var SmallsearchText = searchText.charAt(0).toLowerCase() + searchText.slice(1).toLowerCase();
+
     // Find the label with the matching 'for' attribute
-    var targetLabel = $('label[for="' + searchText + '"]');
+    var targetLabel1 = $('label[for="' + CapitalsearchText + '"]');
+    var targetLabel2 = $('label[for="' + SmallsearchText + '"]');
     
   
     // Scroll to the target label if found
-    if (targetLabel.length > 0) {
+    if (targetLabel1.length > 0) {
     
       $(document).ready(function() {
         $('body, .collection').animate({
-          scrollTop: targetLabel.offset().top-230 //to scroll to position of the search
+          scrollTop: targetLabel1.offset().top-230 //to scroll to position of the search
         }, 500);
       });
       
-    } else {
+    } else if (targetLabel2.length > 0) {
+    
+      $(document).ready(function() {
+        $('body, .collection').animate({
+          scrollTop: targetLabel2.offset().top-230 //to scroll to position of the search
+        }, 500);
+      });
+      
+    }
+     else {
       console.log('Label not found.');
     }
 });
@@ -68,10 +80,11 @@ $('#pic').click(function(){
 menuBtn.onchange = function() {
   if ( menuBtn.checked) {
       menuLogo.innerHTML = 'close';
+      
   }
   else{
        menuLogo.innerHTML = 'menu';
-  }
+       }
 }
 
 // var currentFoodID = null;

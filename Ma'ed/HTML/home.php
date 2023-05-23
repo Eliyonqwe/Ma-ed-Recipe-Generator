@@ -9,7 +9,8 @@
   <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
   <link rel="stylesheet" href="../Styles/home.css" />
   <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -47,37 +48,38 @@
             <li id="signup">
               <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
             </li> -->
-          <li id="account">                            
+          <li id="account">
             <?php
             session_start();
-            
-                            if (isset($_SESSION['username'])) {
-                                $username = $_SESSION['username'];
-                                ?>
-                                    <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
-                                    <div  class="profile">
-                                        <ul id="profile">
-                                            <li id="normal">
-                                                <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
-                                            </li>
-                                            <li id="normal">
-                                                <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
-                                            </li>
-                                            <li id="normal">
-                                                <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                   
-                                <?php
-                            } else {
-                                ?>
-                                <a href="signin.php"><button class="account">
-                                <span class="material-symbols-outlined">person</span>Account 
-                            </button></a><?php                       
-                            }
-                            ?>
-            </li>
+
+            if (isset($_SESSION['username'])) {
+              $username = $_SESSION['username'];
+              ?>
+              <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
+              <div class="profile">
+                <ul id="profile">
+                  <li id="normal">
+                    <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                  </li>
+                  <li id="normal">
+                    <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                  </li>
+                  <li id="normal">
+                    <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
+                  </li>
+                </ul>
+              </div>
+
+              <?php
+            } else {
+              ?>
+              <a href="signin.php"><button class="account">
+                  <span class="material-symbols-outlined">person</span>Account
+                </button></a>
+            <?php
+            }
+            ?>
+          </li>
         </ul>
       </section>
     </header>
@@ -192,11 +194,17 @@
         </p>
         <br />
 
-        <a href="/" target="_blank" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Playstore" /></a>
+        <a href="/" target="_blank" tabIndex="0"><img class="bn45"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+            alt="Google Playstore" /></a>
         <!-- <br> -->
-        <a href="/" target="_blank" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" /></a>
+        <a href="/" target="_blank" tabIndex="0"><img class="bn46"
+            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+            alt="App Store" /></a>
         <!-- <br> -->
-        <a href='/' target="_blank"><img class="bn44" src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Badge' /></a>
+        <a href='/' target="_blank"><img class="bn44"
+            src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png'
+            alt='Badge' /></a>
       </div>
     </div>
 

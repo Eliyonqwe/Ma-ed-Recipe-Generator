@@ -47,15 +47,21 @@ session_start();
                             <span class="material-symbols-outlined">help</span>FAQs</a>
                     </li>
                     <li id="separator"><a href="#">|</a></li>
-                    <li class="phone" id="normal">
-                        <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
-                    </li>
-                    <li class="phone" id="normal">
-                        <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
-                    </li>
-                    <li class="phone" id="normal">
-                        <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
-                    </li>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        ?>
+                        <li class="phone" id="normal">
+                            <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                        </li>
+                        <li class="phone" id="normal">
+                            <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                        </li>
+                        <li class="phone" id="normal">
+                            <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
+                        </li>
+                        <?php
+                    }
+                    ?>
                     <!--           
             <li id="signup">
               <a href="#"><span class="material-symbols-outlined">help</span>Sign Up </a>
@@ -70,7 +76,7 @@ session_start();
                             <div class="profile">
                                 <ul id="profile">
                                     <li id="normal">
-                                        <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                                        <a href="#"><span class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
                                         <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
@@ -88,7 +94,7 @@ session_start();
                             <a href="signin.php"><button class="account">
                                     <span class="material-symbols-outlined">person</span>Account
                                 </button></a>
-                        <?php
+                            <?php
                         }
                         ?>
                     </li>
