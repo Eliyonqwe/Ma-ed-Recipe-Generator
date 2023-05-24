@@ -9,11 +9,10 @@
   <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
   <link rel="stylesheet" href="../Styles/home.css" />
   <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -54,7 +53,7 @@
 
             if (isset($_SESSION['username'])) {
               $username = $_SESSION['username'];
-              ?>
+            ?>
               <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
               <div class="profile">
                 <ul id="profile">
@@ -70,9 +69,9 @@
                 </ul>
               </div>
 
-              <?php
+            <?php
             } else {
-              ?>
+            ?>
               <a href="signin.php"><button class="account">
                   <span class="material-symbols-outlined">person</span>Account
                 </button></a>
@@ -194,58 +193,66 @@
         </p>
         <br />
 
-        <a href="/" target="_blank" tabIndex="0"><img class="bn45"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
-            alt="Google Playstore" /></a>
+        <a href="/" target="_blank" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Playstore" /></a>
         <!-- <br> -->
-        <a href="/" target="_blank" tabIndex="0"><img class="bn46"
-            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-            alt="App Store" /></a>
+        <a href="/" target="_blank" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" /></a>
         <!-- <br> -->
-        <a href='/' target="_blank"><img class="bn44"
-            src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png'
-            alt='Badge' /></a>
+        <a href='/' target="_blank"><img class="bn44" src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Badge' /></a>
       </div>
     </div>
 
 
+
     <footer>
-      <div class="footer-content">
-
-        <h3>MA-ED Recpie Generator</h3>
-        <p>Footer content .....Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo consequatur harum
-          dolores cupiditate atque! Quasi, inventore possimus sunt nulla, excepturi dicta eos impedit err
-          or sint quae, obcaecati eaque voluptas porro.</p>
-        <ul class="socials">
-          <li><a href="#"> <i class="facebook"></i> </a></li>
-          <li><a href="#"> <i class="linkedin"></i> </a></li>
-          <li><a href="#"> <i class="twitter"></i> </a></li>
-          <li><a href="#"> <i class="instagram"></i> </a></li>
-        </ul>
-
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            
+            <span class="logo_name">Ma'ed</span>
+          </div>
+          <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Ma'ed</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Get started</a></li>
+          </ul>
+          
+          <ul class="box input-box">
+            <li class="link_name">Subscribe</li>
+            <li><input type="text" placeholder="Enter your email"></li>
+            <li><input type="button" value="Subscribe"></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>copyright &copy;2021 <a href="#">ME-AD</a></p>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text">Copyright &#169; 2023 <a href="#">Ma'ed </a>All rights reserved</span>
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
       </div>
-
-      <div class="footer-menu">
-        <ul class="foot-menu">
-          <li><a href="">Home</a></li>
-          <li><a href="">About us</a></li>
-          <li><a href="">FAQ</a></li>
-        </ul>
-      </div>
-
-
-
     </footer>
 
 
 
 
-</html>
-</div>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
