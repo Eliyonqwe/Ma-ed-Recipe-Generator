@@ -1,0 +1,65 @@
+.wrapper{
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 13% 87%;
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    grid-column: 1/2;
+    background-color: orange;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+
+
+  
+
+  .sidebar .link a:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+        background-color: white;
+        transition: 0.3s;
+        color: orange;
+      
+  }
+
+  .sidebar .logo a img{
+    width: 10.5rem;
+    align-self: center;
+    background-color: white;
+    
+
+  }
+  .sidebar .link .footer{
+    position: absolute;
+    top: 90vh;
+    width:12rem  ;
+  
+  }
+  
+  div#addFoodPage {
+    display: block;
+    
+    margin-left: 30px;
+    padding: 1px 16px;
+    height: 100vh;
+  }
+  #addIngredientsPage{
+    display: none;
+    margin-left: 30px;
+
+  }
+  #usersPage{
+    display: none;
+    margin-left: 30px;
+  }
+  
