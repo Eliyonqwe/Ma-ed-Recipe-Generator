@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Lexend', serif;
+    font-style: normal;
+
+}
+
+.header {
+    /* position: fixed; */
+    position: relative;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+}
+
+.header .logo {
+    grid-column: 1/2;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(234, 234, 234);
+
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label {
+    border-color: #f88e28;
+    background-color: #f88e28;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.header .logo a img {
+    /* position: top left fixed; */
+
+    width: calc(0.2 * 80vw);
+
+}
+
+.navigation {
+    grid-column: 2/3;
+    /* display: flex; */
+    margin-left: auto;
+    margin-right: 0;
+
+}
+
+.navigation ul {
+    list-style: none;
+
+
+}
+
+.navigation ul li {
+    position: relative;
+    float: left;
+    padding-right: 0;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.profile ul {
+    right: 30px;
+    background-color: rgb(230, 230, 230);
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 200px;
+    overflow: hidden;
+    transition: width 0.5s;
+
+}
+
+.profile ul li {
+    margin-left: 120px;
+}
+
+.phone {
+    display: none;
+}
+
+
+.navigation ul li a {
+    font-size: calc(100% * 16px);
+    padding: 1.3rem;
+    color: black;
+    display: block;
+    text-decoration: none;
+
+}
+
+.navigation ul li#normal a::after {
+    content: '';
+
+    width: 0;
+    height: 0.3rem;
+    background: #FFA500;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    top: 3.2rem;
+    transition: 0.5s ease-out;
+}
+
+.navigation ul li#normal a:hover::after {
+    width: 70%;
+    box-shadow: 0 0 5px orange,
+        0 0 0 orange,
+        0 0 0 orange,
+        0 0 0 orange;
+    border-radius: 5rem;
+}
+
+.navigation ul li#separator {
+    font-weight: lighter;
+}
+
+span[class^="material"] {
+    color: #FFA500;
+    vertical-align: top;
+    line-height: 1.1;
+    padding-right: 0.2rem;
+}
+
+.account span {
+    vertical-align: top;
+    line-height: 0.4;
+    color: white;
+}
+
+.account {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0.4;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: white;
+    background-color: #FFA500;
+    display: block;
+}
+
+#dropcheckbox_label {
+    display: none;
+}
+
+#dropcheckbox {
+    font-size: 2rem;
+    background-color: red;
+    float: right;
+    line-height: 5rem;
+    margin-right: 1rem;
+    display: none;
+
+}
+
+#dropcheckbox_label {
+    display: none;
+}
+
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+    height: 30px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: orange;
+    transition: 0.3s;
+    box-shadow: 0 0 5px orange,
+        0 0 5px orange,
+        0 0 5px orange,
+        0 0 5px orange;
+}
+.main{
+    padding-left: 15vw;
+
+}
+.lists {
+    /* background-color: #f88e28; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.result {
+    /* background-color: rgb(229, 229, 229); */
+    padding: 20px;
+    height: 15rem;
+    height: 100%;
+    width: 80%;
+    
+    box-shadow: -4.58962px 37.0436px 37.689px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-x: hidden;
+    /*hide horizontal scroll*/
+    overflow-y: auto;
+    /*enable vertical scroll for div when needed*/
+
+}
+
+.result p {
+    /* overflow: hidden; */
+    font-size: 1rem;
+
+}
+
+.result img {
+    float: left;
+    height: 50%;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+@media(max-width: 800px) and (min-width: 0px) {
+
+    .header .logo a img {
+        width: 7.5rem;
+    }
+
+    .navigation ul {
+        position: fixed;
+        border-radius: 1rem;
+        width: 100vw;
+        box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
+        height: 25rem;
+        background-color: #00000023;
+        backdrop-filter: blur(6px);
+
+
+        margin-top: 2rem;
+        left: -100%;
+        text-align: center;
+        display: block;
+        transition: all 0.5s ease-in-out;
+    }
+
+    button.account {
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+
+    .phone {
+        display: block;
+    }
+
+    span[class^="material"] {
+        color: #FFA500;
+        vertical-align: top;
+        line-height: 0.7;
+        padding-right: 0.2rem;
+    }
+
+    .navigation ul li {
+        display: block;
+        float: none;
+    }
+
+    .navigation #separator {
+        display: none;
+
+    }
+
+    .navigation ul li a {
+        display: inline-block;
+        /* font-weight: bolder; */
+    }
+
+    .navigation ul li a span {
+        color: #FFA500;
+    }
+
+    .navigation ul li a:hover,
+    .navigation ul li a:active {
+        color: black;
+    }
+
+    .signup,
+    .signup {
+        color: white;
+    }
+
+    .pic img {
+        display: none;
+    }
+
+    #dropcheckbox_label {
+        font-size: 1rem;
+        font-weight: bolder;
+        display: block;
+    }
+
+    #dropcheckbox:checked~ul {
+        left: 0;
+    }
+
+}

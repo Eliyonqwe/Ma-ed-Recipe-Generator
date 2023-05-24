@@ -19,7 +19,7 @@ session_start();
 </head>
 
 <body>
-    <!-- ---------------------------------------------- -->
+   
     <div class="wrapper">
         <header class="header" id="header">
             <section class="logo" id="logo">
@@ -35,11 +35,11 @@ session_start();
 
                 <ul>
                     <li id="normal">
-                        <a href="#"><span class="material-symbols-outlined style"
+                        <a href="home.php"><span class="material-symbols-outlined style"
                                 style="line-height: 1">Home</span>Home</a>
                     </li>
                     <li id="normal">
-                        <a href="#aboutus"><span class="material-symbols-outlined">groups</span> About
+                        <a href="home.php #aboutus"><span class="material-symbols-outlined">groups</span> About
                             Us</a>
                     </li>
                     <li id="normal">
@@ -54,7 +54,7 @@ session_start();
                             <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
                         </li>
                         <li class="phone" id="normal">
-                            <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                            <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
                         </li>
                         <li class="phone" id="normal">
                             <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
@@ -79,7 +79,7 @@ session_start();
                                         <a href="#"><span class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
-                                        <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                                        <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
                                     </li>
                                     <li id="normal">
                                         <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign

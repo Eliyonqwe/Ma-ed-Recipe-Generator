@@ -33,7 +33,7 @@
 
         <ul>
           <li id="normal">
-            <a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
+            <a href="home.php"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
           </li>
           <li id="normal">
             <a href="#aboutus"><span class="material-symbols-outlined">groups</span> About
@@ -52,7 +52,7 @@
               <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
             </li>
             <li class="phone" id="normal">
-              <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+              <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
             </li>
             <li class="phone" id="normal">
               <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
@@ -77,7 +77,7 @@
                     <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
                   </li>
                   <li id="normal">
-                    <a href="#"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                    <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
                   </li>
                   <li id="normal">
                     <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
