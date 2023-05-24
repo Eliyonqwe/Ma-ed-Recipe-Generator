@@ -30,7 +30,9 @@ if (isset($_POST['signin_admin'])) {
 
     // Check if the query returned any rows
     if (mysqli_num_rows($result) == 1) {
+      
         // Set the session variables and redirect to the dashboard
+        session_start();
         $_SESSION['username'] = $username;
         header("Location: adminpage.php");
         exit();
