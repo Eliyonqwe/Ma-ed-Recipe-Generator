@@ -117,7 +117,7 @@
    height: 200px;
    overflow: hidden;
    transition: width 0.5s;
-   backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
 
  }
 
@@ -234,16 +234,21 @@
 
 
  }
-
-
- .text>h3 {
-   color: rgb(38, 38, 38);
+ .text>h1 {
+   font-size: 3.2rem;
+   line-height: 5rem;
  }
 
- .text>h5 {
-   font-weight: 400;
-   color: grey;
- }
+.text>h3 {
+  color: rgb(38, 38, 38);
+  line-height: 3rem;
+}
+
+.text>h5 {
+  font-weight: 400;
+  color: grey;
+  line-height: 2.3rem;
+}
 
  span#orange {
    color: #FFA500;

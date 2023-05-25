@@ -260,8 +260,23 @@ fieldset {
 
 .article {
     text-align: center;
+    margin: 1rem 2rem;
 }
+  #sortType {
+      list-style-type: none;
 
+  }
+
+  .sortbtn, .sortLabel {
+    
+      display: none;
+  }
+
+  #sortType li {
+      list-style-type: none;
+      float: left;
+      padding-right: 0.5rem;
+  }
 .search_results {
     /* background-color: #f88e28; */
     padding: 10px;
@@ -273,23 +288,26 @@ fieldset {
 
 .result {
     background-color: rgb(229, 229, 229);
-    padding: 20px;
+    padding: 15px;
     height: 15rem;
-    height: 100%;
+    height: 15rem;
     width: 80%;
     border-radius: 10px;
-    overflow: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    /* overflow-x: hidden; */
     /*hide horizontal scroll*/
-    overflow-y: auto;
+    overflow-y: hidden;
     /*enable vertical scroll for div when needed*/
 
 }
-
+.result h3{
+    line-height: 3rem;
+}
 .result p {
     /* overflow: hidden; */
     font-size: 1rem;
-
+    line-height: 2rem;
+    
 }
 
 .result img {
@@ -309,15 +327,21 @@ button {
 
 button:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(0.9);
     background-color: orange;
-    transition: 0.3s;
+    transition: 0.1s;
     box-shadow: 0 0 5px orange,
         0 0 5px orange,
         0 0 5px orange,
         0 0 5px orange;
 }
+.moreBtn {
+    border: none;
 
+}
+.moreBtn a{
+    text-decoration: none;
+}
 @media(max-width: 800px) and (min-width: 0px) {
 
     .header .logo a img {
