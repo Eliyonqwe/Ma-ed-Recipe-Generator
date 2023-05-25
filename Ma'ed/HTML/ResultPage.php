@@ -11,10 +11,9 @@ session_start();
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="../styles/resultpage.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
 </head>
 
 <body>
@@ -46,7 +45,7 @@ session_start();
           <li id="separator"><a href="#">|</a></li>
           <?php
           if (isset($_SESSION['username'])) {
-            ?>
+          ?>
             <li class="phone" id="normal">
               <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
             </li>
@@ -56,7 +55,7 @@ session_start();
             <li class="phone" id="normal">
               <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
             </li>
-            <?php
+          <?php
           }
           ?>
           <!--           
@@ -68,7 +67,7 @@ session_start();
 
             if (isset($_SESSION['username'])) {
               $username = $_SESSION['username'];
-              ?>
+            ?>
               <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
               <div class="profile">
                 <ul id="profile">
@@ -85,13 +84,13 @@ session_start();
                 </ul>
               </div>
 
-              <?php
+            <?php
             } else {
-              ?>
+            ?>
               <a href="signin.php"><button class="account">
                   <span class="material-symbols-outlined">person</span>Account
                 </button></a>
-              <?php
+            <?php
             }
             ?>
           </li>
@@ -116,7 +115,7 @@ session_start();
 
       <?php
       // Start the session and connect to the database
-      
+
       include('connect.php');
 
       if (isset($_SESSION['username'])) {
@@ -215,7 +214,7 @@ bookmark</span>bookmark</button></form>';
           //     echo '<input type="checkbox" >';
           //   }
           // }
-          
+
 
           // echo nl2br($row['ingredients']);
           ?>
@@ -247,7 +246,7 @@ bookmark</span>bookmark</button></form>';
           //     echo '<input type="checkbox" >';
           //   }
           // }
-          
+
 
           // echo nl2br($row['ingredients']);
           ?>

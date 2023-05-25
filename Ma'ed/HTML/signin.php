@@ -9,6 +9,7 @@
   <title>signin</title>
   <link rel="stylesheet" href="../styles/signin.css">
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
 </head>
 
 <body>

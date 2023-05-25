@@ -3,7 +3,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+   font-family: 'Dosis';
    text-decoration: none;
    scroll-behavior: smooth;
 
@@ -236,21 +236,21 @@
  }
  .text>h1 {
    /* font-size: 3.2rem; */
-  font-size: calc(3rem + 1.5vw);
-   line-height: 5rem;
+  font-size: calc(3.5rem + 1.5vw);
+   line-height: 6rem;
  }
 
 .text>h3 {
   color: rgb(38, 38, 38);
   font-size: calc(1rem + 1.5vw);
-  line-height: 3rem;
+  line-height: 3.5rem;
 }
 
 .text>h5 {
   font-weight: 400;
   font-size: calc(0rem + 1.5vw);
   color: grey;
-  line-height: 2.3rem;
+  line-height: 3rem;
 }
 
  span#orange {

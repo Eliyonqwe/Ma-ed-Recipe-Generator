@@ -9,9 +9,12 @@
   <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
   <link rel="stylesheet" href="../Styles/home.css" />
   <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
+
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
@@ -224,7 +227,7 @@
         <div class="top">
           <div class="logo-details">
 
-            <span class="logo_name">Ma'ed</span>
+            <span class="logo_name"> <b> Ma'ed</b></span>
           </div>
           <div class="media-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -238,7 +241,7 @@
           <ul class="box">
             <li class="link_name"><span class="material-symbols-outlined">
                 restaurant
-              </span>Ma'ed</li>
+              </span><b>Ma'ed</b></li>
             <li><a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a></li>
             <li><a href="#"><span class="material-symbols-outlined style">
                   send
@@ -251,7 +254,7 @@
                 </span>Get started</a></li>
           </ul>
           <ul class="box">
-            <li class="link_name"><span class="material-symbols-outlined style">explore</span>Explore</li>
+            <li class="link_name"><span class="material-symbols-outlined style">explore</span><b>Explore</b></li>
             <li><a href="#"><span class="material-symbols-outlined style">search</span>Search Food</a></li>
             <li><a href="#"><span class="material-symbols-outlined style">login </span>Login</a></li>
             <li><a href="#"><span class="material-symbols-outlined style">logout</span>Logout</a></li>
@@ -259,7 +262,7 @@
           </ul>
 
           <ul class="box">
-            <li class="link_name"><span class="material-symbols-outlined style">download</span>Get our App</li>
+            <li class="link_name"><span class="material-symbols-outlined style">download</span> <b> Get our App</b></li>
             <li><a href="#"><span class="material-symbols-outlined style">
                   phone_android
                 </span>Android</a></li>
@@ -275,7 +278,7 @@
           <ul class="box input-box">
             <li class="link_name"><span class="material-symbols-outlined style">
                 mail
-              </span>Subscribe</li>
+              </span> <b> Subscribe</b></li>
             <li><input type="text" placeholder="Enter your email"></li>
             <li><input type="button" value="Subscribe"></li>
           </ul>

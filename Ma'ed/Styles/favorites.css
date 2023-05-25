@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Lexend', serif;
+    /* font-family: 'Lexend', serif; */
+    font-family: 'Dosis';
     font-style: normal;
 
 }

@@ -5,7 +5,8 @@
 
 /* Set the font family for body text */
 body {
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Dosis';
 }
 
 /* Set the font family for headings */

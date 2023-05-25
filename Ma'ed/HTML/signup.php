@@ -9,6 +9,7 @@
   <title>Signup</title>
   <link rel="stylesheet" href="../styles/signup.css" />
   <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
+  <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
 </head>
@@ -55,6 +56,7 @@
         <input type="password" placeholder=" Password" name="password_1" />
         <input type="password" placeholder="Repeat Password" name="password_2" />
         <button type="submit" class="signup" name="reg_user">Sign Up</button>
+
       </form>
     </div>
 
