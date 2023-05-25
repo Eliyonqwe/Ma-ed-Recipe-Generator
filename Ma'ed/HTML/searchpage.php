@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@ session_start();
 </head>
 
 <body>
-   
+
     <div class="wrapper">
         <header class="header" id="header">
             <section class="logo" id="logo">
@@ -79,7 +78,8 @@ session_start();
                                         <a href="#"><span class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
-                                        <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                                        <a href="favorites.php"><span
+                                                class="material-symbols-outlined ">Star</span>Favorites</a>
                                     </li>
                                     <li id="normal">
                                         <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign

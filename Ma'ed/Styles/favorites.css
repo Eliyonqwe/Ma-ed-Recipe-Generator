@@ -203,10 +203,16 @@ button:hover {
         0 0 5px orange,
         0 0 5px orange;
 }
-.main{
+
+.main {
     padding-left: 15vw;
 
 }
+
+.main h1 {
+    border-bottom: 1px solid gray;
+}
+
 .lists {
     /* background-color: #f88e28; */
     padding: 10px;
@@ -214,13 +220,14 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
+
 .result {
     /* background-color: rgb(229, 229, 229); */
     padding: 20px;
     height: 15rem;
     height: 100%;
     width: 80%;
-    
+
     box-shadow: -4.58962px 37.0436px 37.689px rgba(0, 0, 0, 0.14);
     border-radius: 10px;
     overflow: hidden;
@@ -328,5 +335,6 @@ button:hover {
     #dropcheckbox:checked~ul {
         left: 0;
     }
+
 
 }

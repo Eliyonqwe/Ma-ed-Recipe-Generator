@@ -123,6 +123,9 @@ session_start();
                 LEFT JOIN nutritionfact nf ON f.foodID = nf.foodID
                 WHERE uf.user_id = '$userid[0]'";
             $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) == 0) {
+                echo "<h3> You have nothing Saved!</h3>";
+            }
             while ($row = mysqli_fetch_assoc($result)) {
                 // Do something with each row
                 ?>
