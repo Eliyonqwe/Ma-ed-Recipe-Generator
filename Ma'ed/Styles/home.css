@@ -27,7 +27,7 @@
    grid-template-columns: 20% 80%;
    align-items: center;
    justify-content: space-between;
-   z-index: 1000;
+   z-index: 1;
 
 
  }
@@ -235,17 +235,20 @@
 
  }
  .text>h1 {
-   font-size: 3.2rem;
+   /* font-size: 3.2rem; */
+  font-size: calc(3rem + 1.5vw);
    line-height: 5rem;
  }
 
 .text>h3 {
   color: rgb(38, 38, 38);
+  font-size: calc(1rem + 1.5vw);
   line-height: 3rem;
 }
 
 .text>h5 {
   font-weight: 400;
+  font-size: calc(0rem + 1.5vw);
   color: grey;
   line-height: 2.3rem;
 }
@@ -256,6 +259,7 @@
 
  .button-start span {
    color: white;
+   line-height: 1.2rem;
  }
 
  .button-start {
@@ -311,6 +315,11 @@
 
  @media(max-width: 800px) {
 
+  .header{
+    position: sticky;
+    top: 0;
+    background-color:  #ecececca;
+  }
    .header .logo a img {
      width: 7.5rem;
    }
@@ -326,7 +335,7 @@
 
 
      margin-top: 2rem;
-     left: -100%;
+     left: -100vw;
      text-align: center;
      display: block;
      transition: all 0.5s ease-in-out;
@@ -391,6 +400,7 @@
 
    #dropcheckbox:checked~ul {
      left: 0;
+     z-index: 1;
    }
 
    .main_box {
@@ -516,6 +526,8 @@
 
    footer .content .link-boxes .box {
      width: calc(100% / 2 - 10px);
+
+
    }
 
    footer .content .link-boxes .input-box {
@@ -918,6 +930,7 @@
  .content .link-boxes .box li {
    margin: 6px 0;
    list-style: none;
+   line-height: 2rem;
  }
 
  .content .link-boxes .box li a {

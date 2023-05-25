@@ -8,6 +8,7 @@
 
 }
 
+
 .header {
     /* position: fixed; */
     position: relative;
@@ -223,6 +224,7 @@ span[class^="material"] {
     overflow-y: auto;
     /*enable vertical scroll for div when needed*/
     height: 62vh;
+  
 }
 
 .container {
@@ -283,6 +285,7 @@ fieldset {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    width: 100vw;
 }
 
 

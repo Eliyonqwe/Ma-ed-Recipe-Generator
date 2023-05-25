@@ -15,6 +15,7 @@ $_SESSION['array'];
     <link rel="stylesheet" href="../Styles/searchpage.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@ $_SESSION['array'];
                 // Do something with each row
                 $foodName = $row['foodName'];
                 $foodImg = $row['foodImg'];
-                $description = substr($row['description'], 0, 35) . '...';
+                $description = substr($row['description'], 0, 45) . '...';
                 $id = $row['foodID'];
                 // Do something with each row
             ?>
