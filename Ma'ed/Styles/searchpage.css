@@ -6,7 +6,7 @@
     /* font-family: 'Lexend', serif; */
     font-family: 'Dosis';
     font-style: normal;
-
+  
 }
 
 
@@ -283,19 +283,19 @@ fieldset {
 .search_results {
     /* background-color: #f88e28; */
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    width: 100vw;
+    display: flex;
+    
+    grid-gap: 1rem; 
+    /* width: 100vw; */
+    overflow-x: hidden;
 }
 
 
 .result {
     background-color: rgb(229, 229, 229);
     padding: 15px;
-    height: 15rem;
-    height: 15rem;
-    width: 80%;
+    height: 20rem;
+    width: 15rem;
     border-radius: 10px;
     overflow: auto;
     /* overflow-x: hidden; */

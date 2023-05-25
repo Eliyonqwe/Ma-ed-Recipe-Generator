@@ -126,6 +126,7 @@ session_start();
                 }
                 while ($row = mysqli_fetch_assoc($result)) {
                     // Do something with each row
+                    $description = substr($row['description'], 0, 45) . '...';
             ?>
                     <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
                         <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
@@ -133,7 +134,7 @@ session_start();
                             <?= $row['foodName']; ?>
                         </h3>
                         <p>
-                            <?= $row['description']; ?> description
+                            <?= $description; ?> description
                         </p>
                         <button class="moreBtn">
 
