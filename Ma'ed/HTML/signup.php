@@ -38,33 +38,38 @@
           <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <p>
-          Enter your personal details <br />
-          to Resgister
+          Enter your personal details to Resgister
         </p>
         <input required type="text" placeholder="First Name" name="fname" />
         <input required type="text" placeholder="Last Name" name="lname" value="" />
-        <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
-        <select id="gender" name="gender">
-          <option value="" style="color:grey" disabled selected hidden>Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
+        <div class="inline">
+          <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
 
+          <select id="gender" name="gender">
+            <option value="" style="color:grey" disabled selected hidden>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
 
         <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" />
         <input type="email" placeholder="  Email" name="email" value="<?php echo $email; ?>" />
         <input type="password" placeholder=" Password" name="password_1" />
         <input type="password" placeholder="Repeat Password" name="password_2" />
-        <button type="submit" class="signup" name="reg_user">Sign Up</button>
+        <div class="sec">
+          <label for="agree"><input type="checkbox" name="" id="agree"> By clicking Sign Up, you agree to our <span class="link">Terms & Conditions</span>. Learn how we collect, use and share your data in our<span class="link"> Privacy Policy.</span>
 
+          </label>
+
+          <button type="submit" class="signup" name="reg_user">Sign Up</button>
+
+        </div>
       </form>
     </div>
 
     <div class="item5">
-      <h1>
-        Welcome to Ma'ed. <br />
-        The First Recipe Generator Site in Ethiopia.
-      </h1>
+      <h1>Welcome to Ma'ed. </h1>
+      <h1> The First Recipe Generator Site in Ethiopia.</h1>
       <p>Sign In your Account and start journey with us</p>
       <button class="signin"><a href="signin.php">Sign In</a></button>
     </div>
