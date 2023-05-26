@@ -76,7 +76,8 @@ session_start();
                             <div class="profile">
                                 <ul id="profile">
                                     <li id="normal">
-                                        <a href="account.php"><span class="material-symbols-outlined ">login</span>Account</a>
+                                        <a href="account.php"><span
+                                                class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
                                         <a href="favorites.php"><span
@@ -123,7 +124,7 @@ session_start();
                     '$_SESSION[username]'";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        $oldpassword=$row['password'];
+                        $oldpassword = $row['password'];
                         ?>
 
                         <div class="profile">
@@ -134,28 +135,31 @@ session_start();
                         </div>
                         <div class="names">
                             <label for="">First Name</label>
-                            <input id="fname" type="text" name="firstname" value="<?= $row['firstName']; ?>">
+                            <input required id="fname" type="text" name="firstname" value="<?= $row['firstName']; ?>">
                             <label for="">Last Name</label>
-                            <input id="lname" type="text" name="lastname" value="<?= $row['lastName']; ?>">
+                            <input required id="lname" type="text" name="lastname" value="<?= $row['lastName']; ?>">
                             <label for="">User Name</label>
-                            <input id="username" type="text" name="username" value="<?= $row['username']; ?>">
+                            <input required id="username" type="text" name="username" value="<?= $row['username']; ?>">
                             <label for="">Gender</label>
-                            <input id="gender" type="text" name="gender" value="<?= $row['gender']; ?>">
+                            <input required id="gender" type="text" name="gender" value="<?= $row['gender']; ?>">
                             <label for="">Age</label>
-                            <input id="age" type="number" name="age" value="<?= $row['age']; ?>">
+                            <input required id="age" type="number" name="age" value="<?= $row['age']; ?>">
                             <label for="">password</label>
-                            <input id="password" type="text" name="password" value="<?= $row['password']; ?>">
+                            <input required id="password" type="text" name="password" value="<?= $row['password']; ?>">
                             <label for="">Email</label>
-                            <input id="email" type="email" name="email" value="<?= $row['email']; ?>">
+                            <input required id="email" type="email" name="email" value="<?= $row['email']; ?>">
                         </div>
                         <div class="account-action">
-                            <button ><a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a></button>
-                            <button type="submit" name="delete"><?php
-                                    $id = $row['id'];
-                                    // echo $id;
-                            
-                                    echo "<a href='removeuser.php?status=" . $id . "'>Delete Account</a>";
-                                    ?></button>
+                            <button><a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign
+                                    out</a></button>
+                            <button type="submit" name="delete">
+                                <?php
+                                $id = $row['id'];
+                                // echo $id;
+                        
+                                echo "<a href='removeuser.php?status=" . $id . "'>Delete Account</a>";
+                                ?>
+                            </button>
                         </div>
 
                         <?php
@@ -178,7 +182,7 @@ session_start();
             $gender = $_POST['gender'];
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $password =($oldpassword===$_POST['password']? $_POST['password']: md5($_POST['password']));
+            $password = ($oldpassword === $_POST['password'] ? $_POST['password'] : md5($_POST['password']));
 
             $sql = "UPDATE users SET firstName='$fname',lastName='$lname' ,age='$age',gender='$gender',
             username='$username',email='$email',password='$password' WHERE username='$_SESSION[username]'";
@@ -186,13 +190,14 @@ session_start();
             // execute the query
             if (mysqli_query($conn, $sql)) {
                 echo "Record updated successfully";
+                $_SESSION['username'] = $username;
             } else {
                 echo "Error updating record: " . mysqli_error($conn);
             }
 
             // close the database connection
             mysqli_close($conn);
-           
+
 
         }
 
