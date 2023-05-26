@@ -11,15 +11,14 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
     <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Favorites</title>
     <link rel="stylesheet" href="../styles/favorites.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
-
+    <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
 </head>
 
 <body>
@@ -38,8 +37,7 @@ session_start();
 
                 <ul>
                     <li id="normal">
-                        <a href="home.php"><span class="material-symbols-outlined style"
-                                style="line-height: 1">Home</span>Home</a>
+                        <a href="home.php"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
                     </li>
                     <li id="normal">
                         <a href="home.php #aboutus"><span class="material-symbols-outlined">groups</span> About
@@ -52,7 +50,7 @@ session_start();
                     <li id="separator"><a href="#">|</a></li>
                     <?php
                     if (isset($_SESSION['username'])) {
-                        ?>
+                    ?>
                         <li class="phone" id="normal">
                             <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
                         </li>
@@ -62,7 +60,7 @@ session_start();
                         <li class="phone" id="normal">
                             <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
                         </li>
-                        <?php
+                    <?php
                     }
                     ?>
                     <!--           
@@ -74,7 +72,7 @@ session_start();
 
                         if (isset($_SESSION['username'])) {
                             $username = $_SESSION['username'];
-                            ?>
+                        ?>
                             <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
                             <div class="profile">
                                 <ul id="profile">
@@ -91,13 +89,13 @@ session_start();
                                 </ul>
                             </div>
 
-                            <?php
+                        <?php
                         } else {
-                            ?>
+                        ?>
                             <a href="signin.php"><button class="account">
                                     <span class="material-symbols-outlined">person</span>Account
                                 </button></a>
-                            <?php
+                        <?php
                         }
                         ?>
                     </li>
@@ -110,45 +108,49 @@ session_start();
         <div class="lists">
             <?php
             include('connect.php');
-            
+
             if (isset($_SESSION['username'])) {
-            $username=$_SESSION['username'];
-            $sql = "SELECT id FROM users WHERE username='$username'";
-            $result = mysqli_query($conn, $sql);
-            $userid = mysqli_fetch_array($result);
+                $username = $_SESSION['username'];
+                $sql = "SELECT id FROM users WHERE username='$username'";
+                $result = mysqli_query($conn, $sql);
+                $userid = mysqli_fetch_array($result);
 
                 $sql = "SELECT f.foodID,f.foodName, f.foodImg, f.foodType, f.prepTime, f.servingSize, f.description, f.ingredients, f.instructions, nf.calories, nf.fat, nf.protein, nf.carbs, nf.cholestrol, nf.sodium
                 FROM user_foods uf
                 JOIN food f ON uf.foodID = f.foodID
                 LEFT JOIN nutritionfact nf ON f.foodID = nf.foodID
                 WHERE uf.user_id = '$userid[0]'";
-            $result = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
-                // Do something with each row
-                ?>
-                <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
-                    <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
-                    <h3>
-                        <?= $row['foodName']; ?>
-                    </h3>
-                    <p>
-                        <?= $row['description']; ?> description
-                    </p>
-                    <button class="moreBtn">
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) == 0) {
+                    echo "<h3> You have nothing Saved!</h3>";
+                }
+                while ($row = mysqli_fetch_assoc($result)) {
+                    // Do something with each row
+                    $description = substr($row['description'], 0, 45) . '...';
+            ?>
+                    <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
+                        <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">
+                        <h3>
+                            <?= $row['foodName']; ?>
+                        </h3>
+                        <p>
+                            <?= $description; ?> description
+                        </p>
+                        <button class="moreBtn">
 
-                        <?php
-                        $id = $row['foodID'];
-                        // echo $id;
-                        echo "<a href='ResultPage.php?status=" . $id . "'>More</a>";
-                        ?>
-                    </button>
+                            <?php
+                            $id = $row['foodID'];
+                            // echo $id;
+                            echo "<a href='ResultPage.php?status=" . $id . "'>More</a>";
+                            ?>
+                        </button>
 
-                </div>
-                <?php
+                    </div>
+            <?php
+                }
+            } else {
+                echo "please login";
             }
-        } else {
-            echo "please login";
-        }
 
             ?>
         </div>

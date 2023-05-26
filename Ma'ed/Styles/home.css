@@ -3,7 +3,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+   font-family: 'Dosis';
    text-decoration: none;
    scroll-behavior: smooth;
 
@@ -27,7 +27,7 @@
    grid-template-columns: 20% 80%;
    align-items: center;
    justify-content: space-between;
-   z-index: 1000;
+   z-index: 1;
 
 
  }
@@ -117,7 +117,7 @@
    height: 200px;
    overflow: hidden;
    transition: width 0.5s;
-   backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
 
  }
 
@@ -234,16 +234,24 @@
 
 
  }
-
-
- .text>h3 {
-   color: rgb(38, 38, 38);
+ .text>h1 {
+   /* font-size: 3.2rem; */
+  font-size: calc(3.5rem + 1.5vw);
+   line-height: 6rem;
  }
 
- .text>h5 {
-   font-weight: 400;
-   color: grey;
- }
+.text>h3 {
+  color: rgb(38, 38, 38);
+  font-size: calc(1rem + 1.5vw);
+  line-height: 3.5rem;
+}
+
+.text>h5 {
+  font-weight: 400;
+  font-size: calc(0rem + 1.5vw);
+  color: grey;
+  line-height: 3rem;
+}
 
  span#orange {
    color: #FFA500;
@@ -251,6 +259,7 @@
 
  .button-start span {
    color: white;
+   line-height: 1.2rem;
  }
 
  .button-start {
@@ -265,6 +274,11 @@
    padding: 0.5rem 0.5rem;
    color: white;
    transition: 0.3s ease;
+   
+ }
+ .button-start a{
+  text-decoration: none;
+  color: white;
  }
 
  .button-start:hover {
@@ -306,6 +320,11 @@
 
  @media(max-width: 800px) {
 
+  .header{
+    position: sticky;
+    top: 0;
+    background-color:  #ecececca;
+  }
    .header .logo a img {
      width: 7.5rem;
    }
@@ -321,7 +340,7 @@
 
 
      margin-top: 2rem;
-     left: -100%;
+     left: -100vw;
      text-align: center;
      display: block;
      transition: all 0.5s ease-in-out;
@@ -386,6 +405,7 @@
 
    #dropcheckbox:checked~ul {
      left: 0;
+     z-index: 1;
    }
 
    .main_box {
@@ -511,6 +531,8 @@
 
    footer .content .link-boxes .box {
      width: calc(100% / 2 - 10px);
+
+
    }
 
    footer .content .link-boxes .input-box {
@@ -913,6 +935,7 @@
  .content .link-boxes .box li {
    margin: 6px 0;
    list-style: none;
+   line-height: 2rem;
  }
 
  .content .link-boxes .box li a {

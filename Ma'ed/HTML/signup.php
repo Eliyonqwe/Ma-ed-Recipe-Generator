@@ -9,8 +9,10 @@
   <title>Signup</title>
   <link rel="stylesheet" href="../styles/signup.css" />
   <link rel="icon" type="image/x-icon" href="../pics/favicon.ico">
+  <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/a837bf0db4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 <body>
@@ -30,39 +32,49 @@
     <div class="item4">
       <form action="../HTML/signup.php" method="post">
         <?php include('errors.php'); ?>
-        <h4>Create an Account</h4>
-        <div class="icon-login">
-          <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
-          <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p>
-          Enter your personal details <br />
-          to Resgister
-        </p>
+        <section class="head">
+          <h4>Create an Account</h4>
+          <div class="icon-login">
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <p>
+            Enter your personal details to Resgister
+          </p>
+        </section>
         <input required type="text" placeholder="First Name" name="fname" />
         <input required type="text" placeholder="Last Name" name="lname" value="" />
-        <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
-        <select id="gender" name="gender">
-          <option value="" style="color:grey" disabled selected hidden>Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
+        <div class="inline">
+          <input required type="number" id="age" name="age" min="0" max="150" placeholder="Age">
 
+          <select id="gender" name="gender">
+            <option value="" style="color:grey" disabled selected hidden>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
 
         <input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" />
         <input type="email" placeholder="  Email" name="email" value="<?php echo $email; ?>" />
-        <input type="password" placeholder=" Password" name="password_1" />
-        <input type="password" placeholder="Repeat Password" name="password_2" />
-        <button type="submit" class="signup" name="reg_user">Sign Up</button>
+        <input type="password" placeholder=" Password" name="password_1" id="password1" />
+        <span><i id="toggler1" class="far fa-eye"></i></span>
+        <input type="password" placeholder="Repeat Password" name="password_2" id="password2" />
+        <span><i id="toggler2" class="far fa-eye"></i></span>
+        <div class="sec">
+          <label for="agree"><input type="checkbox" name="" id="agree"> By clicking Sign Up, you agree to our <span class="link">Terms & Conditions</span>. Learn how we collect, use and share your data in our<span class="link"> Privacy Policy.</span>
+
+          </label>
+          <section class="subButton">
+            <button type="submit" class="signup" name="reg_user">Sign Up</button>
+          </section>
+        </div>
       </form>
     </div>
 
     <div class="item5">
-      <h1>
-        Welcome to Ma'ed. <br />
-        The First Recipe Generator Site in Ethiopia.
-      </h1>
+      <h1>Welcome to Ma'ed. </h1>
+      <h1> The First Recipe Generator Site in Ethiopia.</h1>
       <p>Sign In your Account and start journey with us</p>
       <button class="signin"><a href="signin.php">Sign In</a></button>
     </div>
@@ -75,3 +87,4 @@
 </body>
 
 </html>
+<script src="../Scripts/signup.js"></script>

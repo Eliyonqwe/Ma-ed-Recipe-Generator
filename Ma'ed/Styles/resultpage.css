@@ -5,47 +5,101 @@
 
 /* Set the font family for body text */
 body {
-  font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Dosis';
 }
 
 /* Set the font family for headings */
-h1, h2, h3,h4,h5{
-  font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Playfair Display', serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     scroll-behavior: smooth;
     font-style: normal;
 
 }
 
-.header{
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined#bk2 {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.material-symbols-outlined#bk1 {
+    font-variation-settings:
+        'FILL' 100,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+#bookmark {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 10px;
+    transform: scale(1.0);
+    transition: transform 0.5s;
+}
+
+#bookmark:hover {
+    transform: scale(1.1);
+}
+
+#dropcheckbox {
+    font-size: 2rem;
+    background-color: red;
+    float: right;
+    line-height: 5rem;
+    margin-right: 1rem;
+    display: none;
+
+
+}
+
+.header {
     /* position: fixed; */
     position: relative;
     top: 0px;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     width: 100vw;
     display: grid;
     grid-template-columns: 20% 80%;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    
+
 }
-.header .logo{
+
+.header .logo {
     grid-column: 1/2;
 }
 
-    
-.header .logo a img{
-    /* position: top left fixed; */
-   
-    width: calc(0.2 * 80vw );
 
-} 
+.header .logo a img {
+    /* position: top left fixed; */
+
+    width: calc(0.2 * 80vw);
+
+}
+
 .navigation {
     grid-column: 2/3;
     /* display: flex; */
@@ -53,20 +107,22 @@ h1, h2, h3,h4,h5{
     margin-right: 0;
 
 }
-.navigation ul{
-     list-style: none;
-     
-     
+
+.navigation ul {
+    list-style: none;
+
+
 }
-.navigation ul li{
+
+.navigation ul li {
     position: relative;
     float: left;
     padding-right: 0;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 1rem;
 }
 
-.navigation ul li a{
+.navigation ul li a {
     font-size: calc(100% * 16px);
     padding: 1.3rem;
     color: black;
@@ -74,9 +130,10 @@ h1, h2, h3,h4,h5{
     text-decoration: none;
 
 }
-.navigation ul li#normal a::after{
+
+.navigation ul li#normal a::after {
     content: '';
-    
+
     width: 0;
     height: 0.3rem;
     background: #FFA500;
@@ -86,29 +143,62 @@ h1, h2, h3,h4,h5{
     top: 3.2rem;
     transition: 0.5s ease-out;
 }
-.navigation ul li#normal a:hover::after{
+
+.navigation ul li#normal a:hover::after {
     width: 70%;
     box-shadow: 0 0 5px orange,
-            0 0 0 orange,
-            0 0 0 orange,
-            0 0 0 orange;
+        0 0 0 orange,
+        0 0 0 orange,
+        0 0 0 orange;
     border-radius: 5rem;
 }
-.navigation ul li#separator{
+
+.navigation ul li#separator {
     font-weight: lighter;
 }
-span[class^="material"]{
+
+.pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.profile ul {
+    right: 30px;
+    background-color: rgb(230, 230, 230);
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 200px;
+    overflow: hidden;
+    transition: width 0.5s;
+
+}
+
+.profile ul li {
+    margin-left: 120px;
+}
+
+.phone {
+    display: none;
+}
+
+span[class^="material"] {
     color: #FFA500;
     vertical-align: top;
     line-height: 1.1;
-    padding-right: 0.2rem ;
+    padding-right: 0.2rem;
 }
-.account span{
+
+.account span {
     vertical-align: top;
     line-height: 0.4;
     color: white;
 }
-.account{
+
+.account {
     font-size: 1rem;
     font-weight: bold;
     line-height: 0.4;
@@ -120,10 +210,12 @@ span[class^="material"]{
     background-color: #FFA500;
     display: block;
 }
-#dropcheckbox_label{
+
+#dropcheckbox_label {
     display: none;
 }
-.wrapper2{
+
+.wrapper2 {
     position: relative;
     display: flex;
     padding-left: 15%;
@@ -131,45 +223,56 @@ span[class^="material"]{
     flex-direction: column;
     gap: 30px;
     width: 83%;
- 
-}
-.wrapper2 #information{
-    border-top: 1px solid grey;
-    padding-top: 20px;
-  
-}
-.wrapper2 img{
-    border-radius: 15px;
-    max-width: 100%; /* set the maximum width to 100% of the container */
-  height: auto; /* set the height to auto to maintain the aspect ratio */
-  max-height: 650px; /* set the maximum height to 500 pixels */
- 
 
 }
-.description{
-    display: grid;
-    grid-template-columns: 65% 35%;    
+
+.wrapper2 #information {
+    border-top: 1px solid grey;
+    padding-top: 20px;
+
 }
-.ingredient-info{
+
+.wrapper2 img {
+    border-radius: 15px;
+    max-width: 100%;
+    /* set the maximum width to 100% of the container */
+    height: auto;
+    /* set the height to auto to maintain the aspect ratio */
+    max-height: 650px;
+    /* set the maximum height to 500 pixels */
+
+
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.ingredient-info {
     /* background-color: #FFA500; */
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .info {
     display: flex;
     flex-direction: row;
-    
+
 }
-.info div{
+
+.info div {
     border-left: 1px solid grey;
     padding: 10px;
 }
-.ingredients{
+
+.ingredients {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 input[type="checkbox"] {
     position: relative;
     width: 20px;
@@ -182,13 +285,14 @@ input[type="checkbox"] {
     appearance: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-  }
-  
-input[type="checkbox"]:checked + label {
-    text-decoration: underline; /* underline the label when the checkbox is checked */
-  }
-  
-  input[type="checkbox"]:checked::before {
+}
+
+input[type="checkbox"]:checked+label {
+    text-decoration: underline;
+    /* underline the label when the checkbox is checked */
+}
+
+input[type="checkbox"]:checked::before {
     content: "\2713";
     position: absolute;
     top: -10px;
@@ -196,138 +300,172 @@ input[type="checkbox"]:checked + label {
     font-size: 25px;
     color: orange;
     transition: all 0.3s ease-in-out;
-  }
-  
-  input[type="checkbox"]:hover {
+}
+
+input[type="checkbox"]:hover {
     background-color: #f2f2f2;
-  }
-  /* .instructions ol li{
+}
+
+/* .instructions ol li{
    padding:10px;
    background-color: #FFA500;
 
   } */
-  .instructions ol {
-    list-style: none; /* remove the default list-style */
-    counter-reset: my-counter; /* reset the counter */
-  }
-  
-  .instructions li {
-    padding:10px;
-    counter-increment: my-counter; /* increment the counter */
-    padding-left: 30px; /* add some padding to the left of the text */
-    position: relative; /* make the li element a positioned container for the ::before pseudo-element */
-  }
-  
-  .instructions li::before {
-    content: counter(my-counter); /* add the number */
-    background-color: #ff642f; /* set the background color */
-    color: black; /* set the text color */
-    font-weight: bold; /* make the number bold */
-    padding: 5px; /* add some padding */
-    position: absolute; /* position the number absolutely within the li element */
-    left: 0; /* position the number to the left of the text */
-    top: 0; /* position the number at the top of the li element */
-    border-radius: 30px;
-  }
+.instructions ol {
+    list-style: none;
+    /* remove the default list-style */
+    counter-reset: my-counter;
+    /* reset the counter */
+}
 
-  .nutrition-facts{
+.instructions li {
+    padding: 10px;
+    counter-increment: my-counter;
+    /* increment the counter */
+    padding-left: 30px;
+    /* add some padding to the left of the text */
+    position: relative;
+    /* make the li element a positioned container for the ::before pseudo-element */
+}
+
+.instructions li::before {
+    content: counter(my-counter);
+    /* add the number */
+    background-color: #ff642f;
+    /* set the background color */
+    color: black;
+    /* set the text color */
+    font-weight: bold;
+    /* make the number bold */
+    padding: 5px;
+    /* add some padding */
+    position: absolute;
+    /* position the number absolutely within the li element */
+    left: 0;
+    /* position the number to the left of the text */
+    top: 0;
+    /* position the number at the top of the li element */
+    border-radius: 30px;
+}
+
+.nutrition-facts {
     background-color: #e8e8e8;
     height: 350px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  .nutrition-facts h3{
+}
+
+.nutrition-facts h3 {
     text-align: center;
     margin-top: 10px;
-  }
-  .nutrition{
+}
+
+.nutrition {
     padding-left: 30px;
     padding-right: 30px;
 
-  }
-  .nutrition .left{
+}
+
+.nutrition .left {
     float: left;
-  }
-  
-  .nutrition .rignt{
+}
+
+.nutrition .rignt {
     float: right;
-  }
+}
 
 
-@media(max-width: 800px) and (min-width: 0px){
+@media(max-width: 800px) and (min-width: 0px) {
 
-    .header .logo a img{
+    .header .logo a img {
         width: 7.5rem;
     }
-    .navigation ul{
+
+    .navigation ul {
         position: fixed;
         border-radius: 1rem;
         width: 100%;
         box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
-        height: 16rem;
+        height: 25rem;
         background-color: #00000023;
         backdrop-filter: blur(6px);
-       
-        
+
+
         margin-top: 2rem;
         left: -100%;
         text-align: center;
         display: block;
-        transition:  all 0.5s ease-in-out;    
+        transition: all 0.5s ease-in-out;
     }
-    button.account{
+
+    button.account {
         background-color: transparent;
         color: black;
         font-weight: bold;
         font-size: 1.4rem;
     }
+
     span[class^="material"] {
         color: #FFA500;
         vertical-align: top;
         line-height: 0.7;
         padding-right: 0.2rem;
     }
-    .navigation ul li{
+
+    .navigation ul li {
         display: block;
         float: none;
     }
-    .navigation #separator{
+
+    .navigation #separator {
         display: none;
 
     }
-    .navigation ul li a{
+
+    .navigation ul li a {
         display: inline-block;
         /* font-weight: bolder; */
     }
-    .navigation ul li a span{
-           color: #FFA500;
+
+    .navigation ul li a span {
+        color: #FFA500;
     }
-    .navigation ul li a:hover, .navigation ul li a:active{
+
+    .navigation ul li a:hover,
+    .navigation ul li a:active {
         color: black;
     }
-    .signup, .signup{
+
+    .signup,
+    .signup {
         color: white;
-     }
-   
-   #dropcheckbox_label{
-    font-size: 1rem;
-    font-weight: bolder;
-    display: block;
-   }
-    #dropcheckbox:checked ~ ul{
+    }
+
+    .pic img {
+        display: none;
+    }
+
+    #dropcheckbox_label {
+        font-size: 1rem;
+        font-weight: bolder;
+        display: block;
+    }
+
+    #dropcheckbox:checked~ul {
         left: 0;
     }
-    .description{
+
+    .description {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        
+
     }
-    
+
 }
+
 br::after {
     content: url(../pics/favicon.ico);
     /* content: "&nbsp;" !important; */
 }
-
