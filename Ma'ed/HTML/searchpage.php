@@ -96,7 +96,7 @@ $_SESSION['array'] = [];
                         if (isset($_SESSION['username'])) {
                         ?>
                             <li class="phone" id="normal">
-                                <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                                <a href="account.php"><span class="material-symbols-outlined ">Home</span>Account</a>
                             </li>
                             <li class="phone" id="normal">
                                 <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
@@ -121,7 +121,7 @@ $_SESSION['array'] = [];
                                 <div class="profile">
                                     <ul id="profile">
                                         <li id="normal">
-                                            <a href="#"><span class="material-symbols-outlined ">login</span>Account</a>
+                                            <a href="account.php"><span class="material-symbols-outlined ">login</span>Account</a>
                                         </li>
                                         <li id="normal">
                                             <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>

@@ -51,7 +51,7 @@ session_start();
                     if (isset($_SESSION['username'])) {
                         ?>
                         <li class="phone" id="normal">
-                            <a href="#"><span class="material-symbols-outlined ">Home</span>Account</a>
+                            <a href="account.php"><span class="material-symbols-outlined ">Home</span>Account</a>
                         </li>
                         <li class="phone" id="normal">
                             <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
@@ -76,7 +76,7 @@ session_start();
                             <div class="profile">
                                 <ul id="profile">
                                     <li id="normal">
-                                        <a href="#"><span class="material-symbols-outlined ">login</span>Account</a>
+                                        <a href="account.php"><span class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
                                         <a href="favorites.php"><span
@@ -123,6 +123,7 @@ session_start();
                     '$_SESSION[username]'";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $oldpassword=$row['password'];
                         ?>
 
                         <div class="profile">
@@ -177,7 +178,8 @@ session_start();
             $gender = $_POST['gender'];
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $password = md5($_POST['password']);
+            $password =($oldpassword===$_POST['password']? $_POST['password']: md5($_POST['password']));
+
             $sql = "UPDATE users SET firstName='$fname',lastName='$lname' ,age='$age',gender='$gender',
             username='$username',email='$email',password='$password' WHERE username='$_SESSION[username]'";
 
@@ -190,6 +192,7 @@ session_start();
 
             // close the database connection
             mysqli_close($conn);
+           
 
         }
 
