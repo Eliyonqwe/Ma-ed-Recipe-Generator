@@ -62,13 +62,18 @@ span {
 
 form {
     background-color: white;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 50px;
+    /* flex-direction: column; */
+    padding: 5% 15%;
     height: 100%;
+    text-align: left;
+}
+.subButton{
     text-align: center;
+    margin-right: 5%;
+
 }
 
 form>input, input#age {
@@ -76,10 +81,11 @@ form>input, input#age {
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
+	width: 95%;
 	color: white;
 	text-align: 20px;
     border-radius: 0.4rem;
+    display: inline-block;
 }
 select {
     border-radius: 0.4rem;
@@ -258,9 +264,19 @@ text-decoration: underline;
 }
 .inline{
     display: flex;
-    width: 100%;
+    width: 95%;
     gap: 5%;
 }
+i#toggler1,i#toggler2{
+    cursor: pointer;
+    margin: -30px;
+}
+.head{
+    
+    text-align: center;
+    margin-right: 5%;
+}
+
 @media(max-width: 1200px) {
 
 

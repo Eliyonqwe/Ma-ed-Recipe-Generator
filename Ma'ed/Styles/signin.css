@@ -80,23 +80,40 @@ button.signin:hover {
 
 form {
 	background-color: white;
-	display: flex;
+	
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 	padding: 50px;
+	text-align: left;
 	height: 100%;
-	text-align: center;
+	
 }
+.head{
+	display: flex;
+	
+		flex-direction: column;
+		align-items: center;
+}
+.foot{
+display: flex;
 
+	flex-direction: column;
+	align-items: center;
+}
 input {
 	background-color: rgb(195, 185, 185);
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
+	width: 90%;
 	color: white;
 	text-align: 20px;
+	margin-left: 1.5rem;
+}
+
+i#toggler {
+	cursor: pointer;
+	margin: -1.5rem;
 }
 
 .item1 a i{
