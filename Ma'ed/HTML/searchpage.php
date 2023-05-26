@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['array'];
+$_SESSION['array'] = [];
 ?>
 
 <!DOCTYPE html>
@@ -231,16 +231,17 @@ $_SESSION['array'];
                     </h1>
                     <br />
                     <input type="submit" name="find" value="Find My Recipe">
-                    <ul id="sortType">
-                        <li class="sortLabel">Sort By</li>
-                        <br>
-                        <li><button type="submit" name="sortNameAsc" class="sortbtn">Name(A→Z)</button></li>
-                        <li><button type="submit" name="sortNameDesc" class="sortbtn">Name(Z→A)</button></li>
+                    <div class="sortsec">
+                        <ul id="sortType">
+                            <li class="sortLabel">Sort By</li>
+                            <br>
+                            <li><button type="submit" name="sortNameAsc" class="sortbtn">Name(A→Z)</button></li>
+                            <li><button type="submit" name="sortNameDesc" class="sortbtn">Name(Z→A)</button></li>
 
-                        <li> <button type="submit" name="sortTypeAsc" class="sortbtn">Type(A→Z)</button></li>
-                        <li> <button type="submit" name="sortTypeDesc" class="sortbtn">Type(Z→A)</button></li>
-                    </ul>
-
+                            <li> <button type="submit" name="sortTypeAsc" class="sortbtn">Type(A→Z)</button></li>
+                            <li> <button type="submit" name="sortTypeDesc" class="sortbtn">Type(Z→A)</button></li>
+                        </ul>
+                    </div>
 
                     <?php
                     // ascending order sort for name
