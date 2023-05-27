@@ -13,8 +13,7 @@ session_start();
         <title>Document</title>
         <link rel="stylesheet" href="../Styles/account.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
     </head>
 </head>
@@ -23,7 +22,7 @@ session_start();
     <div class="wrapper">
         <header class="header" id="header">
             <section class="logo" id="logo">
-                <a href="home.html"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
+                <a href="home.php"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
             </section>
             <section class="navigation" id="navigation">
                 <input type="checkbox" id="dropcheckbox" />
@@ -35,8 +34,7 @@ session_start();
 
                 <ul>
                     <li id="normal">
-                        <a href="home.php"><span class="material-symbols-outlined style"
-                                style="line-height: 1">Home</span>Home</a>
+                        <a href="home.php"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a>
                     </li>
                     <li id="normal">
                         <a href="home.php #aboutus"><span class="material-symbols-outlined">groups</span> About
@@ -49,7 +47,7 @@ session_start();
                     <li id="separator"><a href="#">|</a></li>
                     <?php
                     if (isset($_SESSION['username'])) {
-                        ?>
+                    ?>
                         <li class="phone" id="normal">
                             <a href="account.php"><span class="material-symbols-outlined ">Home</span>Account</a>
                         </li>
@@ -59,7 +57,7 @@ session_start();
                         <li class="phone" id="normal">
                             <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
                         </li>
-                        <?php
+                    <?php
                     }
                     ?>
                     <!--           
@@ -71,17 +69,15 @@ session_start();
 
                         if (isset($_SESSION['username'])) {
                             $username = $_SESSION['username'];
-                            ?>
+                        ?>
                             <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
                             <div class="profile">
                                 <ul id="profile">
                                     <li id="normal">
-                                        <a href="account.php"><span
-                                                class="material-symbols-outlined ">login</span>Account</a>
+                                        <a href="account.php"><span class="material-symbols-outlined ">login</span>Account</a>
                                     </li>
                                     <li id="normal">
-                                        <a href="favorites.php"><span
-                                                class="material-symbols-outlined ">Star</span>Favorites</a>
+                                        <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
                                     </li>
                                     <li id="normal">
                                         <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign
@@ -90,13 +86,13 @@ session_start();
                                 </ul>
                             </div>
 
-                            <?php
+                        <?php
                         } else {
-                            ?>
+                        ?>
                             <a href="signin.php"><button class="account">
                                     <span class="material-symbols-outlined">person</span>Account
                                 </button></a>
-                            <?php
+                        <?php
                         }
                         ?>
                     </li>
@@ -125,7 +121,7 @@ session_start();
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
                         $oldpassword = $row['password'];
-                        ?>
+                    ?>
 
                         <div class="profile">
                             <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt="">
@@ -156,13 +152,13 @@ session_start();
                                 <?php
                                 $id = $row['id'];
                                 // echo $id;
-                        
+
                                 echo "<a href='removeuser.php?status=" . $id . "'>Delete Account</a>";
                                 ?>
                             </button>
                         </div>
 
-                        <?php
+                    <?php
                     }
                     // Close the database connection
                     mysqli_close($conn);
@@ -197,8 +193,6 @@ session_start();
 
             // close the database connection
             mysqli_close($conn);
-
-
         }
 
         ?>

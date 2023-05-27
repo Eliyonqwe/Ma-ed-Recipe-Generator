@@ -126,6 +126,7 @@ session_start();
         $result = mysqli_query($conn, $sql);
         $userid = mysqli_fetch_array($result);
 
+
         $result = mysqli_query($conn, "SELECT * FROM user_foods WHERE user_id = $userid[0] AND foodID = $foodid");
         if (mysqli_num_rows($result) > 0) {
           $bookmarked = true;
@@ -165,7 +166,7 @@ bookmark</span>bookmark</button></form>';
 
 
     <p id="information">
-      <?php echo $row['description'] ?>
+      <?php echo $row['descriptions'] ?>
     </p>
     <img src="../pics/about us_pic.jpg" alt="" srcset="">
 

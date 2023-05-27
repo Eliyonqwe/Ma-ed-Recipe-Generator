@@ -25,7 +25,7 @@ session_start();
     <div class="wrapper">
         <header class="header" id="header">
             <section class="logo" id="logo">
-                <a href="home.html"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
+                <a href="home.php"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
             </section>
             <section class="navigation" id="navigation">
                 <input type="checkbox" id="dropcheckbox" />
@@ -126,7 +126,7 @@ session_start();
                 }
                 while ($row = mysqli_fetch_assoc($result)) {
                     // Do something with each row
-                    $description = substr($row['description'], 0, 45) . '...';
+                    $description = substr($row['descriptions'], 0, 45) . '...';
             ?>
                     <div class="<?= $row['foodName'] . ' ' . 'result'; ?>">
                         <img src="<?= $row['foodImg']; ?>" alt="<?= $row['foodName'] . ' ' . 'picture'; ?> ">

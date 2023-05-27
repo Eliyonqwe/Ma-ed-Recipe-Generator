@@ -42,7 +42,7 @@ $_SESSION['array'] = [];
                 // Do something with each row
                 $foodName = $row['foodName'];
                 $foodImg = $row['foodImg'];
-                $description = substr($row['description'], 0, 45) . '...';
+                $description = substr($row['descriptions'], 0, 45) . '...';
                 $id = $row['foodID'];
                 // Do something with each row
             ?>
@@ -53,10 +53,16 @@ $_SESSION['array'] = [];
                     </h3>
 
                     <p>
-                        <?= $description . "   "; ?><button class="moreBtn"><?php echo "<a href='ResultPage.php?status=" . $id . "'>More→</a>"; ?></button>
+                        <?= $description; ?> description
                     </p>
-                    <?php
-                    ?>
+                    <button class="moreBtn">
+
+                        <?php
+
+                        // echo $id;
+                        echo "<a href='ResultPage.php?status=" . $id . "'>More</a>";
+                        ?>
+                    </button>
 
                 </div>
 
@@ -69,7 +75,7 @@ $_SESSION['array'] = [];
         <div class="wrapper">
             <header class="header" id="header">
                 <section class="logo" id="logo">
-                    <a href="home.html"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
+                    <a href="home.php"><img src="../pics/Maed_logo1-removebg.png" alt="" /></a>
                 </section>
                 <section class="navigation" id="navigation">
                     <input type="checkbox" id="dropcheckbox" />
