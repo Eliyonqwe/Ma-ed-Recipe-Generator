@@ -46,7 +46,7 @@ $_SESSION['array'] = [];
                 $id = $row['foodID'];
                 // Do something with each row
             ?>
-                <div class="<?= $foodName . ' ' . 'result'; ?>">
+                <div class="<?= $foodName . ' ' . 'result'; ?>" id="<?= strtolower($foodName);?>">
                     <img src="<?= $foodImg; ?>" alt="<?= $foodName . ' ' . 'picture'; ?> ">
                     <h3>
                         <?= $foodName; ?>
@@ -213,7 +213,7 @@ $_SESSION['array'] = [];
                             // Display the ingredient name and description
                             // echo " <label id='" . strtolower($row['name']) . "'>" . $row['name'] . "</label>";
                         ?>
-                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
+                            <input name="check[]" type="checkbox" id="<?= $row['ingName']; ?>" value="<?= $row['ingName']; ?>" /><label id="<?= strtolower($row['ingName']) ; ?>" for="<?= $row['ingName']; ?>"><?= $row['ingName']; ?></label>
                         <?php
                         }
                         // Close the last container div
@@ -347,12 +347,17 @@ $_SESSION['array'] = [];
                                 }
                             }
 
-                            print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
+                           print_r($displayedfoodid); //Holds the foodids of the selected ingredients.( you can make these foods with 75% and above of the selected ingredients) 
                             $_SESSION['array'] = $displayedfoodid;
 
                             if (count($displayedfoodid) == 0) {
                                 echo '<h3>No food to display!</h3>';
                             } else {
+                                ?>
+                                <br>
+                                <br>
+                                <input  id="search-input" placeholder="Search..." type="text">
+                                <?php
                                 include('connect.php');
                                 // Create a comma-separated string of IDs
                                 $id_list = (count($displayedfoodid) < 2) ? implode('', $displayedfoodid) : implode(',', $displayedfoodid);

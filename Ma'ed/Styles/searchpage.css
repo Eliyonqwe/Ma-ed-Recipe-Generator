@@ -280,6 +280,11 @@ fieldset {
       float: left;
       padding-right: 0.5rem;
   }
+  #search-input{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+  }
 .search_results {
     /* background-color: #f88e28; */
     padding: 10px;
