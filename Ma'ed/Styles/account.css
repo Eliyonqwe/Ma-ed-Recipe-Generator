@@ -239,9 +239,17 @@ button:hover{
     padding-top: 20px;
     align-items: center;
 }
-.profile{
+.acc-profile{
     display: flex;
     gap: 10px;
+    
+}
+.acc-profile #pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 30px;
+    cursor: pointer;
 }
 .names{
 display: grid;
@@ -393,6 +401,18 @@ display: grid;
 
     #dropcheckbox:checked~ul {
         left: 0;
+    }
+    button{
+        font-size: medium;
+    }
+    .acc-profile{
+        width: 80vw;
+    }
+    .names{
+        width: 100%;
+    }
+    .account-action {
+        width: 100vw;
     }
 
 

@@ -123,8 +123,8 @@ session_start();
                         $oldpassword = $row['password'];
                     ?>
 
-                        <div class="profile">
-                            <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt="">
+                        <div class="acc-profile">
+                            <div id="pic" ><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt="">
                             </div>
                             <button type="submit" name="Change-photo">Change photo</button>
                             <button type="submit" name="remove">Remove</button>
