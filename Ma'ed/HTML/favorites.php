@@ -115,7 +115,7 @@ session_start();
                 $result = mysqli_query($conn, $sql);
                 $userid = mysqli_fetch_array($result);
 
-                $sql = "SELECT f.foodID,f.foodName, f.foodImg, f.foodType, f.prepTime, f.servingSize, f.description, f.ingredients, f.instructions, nf.calories, nf.fat, nf.protein, nf.carbs, nf.cholestrol, nf.sodium
+                $sql = "SELECT f.foodID,f.foodName, f.foodImg, f.foodType, f.prepTime, f.servingSize, f.descriptions, f.ingredients, f.instructions, nf.calories, nf.fat, nf.protein, nf.carbs, nf.cholestrol, nf.sodium
                 FROM user_foods uf
                 JOIN food f ON uf.foodID = f.foodID
                 LEFT JOIN nutritionfact nf ON f.foodID = nf.foodID
