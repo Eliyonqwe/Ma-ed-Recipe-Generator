@@ -44,7 +44,9 @@
                 <h3>Hello Admin</h3>
                 <div class="link">
                     <a id="addfood"> Add Food</a>
+                    <a id="edit-remove-food">edit/remove food</a>
                     <a id="adding">Add Ingredient</a>
+                    <a id="edit-remove-ing">edit/remove Ingredients</a>
                     <a id="users"> Users</a>
 
                     <div class="footer">
@@ -199,6 +201,123 @@
                 ?>
 
             </div>
+            <div id="edit-removefoodpage">
+
+<table border="2">
+    <tr>
+        <td>foodID</td>
+        <td>food Name</td>
+        <td>food img</td>
+        <td>food type</td>
+        <td>prep time</td>
+        <td>serving size</td>
+        <td>descriptions</td>
+        <td>Ingredients</td>
+        <td>Instructions</td>
+        <td>Edit</td>
+        <td>status</td>
+
+    </tr>
+    <?php
+    $con = mysqli_connect("localhost", "root", "", "maed");
+    $query = "Select *from food";
+    $query_run = mysqli_query($con, $query);
+
+    if (mysqli_num_rows($query_run) > 0) {
+        foreach ($query_run as $row) {
+            ?>
+            <form action="" method="post">
+                <tr>
+
+                    <td>
+                        <input name="foodid" readonly type="text" value=" <?= $row['foodID']; ?>">
+                    </td>
+                    <td>
+                        <input name="foodname" type="text" value="<?= $row['foodName']; ?>">
+                    </td>
+                    <td>
+                        <input name="foodimg" type="file" value="<?= $row['foodImg']; ?>">
+                    </td>
+                    <td>
+                        <input name="foodtype" type="text" value="<?= $row['foodType']; ?>">
+                    </td>
+                    <td>
+                        <input name="preptime" type="text" value="<?= $row['prepTime']; ?>">
+                    </td>
+                    <td>
+                        <input name="servingsize" type="text" value="<?= $row['servingSize']; ?>">
+                    </td>
+                    <td>
+                        <textarea name="description" id="" cols="20"
+                            rows="2"><?= $row['descriptions']; ?></textarea>
+
+                    </td>
+                    <td>
+                        <textarea name="ingredient" id="" cols="20"
+                            rows="2"><?= $row['ingredients']; ?></textarea>
+                    </td>
+                    <td>
+                        <textarea name="instruction" id="" cols="20"
+                            rows="2"><?= $row['instructions']; ?></textarea>
+                    </td>
+                    <td>
+                        <button name="save-food" type="submit">Save</button>
+                    </td>
+
+                    <td><button class="removeBtn">
+
+                            <?php
+                            $id = $row['foodID'];
+                            // echo $id;
+                    
+                            echo "<a href='removefood.php?status=" . $id . "'>Remove</a>";
+                            ?>
+                        </button></td>
+                </tr>
+            </form>
+
+            <?php
+        }
+    } else {
+        echo '<p>No record found</p>';
+    }
+
+
+    ?>
+
+</table>
+
+<?php
+if (isset($_POST["save-food"])) {
+    include('connect.php');
+    $foodid = $_POST['foodid'];
+    $foodname = $_POST['foodname'];
+    $foodimg = $_POST['foodimg'];
+    $foodtype = $_POST['foodtype'];
+    $preptime = $_POST['preptime'];
+    $servingsize = $_POST['servingsize'];
+    $description = $_POST['description'];
+    $ingredient = $_POST['ingredient'];
+    $instruction = $_POST['instruction'];
+
+
+    $sql = "UPDATE food SET foodName='$foodname',foodImg='$foodimg' ,foodType='$foodtype',prepTime='$preptime',
+    servingSize='$servingsize',descriptions='$description',ingredients='$ingredient',instructions='$instruction' 
+     WHERE foodID='$foodid'";
+
+    // execute the query
+    if (mysqli_query($conn, $sql)) {
+        echo "Record updated successfully";
+       
+    } else {
+        echo "Error updating record: " . mysqli_error($conn);
+    }
+
+    // close the database connection
+    mysqli_close($conn);
+}
+?>
+</div>
             <div id="addIngredientsPage">
                 <form action="" method="post" autocomplete="off">
                     <h1>Add Ingredient</h1>
@@ -227,6 +346,88 @@
                     echo "<script>alert('Ingredient Added')</script>";
                 }
                 ?>
+            </div>
+            <div id="edit-remove-ing-page">
+                <h1>Ingredients</h1>
+                <table border="2">
+                    <tr>
+                        <td>ingID</td>
+                        <td>ingredient name</td>
+                        <td>ingredient Type</td>
+                        <td>edit</td>
+                        <td>Status</td>
+                    </tr> <?php
+                    $con = mysqli_connect("localhost", "root", "", "maed");
+                    $query = "Select *from ingredient";
+                    $query_run = mysqli_query($con, $query);
+
+                    if (mysqli_num_rows($query_run) > 0) {
+                        foreach ($query_run as $row) {
+                            ?>
+                            <form action="" method="post">
+                                <tr>
+
+                                    <td>
+                                        <input name="ingid" readonly type="text" value=" <?= $row['ingID']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="ingname" type="text" value="<?= $row['ingName']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="ingtype" type="text" value="<?= $row['ingType']; ?>">
+                                    </td>
+                                    <td>
+                                        <button name="save-ing" type="submit">Save</button>
+                                    </td>
+
+                                    <td><button class="removeBtn">
+
+                                            <?php
+                                            $ingid = $row['ingID'];
+                                            // echo $id;
+                                    
+                                            echo "<a href='remove-ing.php?status=" . $ingid . "'>Remove</a>";
+                                            ?>
+                                        </button></td>
+                                </tr>
+                            </form>
+
+                            <?php
+                        }
+                    } else {
+                        echo '<p>No record found</p>';
+                    }
+
+
+                    ?>
+
+                </table>
+
+                <?php
+                if (isset($_POST["save-ing"])) {
+                    include('connect.php');
+                    $ingid = $_POST['ingid'];
+                    $ingname = $_POST['ingname'];
+                    $ingtype = $_POST['ingtype'];
+                   
+
+
+                    $sql = "UPDATE ingredient SET ingName='$ingname',ingType='$ingtype'
+                     WHERE ingID='$ingid'";
+
+                    // execute the query
+                    if (mysqli_query($conn, $sql)) {
+                        echo "Record updated successfully";
+                       
+                    } else {
+                        echo "Error updating record: " . mysqli_error($conn);
+                    }
+
+                    // close the database connection
+                    mysqli_close($conn);
+                }
+                ?>
+
             </div>
             <div id="usersPage">
                 <h1>Users</h1>
