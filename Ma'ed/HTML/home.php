@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../Styles/home.css" />
     <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
@@ -38,7 +39,8 @@
 
                 <ul>
                     <li id="normal">
-                        <a href="home.php"><span class="material-symbols-outlined" style="line-height: 1">Home</span>Home</a>
+                        <a href="home.php"><span class="material-symbols-outlined"
+                                style="line-height: 1">Home</span>Home</a>
                     </li>
                     <li id="normal">
                         <a href="#aboutus"><span class="material-symbols-outlined">groups</span> About
@@ -48,11 +50,15 @@
                         <a href="#">
                             <span class="material-symbols-outlined">help</span>FAQs</a>
                     </li>
+                    <li id="normal">
+                        <a href="searchfood.php">
+                            <span class="material-symbols-outlined">search</span>Search</a>
+                    </li>
                     <li id="separator"><a href="#">|</a></li>
                     <?php
                     session_start();
                     if (isset($_SESSION['username'])) {
-                    ?>
+                        ?>
                         <li class="phone" id="normal">
                             <a href="account.php"><span class="material-symbols-outlined ">Home</span>Account</a>
                         </li>
@@ -62,7 +68,7 @@
                         <li class="phone" id="normal">
                             <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
                         </li>
-                    <?php
+                        <?php
                     }
                     ?>
                     <!--           
@@ -74,29 +80,32 @@
 
                         if (isset($_SESSION['username'])) {
                             $username = $_SESSION['username'];
-                        ?>
+                            ?>
                             <div id="pic" class="pic"><img src="../pics/photo_2021-05-31_08-56-23.jpg" alt=""></div>
                             <div class="profile">
                                 <ul id="profile">
                                     <li id="normal">
-                                        <a href="account.php"><span class="material-symbols-outlined ">Home</span>Account</a>
+                                        <a href="account.php"><span
+                                                class="material-symbols-outlined ">Home</span>Account</a>
                                     </li>
                                     <li id="normal">
-                                        <a href="favorites.php"><span class="material-symbols-outlined ">Star</span>Favorites</a>
+                                        <a href="favorites.php"><span
+                                                class="material-symbols-outlined ">Star</span>Favorites</a>
                                     </li>
                                     <li id="normal">
-                                        <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign out</a>
+                                        <a href="logout.php"><span class="material-symbols-outlined ">logout</span>Sign
+                                            out</a>
                                     </li>
                                 </ul>
                             </div>
 
-                        <?php
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <a href="signin.php"><button class="account">
                                     <span class="material-symbols-outlined">person</span>Account
                                 </button></a>
-                        <?php
+                            <?php
                         }
                         ?>
                     </li>
@@ -136,25 +145,23 @@
                 <h1>About Us</h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
-                    corporis id eveniet deleniti ducimus quis alias suscipit tempora
-                    facilis velit esse a.
+                    Welcome to Maed, your go-to destination for authentic Ethiopian cuisine. Our team is passionate
+                    about sharing the rich culinary traditions of Ethiopia with the world, and we're dedicated to
+                    providing high-quality recipes, beautiful food photography, and helpful cooking tips to help you
+                    bring the flavors of Ethiopia into your own kitchen.
                 </p>
                 <br />
                 <p>
-                    Sit labore, sequi eaque voluptates harum consectetur! Adipisci,
-                    deserunt. Aspernatur a in consectetur repellat vitae nisi
-                    consequuntur soluta alias qui dolores sapiente numquam ab
-                    consequatur, et vel! Aliquam.
+                    Our team is made up of experienced home cooks and food enthusiasts who have spent years exploring
+                    the diverse and delicious cuisine of Ethiopia. We believe that food is a powerful way to connect
+                    with others and celebrate different cultures, and we're excited to share our love of Ethiopian
+                    cuisine with you.
                 </p>
                 <br />
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
-                    tempora quam vel. Eaque sunt, maiores praesentium reprehenderit
-                    excepturi eligendi, dicta facere sequi nihil aut tempore architecto
-                    unde possimus provident, aliquam omnis. Distinctio eaque sapiente,
-                    autem voluptatem repellendus iste enim nam ipsa, culpa unde delectus
-                    dolorem repudiandae, dicta harum et temporibus!
+                    Whether you're a seasoned home cook or just starting out, we're here to help you explore the rich
+                    culinary traditions of Ethiopia and discover new flavors and ingredients along the way. So come join
+                    us on this culinary journey, and let's explore the delicious world of Ethiopian cuisine together!
                 </p>
             </div>
         </div>
@@ -204,9 +211,16 @@
             </div>
         </div>
         <div class="searchFood">
-
+            <form action="searchfood.php" method="get">
             <label for="searching">Search</label>
-            <input type="search" name="" id="searching">
+            <input placeholder="search food" type="search" name="searchtxt" id="searching">
+            <button type="submit" name="searchfoodbtn"><span class="material-symbols-outlined"> search</span>
+            </button>
+            </form>
+            
+           
+
+
         </div>
         <div class="mobileapp">
             <div class="mobileapp_pic">
@@ -221,11 +235,17 @@
                 </p>
                 <br />
 
-                <a href="/" target="_blank" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="Google Playstore" /></a>
+                <a href="/" target="_blank" tabIndex="0"><img class="bn45"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png"
+                        alt="Google Playstore" /></a>
                 <!-- <br> -->
-                <a href="/" target="_blank" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" /></a>
+                <a href="/" target="_blank" tabIndex="0"><img class="bn46"
+                        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                        alt="App Store" /></a>
                 <!-- <br> -->
-                <a href='/' target="_blank"><img class="bn44" src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Badge' /></a>
+                <a href='/' target="_blank"><img class="bn44"
+                        src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png'
+                        alt='Badge' /></a>
             </div>
         </div>
 
@@ -242,43 +262,67 @@
                     <div class="slide-row" id="slide">
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."
+                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae
+                                    reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti
+                                    nobis quam eligendi magnam tempore asperiores, iusto quasi."
                                 </p>
                                 <h3>Chef Yohanis</h3>
                                 <p>Executive Chef at Antica Restaurant & Farm </p>
                             </div>
                             <div class="user-img">
-                                <img src=https://www.cuisinenoirmag.com/wp-content/uploads/2018/03/ChefYohanis.jpg" alt="Chef Yohanis" loading="eager">
+                                <img src="../pics/Chef/ChefYohanis-removebg-preview.png" alt="Chef Yohanis" loading="eager">
                             </div>
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
+                                <p>"Well, well, well, what do we have here? A website that actually knows how to cook
+                                    Ethiopian? I have to say, I'm pleasantly surprised. The Maed team has done a
+                                    fantastic job of showcasing the bold flavors and unique ingredients of Ethiopian
+                                    cuisine in a way that is both informative and engaging. The recipes are well-written
+                                    and easy to follow, and the food photography is absolutely mouth-watering. I can
+                                    tell that the team behind this website is truly passionate about Ethiopian cuisine
+                                    and dedicated to sharing it with the world. So, if you're looking to spice up your
+                                    cooking game and try something new, give Maed a try. Trust me, your taste buds will
+                                    thank you."</p>
                                 <h3>Chef Gordon Ramsey</h3>
                                 <p>Celebrity Chef</p>
                             </div>
                             <div class="user-img">
-                                <img src="https://www.hachettebookgroup.com/wp-content/uploads/2017/06/GR.jpg?resize=500%2C700" alt="Chef Gordon" loading="eager">
+                                <img src="../pics/Chef/GR-removebg-preview.png" alt="Chef Gordon" loading="eager">
                             </div>
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
+                                <p>"I have to say, I'm thoroughly impressed with this website. The team behind Maed has
+                                    done an incredible job of showcasing the unique flavors and ingredients of Ethiopian
+                                    cuisine in a way that is both accessible and informative. The recipes are
+                                    well-written and easy to follow, and the food photography is absolutely stunning. As
+                                    someone who has spent a lot of time exploring the culinary traditions of Ethiopia, I
+                                    can tell you that this website is the real deal. I highly recommend it to anyone
+                                    looking to expand their culinary horizons and try something new."</p>
                                 <h3>Chef Marcus Samuelsson</h3>
                                 <p>Head chef of Red Rooster </p>
                             </div>
                             <div class="user-img">
-                                <img src="https://swedishpress.com/wp-content/uploads/2021/01/Cropped-Marcus-Samuelsson-copy.jpg" alt="Chef Marcus">
+                                <img src="../pics/Chef/Cropped-Marcus-Samuelsson-copy-removebg-preview.png" alt="Chef Marcus">
                             </div>
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
+                                <p>"Let me tell you, this website is a real gem. The Maed team has done an amazing job
+                                    of bringing the flavors and traditions of Ethiopian cuisine to life in a way that is
+                                    both authentic and approachable. The recipes are easy to follow and the food
+                                    photography is absolutely stunning. As someone who has spent a lot of time in the
+                                    kitchen, I can tell you that the Maed team really knows their stuff. I highly
+                                    recommend this website to anyone looking to explore the rich culinary traditions of
+                                    Ethiopia and try something new in the kitchen."
+                                </p>
                                 <h3>Chef Andre Rush</h3>
                                 <p>American celebrity chef and military veteran </p>
                             </div>
                             <div class="user-img">
-                                <img src="https://dogtagbuddies.org/wp-content/uploads/64876075_1031067970422773_4149167810729213952_n.jpg" alt="Chef Rush">
+                                <img src="https://dogtagbuddies.org/wp-content/uploads/64876075_1031067970422773_4149167810729213952_n.jpg"
+                                    alt="Chef Rush">
                             </div>
                         </div>
                     </div>
@@ -306,7 +350,8 @@
                         <li class="link_name"><span class="material-symbols-outlined">
                                 restaurant
                             </span><b>Ma'ed</b></li>
-                        <li><a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style"
+                                    style="line-height: 1">Home</span>Home</a></li>
                         <li><a href="#"><span class="material-symbols-outlined style">
                                     send
                                 </span>Contact us</a></li>
@@ -318,7 +363,8 @@
                                 </span>Get started</a></li>
                     </ul>
                     <ul class="box">
-                        <li class="link_name"><span class="material-symbols-outlined style">explore</span><b>Explore</b></li>
+                        <li class="link_name"><span class="material-symbols-outlined style">explore</span><b>Explore</b>
+                        </li>
                         <li><a href="#"><span class="material-symbols-outlined style">search</span>Search Food</a></li>
                         <li><a href="#"><span class="material-symbols-outlined style">login </span>Login</a></li>
                         <li><a href="#"><span class="material-symbols-outlined style">logout</span>Logout</a></li>
@@ -326,7 +372,8 @@
                     </ul>
 
                     <ul class="box">
-                        <li class="link_name"><span class="material-symbols-outlined style">download</span> <b> Get our App</b></li>
+                        <li class="link_name"><span class="material-symbols-outlined style">download</span> <b> Get our
+                                App</b></li>
                         <li><a href="#"><span class="material-symbols-outlined style">
                                     phone_android
                                 </span>Android</a></li>
@@ -375,22 +422,22 @@
                     indBtn[i].classList.remove("activeInd");
                 }
             }
-            indBtn[0].onclick = function() {
+            indBtn[0].onclick = function () {
                 slide.style.transform = "translateX(0px)";
                 removeActive();
                 this.classList.add("activeInd");
             }
-            indBtn[1].onclick = function() {
+            indBtn[1].onclick = function () {
                 slide.style.transform = "translateX(-800px)";
                 removeActive();
                 this.classList.add("activeInd");
             }
-            indBtn[2].onclick = function() {
+            indBtn[2].onclick = function () {
                 slide.style.transform = "translateX(-1600px)";
                 removeActive();
                 this.classList.add("activeInd");
             }
-            indBtn[3].onclick = function() {
+            indBtn[3].onclick = function () {
                 slide.style.transform = "translateX(-2400px)";
                 removeActive();
                 this.classList.add("activeInd");

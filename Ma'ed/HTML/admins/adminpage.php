@@ -45,7 +45,7 @@
                 <div class="link">
                     <a id="addfood"> Add Food</a>
                     <a id="edit-remove-food">edit/remove food</a>
-                    <a id="adding">Add Ingredient</a>
+                    <a id="adding-ing">Add Ingredient</a>
                     <a id="edit-remove-ing">edit/remove Ingredients</a>
                     <a id="users"> Users</a>
 
