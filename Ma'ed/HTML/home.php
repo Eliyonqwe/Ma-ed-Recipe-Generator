@@ -203,6 +203,11 @@
                 </div>
             </div>
         </div>
+        <div class="searchFood">
+
+            <label for="searching">Search</label>
+            <input type="search" name="" id="searching">
+        </div>
         <div class="mobileapp">
             <div class="mobileapp_pic">
                 <img src="../pics/ourapp-removebg.png" alt="" />
@@ -237,7 +242,7 @@
                     <div class="slide-row" id="slide">
                         <div class="slide-col">
                             <div class="user-text">
-                                <p><q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</q>
+                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."
                                 </p>
                                 <h3>Chef Yohanis</h3>
                                 <p>Executive Chef at Antica Restaurant & Farm </p>
@@ -248,7 +253,7 @@
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
                                 <h3>Chef Gordon Ramsey</h3>
                                 <p>Celebrity Chef</p>
                             </div>
@@ -258,7 +263,7 @@
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
                                 <h3>Chef Marcus Samuelsson</h3>
                                 <p>Head chef of Red Rooster </p>
                             </div>
@@ -268,7 +273,7 @@
                         </div>
                         <div class="slide-col">
                             <div class="user-text">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi."</p>
                                 <h3>Chef Andre Rush</h3>
                                 <p>American celebrity chef and military veteran </p>
                             </div>
