@@ -399,12 +399,95 @@ $_SESSION['array'] = [];
 
 
 
+
+
     </article>
         </form>
         </div>
         </div>
         <script type="module" src="../Scripts/jquery.js"></script>
         <script type="module" src="../Scripts/searchpage.js"></script>
+
+<br>
+<br>
+<br>
+
+        
+<footer>
+            <div class="content">
+                <div class="top">
+                    <div class="logo-details">
+
+                        <span class="logo_name"> <b> Ma'ed</b></span>
+                    </div>
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="link-boxes">
+                    <ul class="box">
+                        <li class="link_name"><span class="material-symbols-outlined">
+                                restaurant
+                            </span><b>Ma'ed</b></li>
+                        <li><a href="#"><span class="material-symbols-outlined style" style="line-height: 1">Home</span>Home</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    send
+                                </span>Contact us</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    groups
+                                </span>About us</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    start
+                                </span>Get started</a></li>
+                    </ul>
+                    <ul class="box">
+                        <li class="link_name"><span class="material-symbols-outlined style">explore</span><b>Explore</b></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">search</span>Search Food</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">login </span>Login</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">logout</span>Logout</a></li>
+
+                    </ul>
+
+                    <ul class="box">
+                        <li class="link_name"><span class="material-symbols-outlined style">download</span> <b> Get our App</b></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    phone_android
+                                </span>Android</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    phone_iphone
+                                </span>IOS</a></li>
+                        <li><a href="#"><span class="material-symbols-outlined style">
+                                    desktop_windows
+                                </span>Microsoft</a></li>
+
+                    </ul>
+
+                    <ul class="box input-box">
+                        <li class="link_name"><span class="material-symbols-outlined style">
+                                mail
+                            </span> <b> Subscribe</b></li>
+                        <li><input type="text" placeholder="Enter your email"></li>
+                        <li><input type="button" value="Subscribe"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-details">
+                <div class="bottom_text">
+                    <span class="copyright_text">Copyright &#169; 2023 <a href="#">Ma'ed </a>All rights reserved</span>
+                    <span class="policy_terms">
+                        <a href="#">Privacy policy</a>
+                        <a href="#">Terms & condition</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+
+        
 
 </body>
 
