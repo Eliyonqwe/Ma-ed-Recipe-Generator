@@ -50,6 +50,10 @@
                         <a href="#">
                             <span class="material-symbols-outlined">help</span>FAQs</a>
                     </li>
+                    <li id="normal">
+                        <a href="searchfood.php">
+                            <span class="material-symbols-outlined">search</span>Search</a>
+                    </li>
                     <li id="separator"><a href="#">|</a></li>
                     <?php
                     session_start();
