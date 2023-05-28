@@ -219,6 +219,8 @@ button:hover {
     padding: 10px;
 grid-gap: 1rem;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .result {

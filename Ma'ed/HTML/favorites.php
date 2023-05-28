@@ -134,7 +134,7 @@ session_start();
                             <?= $row['foodName']; ?>
                         </h3>
                         <p>
-                            <?= $description; ?> description
+                            <?= $description; ?>
                         </p>
                         <button class="moreBtn">
 
