@@ -14,6 +14,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link href="https://fonts.cdnfonts.com/css/dosis" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/adobe-garamond-pro-2" rel="stylesheet">
+
+
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -159,6 +162,7 @@
             <header class="exploretitle">
                 <h3>Explore different Ethiopian Cuisines</h3>
             </header>
+
             <div class="gridone">
                 <div class="gridone_text">
                     <div class="gridone_image">
@@ -220,7 +224,62 @@
             </div>
         </div>
 
-
+        <div class="testimony">
+            <h1>Testimonials</h1>
+            <div class="container">
+                <div class="indicator">
+                    <span class="btn activeInd"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                    <span class="btn"></span>
+                </div>
+                <div class="testimonial">
+                    <div class="slide-row" id="slide">
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p><q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</q>
+                                </p>
+                                <h3>Chef Yohanis</h3>
+                                <p>Executive Chef at Antica Restaurant & Farm </p>
+                            </div>
+                            <div class="user-img">
+                                <img src=https://www.cuisinenoirmag.com/wp-content/uploads/2018/03/ChefYohanis.jpg" alt="Chef Yohanis" loading="eager">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <h3>Chef Gordon Ramsey</h3>
+                                <p>Celebrity Chef</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="https://www.hachettebookgroup.com/wp-content/uploads/2017/06/GR.jpg?resize=500%2C700" alt="Chef Gordon" loading="eager">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <h3>Chef Marcus Samuelsson</h3>
+                                <p>Head chef of Red Rooster </p>
+                            </div>
+                            <div class="user-img">
+                                <img src="https://swedishpress.com/wp-content/uploads/2021/01/Cropped-Marcus-Samuelsson-copy.jpg" alt="Chef Marcus">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum minima quae reiciendis accusamus et eum soluta, error perferendis, cumque quo sint corrupti nobis quam eligendi magnam tempore asperiores, iusto quasi.</p>
+                                <h3>Chef Andre Rush</h3>
+                                <p>American celebrity chef and military veteran </p>
+                            </div>
+                            <div class="user-img">
+                                <img src="https://dogtagbuddies.org/wp-content/uploads/64876075_1031067970422773_4149167810729213952_n.jpg" alt="Chef Rush">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="content">
@@ -302,6 +361,36 @@
 
 
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script>
+            var indBtn = document.getElementsByClassName("btn");
+            var slid = document.getElementById("slide");
+
+            function removeActive() {
+                for (i = 0; i < 4; i++) {
+                    indBtn[i].classList.remove("activeInd");
+                }
+            }
+            indBtn[0].onclick = function() {
+                slide.style.transform = "translateX(0px)";
+                removeActive();
+                this.classList.add("activeInd");
+            }
+            indBtn[1].onclick = function() {
+                slide.style.transform = "translateX(-800px)";
+                removeActive();
+                this.classList.add("activeInd");
+            }
+            indBtn[2].onclick = function() {
+                slide.style.transform = "translateX(-1600px)";
+                removeActive();
+                this.classList.add("activeInd");
+            }
+            indBtn[3].onclick = function() {
+                slide.style.transform = "translateX(-2400px)";
+                removeActive();
+                this.classList.add("activeInd");
+            }
+        </script>
 
 </body>
 
