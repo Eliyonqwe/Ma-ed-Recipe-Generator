@@ -62,23 +62,23 @@
                 <h1>Add Food</h1>
                 <form action="" method="post" autocomplete="off">
                     <label for="name">Food Name: </label>
-                    <input type="text" name="name" id="name" value="8" />
+                    <input type="text" name="name" id="name" />
                     <br>
                     <br>
                     <label for="foodimg">Food Image(Link): </label>
-                    <input type="text" name="foodimg" id="foodimg" value="8" />
+                    <input type="text" name="foodimg" id="foodimg" />
                     <br>
                     <br>
                     <label for="foodtype">Food Type: </label>
-                    <input type="text" name="foodtype" id="foodtype" value="8" />
+                    <input type="text" name="foodtype" id="foodtype" />
                     <br>
                     <br>
                     <label for="preptime">Food Time: </label>
-                    <input type="text" name="preptime" id="preptime" value="8" />
+                    <input type="text" name="preptime" id="preptime" />
                     <br>
                     <br>
                     <label for="servingsize">Serving Size: </label>
-                    <input type="text" name="servingsize" id="servingsize" value="8" />
+                    <input type="text" name="servingsize" id="servingsize" />
                     <br>
                     <br>
                     <label for="description">Description: </label>
@@ -96,27 +96,27 @@
                     <br>
                     <br>
                     <label for="calories">calories: </label>
-                    <input type="text" name="calories" id="calories" value="8" />
+                    <input type="text" name="calories" id="calories" />
                     <br>
                     <br>
                     <label for="fat">Fat: </label>
-                    <input type="text" name="fat" id="fat" value="8" />
+                    <input type="text" name="fat" id="fat" />
                     <br>
                     <br>
                     <label for="protein">protein: </label>
-                    <input type="text" name="protein" id="protein" value="8" />
+                    <input type="text" name="protein" id="protein" />
                     <br>
                     <br>
                     <label for="carbs">Carbs: </label>
-                    <input type="text" name="carbs" id="carbs" value="8" />
+                    <input type="text" name="carbs" id="carbs" />
                     <br>
                     <br>
                     <label for="cholestrol">cholestrol: </label>
-                    <input type="text" name="cholestrol" id="cholestrol" value="8" />
+                    <input type="text" name="cholestrol" id="cholestrol" />
                     <br>
                     <br>
                     <label for="sodium">sodium: </label>
-                    <input type="text" name="sodium" id="sodium" value="8" />
+                    <input type="text" name="sodium" id="sodium" />
                     <br>
                     <br>
 
@@ -203,121 +203,117 @@
             </div>
             <div id="edit-removefoodpage">
 
-<table border="2">
-    <tr>
-        <td>foodID</td>
-        <td>food Name</td>
-        <td>food img</td>
-        <td>food type</td>
-        <td>prep time</td>
-        <td>serving size</td>
-        <td>descriptions</td>
-        <td>Ingredients</td>
-        <td>Instructions</td>
-        <td>Edit</td>
-        <td>status</td>
+                <table border="2">
+                    <tr>
+                        <td>foodID</td>
+                        <td>food Name</td>
+                        <td>food img</td>
+                        <td>food type</td>
+                        <td>prep time</td>
+                        <td>serving size</td>
+                        <td>descriptions</td>
+                        <td>Ingredients</td>
+                        <td>Instructions</td>
+                        <td>Edit</td>
+                        <td>status</td>
 
-    </tr>
-    <?php
-    $con = mysqli_connect("localhost", "root", "", "maed");
-    $query = "Select *from food";
-    $query_run = mysqli_query($con, $query);
+                    </tr>
+                    <?php
+                    $con = mysqli_connect("localhost", "root", "", "maed");
+                    $query = "Select *from food";
+                    $query_run = mysqli_query($con, $query);
 
-    if (mysqli_num_rows($query_run) > 0) {
-        foreach ($query_run as $row) {
-            ?>
-            <form action="" method="post">
-                <tr>
+                    if (mysqli_num_rows($query_run) > 0) {
+                        foreach ($query_run as $row) {
+                    ?>
+                            <form action="" method="post">
+                                <tr>
 
-                    <td>
-                        <input name="foodid" readonly type="text" value=" <?= $row['foodID']; ?>">
-                    </td>
-                    <td>
-                        <input name="foodname" type="text" value="<?= $row['foodName']; ?>">
-                    </td>
-                    <td>
-                        <input name="foodimg" type="file" value="<?= $row['foodImg']; ?>">
-                    </td>
-                    <td>
-                        <input name="foodtype" type="text" value="<?= $row['foodType']; ?>">
-                    </td>
-                    <td>
-                        <input name="preptime" type="text" value="<?= $row['prepTime']; ?>">
-                    </td>
-                    <td>
-                        <input name="servingsize" type="text" value="<?= $row['servingSize']; ?>">
-                    </td>
-                    <td>
-                        <textarea name="description" id="" cols="20"
-                            rows="2"><?= $row['descriptions']; ?></textarea>
+                                    <td>
+                                        <input name="foodid" readonly type="text" value=" <?= $row['foodID']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="foodname" type="text" value="<?= $row['foodName']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="foodimg" type="file" value="<?= $row['foodImg']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="foodtype" type="text" value="<?= $row['foodType']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="preptime" type="text" value="<?= $row['prepTime']; ?>">
+                                    </td>
+                                    <td>
+                                        <input name="servingsize" type="text" value="<?= $row['servingSize']; ?>">
+                                    </td>
+                                    <td>
+                                        <textarea name="description" id="" cols="20" rows="2"><?= $row['descriptions']; ?></textarea>
 
-                    </td>
-                    <td>
-                        <textarea name="ingredient" id="" cols="20"
-                            rows="2"><?= $row['ingredients']; ?></textarea>
-                    </td>
-                    <td>
-                        <textarea name="instruction" id="" cols="20"
-                            rows="2"><?= $row['instructions']; ?></textarea>
-                    </td>
-                    <td>
-                        <button name="save-food" type="submit">Save</button>
-                    </td>
+                                    </td>
+                                    <td>
+                                        <textarea name="ingredient" id="" cols="20" rows="2"><?= $row['ingredients']; ?></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea name="instruction" id="" cols="20" rows="2"><?= $row['instructions']; ?></textarea>
+                                    </td>
+                                    <td>
+                                        <button name="save-food" type="submit">Save</button>
+                                    </td>
 
-                    <td><button class="removeBtn">
+                                    <td><button class="removeBtn">
 
-                            <?php
-                            $id = $row['foodID'];
-                            // echo $id;
-                    
-                            echo "<a href='removefood.php?status=" . $id . "'>Remove</a>";
-                            ?>
-                        </button></td>
-                </tr>
-            </form>
+                                            <?php
+                                            $id = $row['foodID'];
+                                            // echo $id;
 
-            <?php
-        }
-    } else {
-        echo '<p>No record found</p>';
-    }
+                                            echo "<a href='removefood.php?status=" . $id . "'>Remove</a>";
+                                            ?>
+                                        </button></td>
+                                </tr>
+                            </form>
+
+                    <?php
+                        }
+                    } else {
+                        echo '<p>No record found</p>';
+                    }
 
 
-    ?>
+                    ?>
 
-</table>
+                </table>
 
-<?php
-if (isset($_POST["save-food"])) {
-    include('connect.php');
-    $foodid = $_POST['foodid'];
-    $foodname = $_POST['foodname'];
-    $foodimg = $_POST['foodimg'];
-    $foodtype = $_POST['foodtype'];
-    $preptime = $_POST['preptime'];
-    $servingsize = $_POST['servingsize'];
-    $description = $_POST['description'];
-    $ingredient = $_POST['ingredient'];
-    $instruction = $_POST['instruction'];
+                <?php
+                if (isset($_POST["save-food"])) {
+                    include('connect.php');
+                    $foodid = $_POST['foodid'];
+                    $foodname = $_POST['foodname'];
+                    $foodimg = $_POST['foodimg'];
+                    $foodtype = $_POST['foodtype'];
+                    $preptime = $_POST['preptime'];
+                    $servingsize = $_POST['servingsize'];
+                    $description = $_POST['description'];
+                    $ingredient = $_POST['ingredient'];
+                    $instruction = $_POST['instruction'];
 
 
-    $sql = "UPDATE food SET foodName='$foodname',foodImg='$foodimg' ,foodType='$foodtype',prepTime='$preptime',
+                    $sql = "UPDATE food SET foodName='$foodname',foodImg='$foodimg' ,foodType='$foodtype',prepTime='$preptime',
     servingSize='$servingsize',descriptions='$description',ingredients='$ingredient',instructions='$instruction' 
      WHERE foodID='$foodid'";
 
-    // execute the query
-    if (mysqli_query($conn, $sql)) {
-        echo "Record updated successfully";
-       
-    } else {
-        echo "Error updating record: " . mysqli_error($conn);
-    }
+                    // execute the query
+                    if (mysqli_query($conn, $sql)) {
+                        echo "Record updated successfully";
+                    } else {
+                        echo "Error updating record: " . mysqli_error($conn);
+                    }
 
-    // close the database connection
-    mysqli_close($conn);
-}
-?>
-</div>
+                    // close the database connection
+                    mysqli_close($conn);
+                }
+                ?>
+            </div>
             <div id="addIngredientsPage">
                 <form action="" method="post" autocomplete="off">
                     <h1>Add Ingredient</h1>
@@ -357,12 +353,12 @@ if (isset($_POST["save-food"])) {
                         <td>edit</td>
                         <td>Status</td>
                     </tr> <?php
-                    $con = mysqli_connect("localhost", "root", "", "maed");
-                    $query = "Select *from ingredient";
-                    $query_run = mysqli_query($con, $query);
+                            $con = mysqli_connect("localhost", "root", "", "maed");
+                            $query = "Select *from ingredient";
+                            $query_run = mysqli_query($con, $query);
 
-                    if (mysqli_num_rows($query_run) > 0) {
-                        foreach ($query_run as $row) {
+                            if (mysqli_num_rows($query_run) > 0) {
+                                foreach ($query_run as $row) {
                             ?>
                             <form action="" method="post">
                                 <tr>
@@ -385,18 +381,18 @@ if (isset($_POST["save-food"])) {
                                             <?php
                                             $ingid = $row['ingID'];
                                             // echo $id;
-                                    
+
                                             echo "<a href='remove-ing.php?status=" . $ingid . "'>Remove</a>";
                                             ?>
                                         </button></td>
                                 </tr>
                             </form>
 
-                            <?php
-                        }
-                    } else {
-                        echo '<p>No record found</p>';
-                    }
+                    <?php
+                                }
+                            } else {
+                                echo '<p>No record found</p>';
+                            }
 
 
                     ?>
@@ -409,7 +405,7 @@ if (isset($_POST["save-food"])) {
                     $ingid = $_POST['ingid'];
                     $ingname = $_POST['ingname'];
                     $ingtype = $_POST['ingtype'];
-                   
+
 
 
                     $sql = "UPDATE ingredient SET ingName='$ingname',ingType='$ingtype'
@@ -418,7 +414,6 @@ if (isset($_POST["save-food"])) {
                     // execute the query
                     if (mysqli_query($conn, $sql)) {
                         echo "Record updated successfully";
-                       
                     } else {
                         echo "Error updating record: " . mysqli_error($conn);
                     }
