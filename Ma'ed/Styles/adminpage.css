@@ -58,6 +58,15 @@
     margin-left: 30px;
 
   }
+  #edit-removefoodpage{
+    display: none;
+    margin-left: 30px;
+  }
+
+  #edit-remove-ing-page{
+    display: none;
+    margin-left: 30px;
+  }
   #usersPage{
     display: none;
     margin-left: 30px;
