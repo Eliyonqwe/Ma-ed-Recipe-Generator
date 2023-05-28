@@ -203,6 +203,11 @@
                 </div>
             </div>
         </div>
+        <div class="searchFood">
+
+            <label for="searching">Search</label>
+            <input type="search" name="" id="searching">
+        </div>
         <div class="mobileapp">
             <div class="mobileapp_pic">
                 <img src="../pics/ourapp-removebg.png" alt="" />
