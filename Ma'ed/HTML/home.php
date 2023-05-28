@@ -248,7 +248,7 @@
                                 <p>Executive Chef at Antica Restaurant & Farm </p>
                             </div>
                             <div class="user-img">
-                                <img src=https://www.cuisinenoirmag.com/wp-content/uploads/2018/03/ChefYohanis.jpg" alt="Chef Yohanis" loading="eager">
+                                <img src="../pics/Chef/ChefYohanis-removebg-preview.png" alt="Chef Yohanis" loading="eager">
                             </div>
                         </div>
                         <div class="slide-col">
@@ -258,7 +258,7 @@
                                 <p>Celebrity Chef</p>
                             </div>
                             <div class="user-img">
-                                <img src="https://www.hachettebookgroup.com/wp-content/uploads/2017/06/GR.jpg?resize=500%2C700" alt="Chef Gordon" loading="eager">
+                                <img src="../pics/Chef/GR-removebg-preview.png" alt="Chef Gordon" loading="eager">
                             </div>
                         </div>
                         <div class="slide-col">
@@ -268,7 +268,7 @@
                                 <p>Head chef of Red Rooster </p>
                             </div>
                             <div class="user-img">
-                                <img src="https://swedishpress.com/wp-content/uploads/2021/01/Cropped-Marcus-Samuelsson-copy.jpg" alt="Chef Marcus">
+                                <img src="../pics/Chef/Cropped-Marcus-Samuelsson-copy-removebg-preview.png" alt="Chef Marcus">
                             </div>
                         </div>
                         <div class="slide-col">
