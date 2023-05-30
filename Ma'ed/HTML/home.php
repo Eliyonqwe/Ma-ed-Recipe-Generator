@@ -126,11 +126,8 @@
                     recipes.
                 </h5>
                 <br />
-                <button class="button-start">
-                    <a href="signin.php"><b> GET STARTED</b></a>
-
-                    <span class="material-symbols-outlined"> arrow_forward </span>
-                </button>
+                <a href="signin.php"><button class="button-start"> <b> GET STARTED<span class="material-symbols-outlined"> arrow_forward </span></b></button>
+                </a>
             </aside>
         </div>
         <div class="aboutus" id="aboutus">
@@ -167,50 +164,60 @@
             </header>
 
             <div class="gridone">
-                <div class="gridone_text">
+                <div class="gridimg">
                     <div class="gridone_image">
                         <img src="../Logo/https __cdn.cnn.com_cnnnext_dam_assets_190205205048-kitfo.jpg" alt="" />
                     </div>
+                </div>
+                <div class="gridtext">
                     <h1 id="gridtitle">Kitfo</h1>
                     <p id="gridtext">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
                         non, dolorum eos illum sed odio!
                     </p>
-                    <button id="clickgrid"><a href="#">Click Here &rarr;</a></button>
+                    <a href="#"><button id="clickgrid">Click Here &rarr;</button></a>
+
                 </div>
             </div>
             <div class="gridtwo">
-                <div class="gridtwo_text">
+                <div class="gridimg">
                     <div class="gridtwo_image">
                         <img src="../Logo/190205144959-shekla-tibs.jpg" alt="" />
                     </div>
+                </div>
+                <div class="gridtext">
+
                     <h1 id="gridtitle">Beyanetu</h1>
                     <p id="gridtext">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
                         non, dolorum eos illum sed odio!
                     </p>
-                    <button id="clickgrid"><a href="#">Click Here &rarr;</a></button>
+                    <a href="#"> <button id="clickgrid">Click Here &rarr;</button></a>
                 </div>
+
             </div>
             <div class="gridthree">
-                <div class="gridthree_text">
+                <div class="gridimg">
                     <div class="gridthree_image">
                         <img src="../Logo/190205144959-shekla-tibs.jpg" alt="" />
                     </div>
+                </div>
+                <div class="gridtext">
                     <h1 id="gridtitle">Shekla Tibs</h1>
                     <p id="gridtext">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
                         non, dolorum eos illum sed odio!
                     </p>
-                    <button id="clickgrid"><a href="#">Click Here &rarr;</a></button>
+                    <a href="#"> <button id="clickgrid">Click Here &rarr;</button></a>
                 </div>
+
             </div>
         </div>
         <div class="searchFood">
             <form action="searchfood.php" method="get">
                 <label for="searching">Search</label>
-                <input placeholder="search food" type="search" name="searchtxt" id="searching">
-                <button type="submit" name="searchfoodbtn"><span class="material-symbols-outlined"> search</span>
+                <input placeholder="  Search food" type="search" name="searchtxt" id="searching" style="border-radius: 1rem;" required>
+                <button type="submit" name="searchfoodbtn" class="searchfoodbtn"><span class="material-symbols-outlined" id="searchIcon"> search</span>
                 </button>
             </form>
 

@@ -414,15 +414,15 @@
    grid-row: 2/3;
    grid-column: 1/2;
    background-color: #fff3dd;
-   padding: 0 5%;
+   
    border-radius: 1rem;
    transition: 0.5s;
  }
 
- .gridtwo {
-   grid-row: 2/3;
-   grid-column: 2/3;
-   padding: 0 5%;
+.gridtwo {
+  grid-row: 2/3;
+  grid-column: 2/3;
+
    background-color: #fff3dd;
    border-radius: 1rem;
    transition: 0.5s;
@@ -431,18 +431,24 @@
  .gridthree {
    grid-row: 2/3;
    grid-column: 3/4;
-   padding: 0 5%;
+
    background-color: #fff3dd;
    border-radius: 1rem;
    transition: 0.5s;
 
  }
+.gridtext {
+  padding: 0 5%;
 
- .gridone img,
- .gridtwo img,
- .gridthree img {
+}
+.gridimg{
+  padding: 2% 1%;
+  
+}
+ .gridimg img{
+  border-radius: 1rem;
    width: 100%;
-   margin: 1rem 0;
+  
  }
 
 
@@ -466,6 +472,7 @@
  #gridtext {
    font-size: calc(0.1rem + 1.5vw);
    padding-bottom: 7%;
+   
  }
 
  #clickgrid {
@@ -476,6 +483,7 @@
    font-weight: bolder;
    margin-bottom: 5%;
    padding: 0.5rem 0.5rem;
+   
 
  }
 
@@ -483,6 +491,7 @@
    transform: scale(1.1);
    transition: 0.3s ease-in-out;
    background-color: #ffffff;
+   color: black;
 
  }
 .searchFood{
@@ -490,6 +499,17 @@
  text-align: center;
  padding-top: 0;
  padding-bottom: 5%;
+
+}
+#searchIng{
+  border-radius: 1rem;
+}
+#searchIcon{
+  line-height: 20px;
+}
+.searchfoodbtn{
+  background-color: transparent;
+  border: none;
 }
  .mobileapp {
    background-color: var(--mainColor);
