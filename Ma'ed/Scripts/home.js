@@ -37,6 +37,7 @@ sr.reveal('.aboutus_text', { delay:350, origin:'top'})
 sr.reveal('.gridone', { delay:350, origin:'top'})
 sr.reveal('.gridtwo', { delay:350, origin:'bottom'})
 sr.reveal('.gridthree', { delay:350, origin:'top'})
+sr.reveal('.searchFood', { delay:350, origin:'bottom'})
 
 sr.reveal('.mobileapp_pic', { delay:350, origin:'left'})
 sr.reveal('.mobileapp_text', { delay:350, origin:'right'})
