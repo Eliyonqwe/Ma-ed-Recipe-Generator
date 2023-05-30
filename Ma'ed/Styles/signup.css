@@ -1,3 +1,4 @@
+@import url(./root.css);
 * {
     margin: 0;
         padding: 0;
@@ -107,7 +108,7 @@ option{
     grid-area: item1;
 }
 .item1 a{
-    color: #ffa500;
+    color: var(--mainColor);
     background-color: white;
 
 
@@ -178,7 +179,7 @@ button.signup{
     outline: none;
     height: 2rem;
     width: 10rem;
-    background-color: #ffa500;
+    background-color: var(--mainColor);
     border-radius: 1.5rem;
     cursor: pointer;
     font-size: 1rem;
@@ -222,7 +223,7 @@ button.signin {
 .signup:hover {
     cursor: pointer;
     transform: scale(0.9);
-    background-color: #FFA500;
+    background-color: var(--mainColor);
     transition: 0.3s;
     box-shadow: 0 0 5px orange,
         0 0 5px orange,
@@ -343,7 +344,7 @@ i#toggler1,i#toggler2{
     .item5 {
 
         grid-area: item5;
-        background-color: #ffa500;
+        background-color: var(--mainColor);
           box-shadow: 0 10px 10px gray, 
                     0 10px 10px silver;
         position: relative;

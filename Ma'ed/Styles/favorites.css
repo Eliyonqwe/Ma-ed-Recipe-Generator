@@ -1,3 +1,4 @@
+@import url(./root.css);
 * {
     margin: 0;
     padding: 0;
@@ -121,7 +122,7 @@ input[type="checkbox"]:checked+label {
 
     width: 0;
     height: 0.3rem;
-    background: #FFA500;
+    background: var(--mainColor);
     position: absolute;
     left: 52%;
     transform: translateX(-50%);
@@ -143,7 +144,7 @@ input[type="checkbox"]:checked+label {
 }
 
 span[class^="material"] {
-    color: #FFA500;
+    color: var(--mainColor);
     vertical-align: top;
     line-height: 1.1;
     padding-right: 0.2rem;
@@ -164,7 +165,7 @@ span[class^="material"] {
     border-radius: 2rem;
     cursor: pointer;
     color: white;
-    background-color: #FFA500;
+    background-color: var(--mainColor);
     display: block;
 }
 
@@ -197,7 +198,7 @@ button {
 button:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background-color: orange;
+    background-color: var(--orange);
     transition: 0.3s;
     box-shadow: 0 0 5px orange,
         0 0 5px orange,
@@ -289,7 +290,7 @@ grid-gap: 1rem;
     }
 
     span[class^="material"] {
-        color: #FFA500;
+        color: var(--mainColor);
         vertical-align: top;
         line-height: 0.7;
         padding-right: 0.2rem;
@@ -311,7 +312,7 @@ grid-gap: 1rem;
     }
 
     .navigation ul li a span {
-        color: #FFA500;
+        color: var(--mainColor);
     }
 
     .navigation ul li a:hover,

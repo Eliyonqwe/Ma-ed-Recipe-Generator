@@ -1,3 +1,4 @@
+@import url(./root.css);
 .wrapper{
   display: grid;
   width: 100vw;
@@ -7,7 +8,7 @@
     margin: 0;
     padding: 0;
     grid-column: 1/2;
-    background-color: orange;
+    background-color: var(--orange);
     height: 100vh;
     overflow: auto;
   }
@@ -28,7 +29,7 @@
     transform: scale(1.1);
         background-color: white;
         transition: 0.3s;
-        color: orange;
+        color: var(--orange);
       
   }
 
