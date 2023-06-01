@@ -88,3 +88,4 @@
 
 </html>
 <script src="../Scripts/signup.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>

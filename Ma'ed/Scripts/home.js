@@ -41,6 +41,7 @@ sr.reveal('.searchFood', { delay:350, origin:'bottom'})
 
 sr.reveal('.mobileapp_pic', { delay:350, origin:'left'})
 sr.reveal('.mobileapp_text', { delay:350, origin:'right'})
+sr.reveal('.testimony', { delay:350, origin:'right'})
 
 document.getElementById('pic').addEventListener('click',function(){
   console.log('j');

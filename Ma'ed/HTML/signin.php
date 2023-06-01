@@ -53,3 +53,4 @@
 
 </html>
 <script src="../Scripts/signin.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
