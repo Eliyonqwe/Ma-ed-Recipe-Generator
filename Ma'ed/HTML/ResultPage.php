@@ -174,8 +174,9 @@ bookmark</span>bookmark</button></form>';
     <p id="information">
       <?php echo $row['descriptions'] ?>
     </p>
-    <img src="../pics/about us_pic.jpg" alt="" srcset="">
+    <div class="img" style="background-image: url(' <?=$row['foodImg'] ?>');"></div>
 
+    
     <div class="description">
       <div class="ingredient-info">
         <div class="info">

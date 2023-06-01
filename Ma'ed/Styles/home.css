@@ -115,13 +115,14 @@
  .profile ul {
    right: 30px;
    background-color: rgb(230, 230, 230);
-   position: absolute;
+   position: fixed;
    display: block;
    width: 0px;
-   height: 200px;
+   height: 210px;
    overflow: hidden;
    transition: width 0.5s;
     backdrop-filter: blur(5px);
+    z-index:1;
 
  }
 
@@ -964,7 +965,7 @@
             border-radius: 1rem;
             width: 100vw;
             box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
-            height: 25rem;
+            height: 30rem;
             background-color: #00000023;
             backdrop-filter: blur(6px);
 

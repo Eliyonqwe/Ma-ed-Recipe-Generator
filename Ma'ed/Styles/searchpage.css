@@ -363,7 +363,7 @@ button:hover {
         border-radius: 1rem;
         width: 100vw;
         box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
-        height: 25rem;
+        height: 27rem;
         background-color: #00000023;
         backdrop-filter: blur(6px);
 
@@ -722,7 +722,7 @@ button:hover {
              border-radius: 1rem;
              width: 100vw;
              box-shadow: 0 30px 40px rgba(0, 0, 0, .1);
-             height: 25rem;
+             height: 27rem;
              background-color: #00000023;
              backdrop-filter: blur(6px);
  

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2023 at 04:44 PM
+-- Generation Time: Jun 01, 2023 at 02:40 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,9 +64,14 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`foodID`, `foodName`, `foodImg`, `foodType`, `prepTime`, `servingSize`, `descriptions`, `ingredients`, `instructions`) VALUES
-(1, 'Salad', '', 'Vegan', '10min', 0, 'Salad is a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, or other ingredients.', '3 cups of Lettuce\r\n1 cup of Onion\r\n1/4 cup lemon juice\r\n2 garlic cloves, minced\r\n1/2 teaspoon salt\r\n1/2 teaspoon pepper\r\n2 cups chopped tomatoes\r\n', 'In a jar with a tight-fitting lid, combine the oil, lemon juice, garlic, salt and pepper; cover and shake well. Chill.\r\nIn a large serving bowl, toss the romaine, tomatoes, Swiss cheese, almonds if desired, Parmesan cheese and bacon.\r\nShake dressing; pour over salad and toss. Add croutons and serve immediately.'),
-(2, 'Shiro', '', 'Stew', '20mun', 5, 'Shiro is a stew served for either lunch or dinner, originating from Ethiopia and Eritrea. An essential part of Eritrean and Ethiopian cuisine, its primary ingredient is powdered chickpeas or broad bean meal and often prepared with the addition of minced onions, garlic and, depending upon regional variation, ground ginger or chopped tomatoes and chili-peppers.', '½ cup oil\r\n½ cup chickpea flour\r\n2 medium onions pureed\r\n1 roma tomato pureed\r\n4 cloves of garlic chopped\r\n2 tablespoons niter kibbeh Ethiopian spiced clarified butter\r\n2 to 2 ½ cups of water\r\n3 tablespoons berbere spice\r\n1 teaspoon garlic powder\r\n¼ teaspoon sugar\r\nSalt to taste\r\n1 jalepeno chopped (optional)', 'Bring a heavy bottom stockpot to medium heat. Add pureed onions to the dry pan, and saute until they become dry and start to take on color- about 4-5 minutes. Add the oil and berbere spice. Saute for 1-2 minutes until fragrant.\r\nNext add tomato and chopped garlic. Saute for 2-3 minutes more.\r\nNow start whisking in about half of the chickpea flour. Gradually start to add about 1 cup of water. Whisk in the remaining chickpea flour and an additional 1 cup of water. Whisk until mixture is very smooth. Add remaining ½ cup of water if you prefer your shiro a little thinner.\r\nHeat until the shiro begins to pop (simmer). Then add the niter kibbeh, garlic powder, sugar, and salt to taste, stirring until combined.\r\nSimmer for about 5-10 minutes over low heat until the flavors combine and the oil separates slightly from the shiro.\r\nGarnish with jalepeno, if desired.\r\nServe with fresh injera.'),
-(26, 'Burger', '', 'FastFood', '50min', 1, 'A sandwich consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.', '1 pound ground lean (7% fat) beef\r\n1 large egg\r\n100g Slice Cheese\r\n½ cup minced onion\r\n¼ cup fine dried bread crumbs\r\n1 hamburger buns ', 'In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide.\r\nLay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill.\r\nLay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute.\r\nSpread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place.');
+(1, 'Salad', '../pics/salad.jpg', 'Vegan', '10min', 0, 'Salad is a cold dish of various mixtures of raw or cooked vegetables, usually seasoned with oil, vinegar, or other dressing and sometimes accompanied by meat, fish, or other ingredients.', '3 cups of Lettuce\r\n1 cup of Onion\r\n1/4 cup lemon juice\r\n2 garlic cloves, minced\r\n1/2 teaspoon salt\r\n1/2 teaspoon pepper\r\n2 cups chopped tomatoes\r\n', 'In a jar with a tight-fitting lid, combine the oil, lemon juice, garlic, salt and pepper; cover and shake well. Chill.\r\nIn a large serving bowl, toss the romaine, tomatoes, Swiss cheese, almonds if desired, Parmesan cheese and bacon.\r\nShake dressing; pour over salad and toss. Add croutons and serve immediately.'),
+(2, 'Shiro', '../pics/shiro.jpg', 'Stew', '20mun', 5, 'Shiro is a stew served for either lunch or dinner, originating from Ethiopia and Eritrea. An essential part of Eritrean and Ethiopian cuisine, its primary ingredient is powdered chickpeas or broad bean meal and often prepared with the addition of minced onions, garlic and, depending upon regional variation, ground ginger or chopped tomatoes and chili-peppers.', '½ cup oil\r\n½ cup chickpea flour\r\n2 medium onions pureed\r\n1 roma tomato pureed\r\n4 cloves of garlic chopped\r\n2 tablespoons niter kibbeh Ethiopian spiced clarified butter\r\n2 to 2 ½ cups of water\r\n3 tablespoons berbere spice\r\n1 teaspoon garlic powder\r\n¼ teaspoon sugar\r\nSalt to taste\r\n1 jalepeno chopped (optional)', 'Bring a heavy bottom stockpot to medium heat. Add pureed onions to the dry pan, and saute until they become dry and start to take on color- about 4-5 minutes. Add the oil and berbere spice. Saute for 1-2 minutes until fragrant.\r\nNext add tomato and chopped garlic. Saute for 2-3 minutes more.\r\nNow start whisking in about half of the chickpea flour. Gradually start to add about 1 cup of water. Whisk in the remaining chickpea flour and an additional 1 cup of water. Whisk until mixture is very smooth. Add remaining ½ cup of water if you prefer your shiro a little thinner.\r\nHeat until the shiro begins to pop (simmer). Then add the niter kibbeh, garlic powder, sugar, and salt to taste, stirring until combined.\r\nSimmer for about 5-10 minutes over low heat until the flavors combine and the oil separates slightly from the shiro.\r\nGarnish with jalepeno, if desired.\r\nServe with fresh injera.'),
+(26, 'Burger', '../pics/burger.jpg', 'FastFood', '50min', 1, 'A sandwich consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.', '1 pound ground lean (7% fat) beef\r\n1 large egg\r\n100g Slice Cheese\r\n½ cup minced onion\r\n¼ cup fine dried bread crumbs\r\n1 hamburger buns ', 'In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide.\r\nLay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill.\r\nLay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute.\r\nSpread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place.'),
+(39, 'Misir Wot', '../pics/misirwot.webp', 'Stew', '30 min', 5, ' a spicy lentil stew.', '1 cup red lentils\r\n3 cups water\r\n1 onion, chopped\r\n2 cloves garlic, minced\r\n2 oil\r\n1 teaspoon berbere spice (or substitute with paprika)\r\nSalt to taste', 'Rinse the lentils and place them in a pot with the water.\r\nBring to a boil, then reduce heat and simmer for 20-30 minutes, until the lentils are soft.\r\nIn a separate pan, sauté the onion and garlic in oil until softened.\r\nAdd the berbere spice and stir for a minute.\r\nAdd the cooked lentils and stir until combined.\r\nAdd salt to taste.\r\nSimmer for 10-15 minutes, stirring occasionally, until the stew thickens.'),
+(40, 'Alicha Kik', '../pics/alichakek.jpg', 'Stew', '15 min', 4, ' a mild split pea stew.', '1 cup split yellow peas\r\n3 cups water\r\n1 onion, chopped\r\n2 cloves garlic, minced\r\n2 tablespoons oil\r\n1 teaspoon turmeric\r\nSalt to taste', 'Rinse the split peas and place them in a pot with the water.\r\nBring to a boil, then reduce heat and simmer for 20-30 minutes, until the peas are soft.\r\nIn a separate pan, sauté the onion and garlic in oil until softened.\r\nAdd the turmeric and stir for a minute.\r\nAdd the cooked split peas and stir until combined.\r\nAdd salt to taste.\r\nSimmer for 10-15 minutes, stirring occasionally, until the stew thickens.'),
+(41, 'Gomen', '../pics/gomen.jpg', 'Stew', '1hr', 12, 'a collard greens dish.', '1 bunch collard greens, washed and chopped\r\n1 onion, chopped\r\n2 cloves garlic, minced\r\n2 tablespoons oil\r\nSalt to taste', 'In a large pot, sauté the onion and garlic in oil until softened.\r\nAdd the chopped collard greens and stir until wilted.\r\nAdd salt to taste.\r\nCover the pot and simmer for 10-15 minutes, stirring occasionally, until the collard greens are tender.'),
+(42, 'Doro Wat', '../pics/doro-wat.jpg', 'Stew', '1hr', 10, ' a spicy chicken stew.', '1 pound chicken, cut into pieces\r\n1 onion, chopped\r\n2 cloves garlic, minced\r\n2 tablespoons oil\r\n2 tablespoons berbere spice\r\n1 tablespoon tomato paste\r\n1 cup water\r\nSalt to taste', 'In large pot, sauté the onion and garlic in oil until softened.\r\nAdd the berbere spice and tomato paste and stir for a minute.\r\nAdd the chicken pieces and stir until coated with the spice mixture.\r\nAdd the water and salt to taste.\r\nCover the pot and simmer for 30-40 minutes, stirring occasionally, until the chicken is cooked through and the sauce has thickened.'),
+(43, 'Kitfo', '../pics/kitfo.webp', 'Stew', '30 min', 5, 'a spicy beef dish.', '1/2 pound ground beef\r\n1 tablespoon butter\r\n1 teaspoon berbere spice\r\nSalt to taste', 'In a pan, melt the butter over low heat.\r\nAdd the berbere spice and stir for a minute.\r\nAdd the ground beef and stir until cooked through.\r\nAdd salt to taste.\r\nServe immediately.');
 
 -- --------------------------------------------------------
 
@@ -93,7 +98,26 @@ INSERT INTO `fooding` (`foodID`, `ingID`) VALUES
 (26, 115),
 (26, 118),
 (26, 121),
-(26, 123);
+(26, 123),
+(39, 101),
+(39, 104),
+(39, 143),
+(40, 101),
+(40, 104),
+(40, 118),
+(40, 145),
+(41, 101),
+(41, 104),
+(41, 146),
+(42, 101),
+(42, 102),
+(42, 104),
+(42, 118),
+(42, 124),
+(42, 144),
+(43, 116),
+(43, 123),
+(43, 144);
 
 -- --------------------------------------------------------
 
@@ -136,7 +160,11 @@ INSERT INTO `ingredient` (`ingID`, `ingName`, `ingType`) VALUES
 (122, 'vinegar', 'Essentials'),
 (123, 'Beef', 'meat'),
 (124, 'chicken', 'meat'),
-(125, 'fish', 'meat');
+(125, 'fish', 'meat'),
+(143, 'red lentils', 'Lentils'),
+(144, 'berbere', 'spice'),
+(145, 'Yellow peas', 'Peas'),
+(146, 'collard greens', 'Vegetables');
 
 -- --------------------------------------------------------
 
@@ -162,7 +190,12 @@ CREATE TABLE `nutritionfact` (
 INSERT INTO `nutritionfact` (`id`, `foodID`, `calories`, `fat`, `protein`, `carbs`, `cholestrol`, `sodium`) VALUES
 (1, 26, '500kcal', '10g', '20g', '40g', '2mg', '1g'),
 (2, 1, '150kcal', '1g', '5g', '2g', '0g', '2g'),
-(3, 2, '120kcal', '5g', '12g', '20g', '0g', '1g');
+(3, 2, '120kcal', '5g', '12g', '20g', '0g', '1g'),
+(9, 39, '50kcal', '2g', '15g', '8g', '12g', '1g'),
+(10, 40, '100kcal', '10g', '4g', '23g', '19g', '1g'),
+(11, 41, '100kcal', '10g', '19g', '12g', '0g', '1g'),
+(12, 42, '100kcal', '10g ', '12g', '10g', '1g', '1g'),
+(13, 43, '200kcal', '10g', '59g', '12g', '18g', '1g');
 
 -- --------------------------------------------------------
 
@@ -199,7 +232,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `username`, `gender`, `age`, `password`, `email`) VALUES
 (18, 'Eliyon', 'Zewgemichael', 'eliyonzm', 'male', 20, 'c4ca4238a0b923820dcc509a6f75849b', 'eliyonzmz@gmail.com'),
-(19, 'this', 'works', 'eliyoanzm', 'male', 88, 'efaa153b0f682ae5170a3184fa0df28c', 'liyonzmz@gmail.com');
+(19, 'this', 'works', 'eliyoanzm', 'male', 88, 'efaa153b0f682ae5170a3184fa0df28c', 'liyonzmz@gmail.com'),
+(20, 'leul', 'dawit', 'ld', 'male', 21, '81dc9bdb52d04dc20036dbd8313ed055', 'ld@g.com');
 
 -- --------------------------------------------------------
 
@@ -219,7 +253,8 @@ CREATE TABLE `user_foods` (
 
 INSERT INTO `user_foods` (`id`, `user_id`, `foodID`) VALUES
 (3, 18, 1),
-(4, 18, 2);
+(4, 18, 2),
+(6, 20, 26);
 
 --
 -- Indexes for dumped tables
@@ -294,19 +329,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `foodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `foodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `ingredient`
 --
 ALTER TABLE `ingredient`
-  MODIFY `ingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
+  MODIFY `ingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
 -- AUTO_INCREMENT for table `nutritionfact`
 --
 ALTER TABLE `nutritionfact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `suggestion`
@@ -318,13 +353,13 @@ ALTER TABLE `suggestion`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user_foods`
 --
 ALTER TABLE `user_foods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
