@@ -174,8 +174,9 @@ bookmark</span>bookmark</button></form>';
     <p id="information">
       <?php echo $row['descriptions'] ?>
     </p>
-    <div class="img" style="background-image: url(' <?=$row['foodImg'] ?>');"></div>
+    <!-- <div class="img" style="background-image: url(' <?=$row['foodImg'] ?>');"></div> -->
 
+    <iframe width="100%" height="500px" src="<?=$row['youtube'] ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
     <div class="description">
       <div class="ingredient-info">
