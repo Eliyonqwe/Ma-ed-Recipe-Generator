@@ -47,10 +47,10 @@
                     <a id="edit-remove-food">edit/remove food</a>
                     <a id="adding-ing">Add Ingredient</a>
                     <a id="edit-remove-ing">edit/remove Ingredients</a>
-                    <a id="users"> Users</a>
+                    <a id="users" > Users</a>
 
                     <div class="footer">
-                        <a href="">Sign out</a>
+                        <a href="adminlogin.php">Sign out</a>
                     </div>
                 </div>
 
@@ -62,61 +62,61 @@
                 <h1>Add Food</h1>
                 <form action="" method="post" autocomplete="off">
                     <label for="name">Food Name: </label>
-                    <input type="text" name="name" id="name" />
+                    <input required type="text" name="name" id="name" />
                     <br>
                     <br>
                     <label for="foodimg">Food Image(Link): </label>
-                    <input type="text" name="foodimg" id="foodimg" />
+                    <input required type="text" name="foodimg" id="foodimg" />
                     <br>
                     <br>
                     <label for="foodtype">Food Type: </label>
-                    <input type="text" name="foodtype" id="foodtype" />
+                    <input required type="text" name="foodtype" id="foodtype" />
                     <br>
                     <br>
                     <label for="preptime">Food Time: </label>
-                    <input type="text" name="preptime" id="preptime" />
+                    <input required type="text" name="preptime" id="preptime" />
                     <br>
                     <br>
                     <label for="servingsize">Serving Size: </label>
-                    <input type="text" name="servingsize" id="servingsize" />
+                    <input required type="text" name="servingsize" id="servingsize" />
                     <br>
                     <br>
                     <label for="description">Description: </label>
-                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    <textarea required name="description" id="description" cols="30" rows="10"></textarea>
                     <br>
                     <br>
                     <label for="ingredients">Ingredients: </label>
-                    <textarea name="ingredients" id="ingredients" cols="30" rows="10"></textarea>
+                    <textarea required name="ingredients" id="ingredients" cols="30" rows="10"></textarea>
 
                     <br>
                     <br>
                     <label for="instructions">Instructions: </label>
                     <!-- <input type="text" name="instructions" id="instructions" /> -->
-                    <textarea name="instructions" id="instructions" cols=" 30" rows="10"></textarea>
+                    <textarea required name="instructions" id="instructions" cols=" 30" rows="10"></textarea>
                     <br>
                     <br>
                     <label for="calories">calories: </label>
-                    <input type="text" name="calories" id="calories" />
+                    <input required type="text" name="calories" id="calories" />
                     <br>
                     <br>
                     <label for="fat">Fat: </label>
-                    <input type="text" name="fat" id="fat" />
+                    <input required type="text" name="fat" id="fat" />
                     <br>
                     <br>
                     <label for="protein">protein: </label>
-                    <input type="text" name="protein" id="protein" />
+                    <input required type="text" name="protein" id="protein" />
                     <br>
                     <br>
                     <label for="carbs">Carbs: </label>
-                    <input type="text" name="carbs" id="carbs" />
+                    <input required type="text" name="carbs" id="carbs" />
                     <br>
                     <br>
                     <label for="cholestrol">cholestrol: </label>
-                    <input type="text" name="cholestrol" id="cholestrol" />
+                    <input required type="text" name="cholestrol" id="cholestrol" />
                     <br>
                     <br>
                     <label for="sodium">sodium: </label>
-                    <input type="text" name="sodium" id="sodium" />
+                    <input required type="text" name="sodium" id="sodium" />
                     <br>
                     <br>
 

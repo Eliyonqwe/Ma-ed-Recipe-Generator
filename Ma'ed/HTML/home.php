@@ -182,7 +182,7 @@
             <div class="gridtwo">
                 <div class="gridimg">
                     <div class="gridtwo_image">
-                        <img src="../Logo/190205144959-shekla-tibs.jpg" alt="" />
+                        <img src="../Logo/Ethiopian-food-.jpg" alt="" />
                     </div>
                 </div>
                 <div class="gridtext">
